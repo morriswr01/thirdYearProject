@@ -13,6 +13,8 @@ app.use(express.json());
 // ...
 
 // Routes
+app.use('/api/listings', require('./routes/api/listings'))
+// /areaData
 
 // Start server and listen on port 5000
 const port = process.env.PORT || 5000;

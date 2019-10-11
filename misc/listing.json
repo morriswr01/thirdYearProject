@@ -1,0 +1,82 @@
+{
+    "request": {
+        "country": "uk",
+        "language": "en",
+        "location": "LS16",
+        "num_res": "1",
+        "offset": 0,
+        "output": "json_xs",
+        "page": 1,
+        "product_type": "realestate",
+        "property_type": "property",
+        "size_type": "net",
+        "size_unit": "m2",
+        "sort": "nestoria_rank"
+    },
+    "response": {
+        "application_response_code": "101",
+        "application_response_text": "listings returned for best guess of ambiguous location",
+        "attribution": {
+            "img_height": 22,
+            "img_url": "https://resources.nestimg.com/nestoria/img/pbr_v1.png",
+            "img_width": 183,
+            "link_to_img": "http://www.nestoria.com"
+        },
+        "created_http": "Fri, 11 Oct 2019 10:36:20 GMT",
+        "created_unix": 1570790180,
+        "link_to_url": "https://www.nestoria.co.uk/LS16/property/buy",
+        "listings": [
+            {
+                "bathroom_number": "",
+                "bedroom_number": 4,
+                "car_spaces": "",
+                "commission": 0,
+                "construction_year": 0,
+                "datasource_name": "OneDome",
+                "img_height": 300,
+                "img_url": "https://imgs.nestimg.com/4_bedroom_house_for_sale_112435310404014998.jpg",
+                "img_width": 400,
+                "keywords": "Detached, Garden, Double Bedroom, Garage, Kitchen, Cul-de-Sac, Reception",
+                "latitude": 53.84801,
+                "lister_url": "https://www.nestoria.co.uk/detail/0000000112435310404014998/title/5/1-1?serpUid=&pt=1&ot=1&l=ls16&did=370851_default&t_sec=9&t_or=45&t_pvid=null&utm_source=api&utm_medium=external",
+                "listing_type": "buy",
+                "location_accuracy": 9,
+                "longitude": -1.586495,
+                "price": 500000,
+                "price_currency": "£",
+                "price_formatted": "£500,000",
+                "price_high": 500000,
+                "price_low": 500000,
+                "price_type": "fixed",
+                "property_type": "house",
+                "room_number": 4,
+                "size": 0,
+                "size_type": "net",
+                "summary": "About the property a superb four/five bedroom detached property con...",
+                "thumb_height": 60,
+                "thumb_url": "https://imgs.nestimg.com/medium/4_bedroom_house_for_sale_112435310404014998.jpg",
+                "thumb_width": 80,
+                "title": "ADEL PARK CLOSE - Garden, Cul-de-Sac",
+                "updated_in_days": 1,
+                "updated_in_days_formatted": "New"
+            }
+        ],
+        "locations": [
+            {
+                "center_lat": 53.859197,
+                "center_long": -1.602154,
+                "long_title": "LS16",
+                "place_name": "ls16",
+                "title": "LS16"
+            }
+        ],
+        "page": 1,
+        "sort": "nestoria_rank",
+        "status_code": "200",
+        "status_text": "OK",
+        "thanks": "For using the Nestoria API.",
+        "total_pages": 709,
+        "total_results": 709,
+        "_cu5t0mP434m_": "remove"
+    }
+}
