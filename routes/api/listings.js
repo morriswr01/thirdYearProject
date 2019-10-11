@@ -18,6 +18,11 @@ router.get('/nestoria', (req,res) => {
         })
 });
 
+// Some API for area data
+
+module.exports = router;
+
+// =========== Does Not Work ==============
 // @router  GET api/listings/zoopla
 // @desc    Gets listings from nestoria API
 // @access  Public
@@ -30,5 +35,4 @@ router.get('/zoopla', (req,res) => {
             res.json({'msg' : err})
         })
 });
-
-module.exports = router;
+// ========================================
