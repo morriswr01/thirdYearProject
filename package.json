@@ -1,0 +1,28 @@
+{
+  "name": "thirdyearproject",
+  "version": "1.0.0",
+  "description": "Repository for my 3rd Year Project: House listing map application.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morriswr01/thirdYearProject.git"
+  },
+  "author": "Will Morris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morriswr01/thirdYearProject/issues"
+  },
+  "homepage": "https://github.com/morriswr01/thirdYearProject#readme",
+  "dependencies": {
+    "concurrently": "^5.0.0",
+    "config": "^3.2.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.4"
+  }
+}
