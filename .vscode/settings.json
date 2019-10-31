@@ -3,6 +3,13 @@
     "client\\node_modules": true,
     "node_modules": true,
     "package-lock.json": true,
-    "client\\package-lock.json": true
+    "client\\package-lock.json": true,
+    "client\\public": true,
+    "client\\.gitignore": true,
+    ".gitignore": true,
+    "client\\package.json": true,
+    "package.json": true,
+    "README.md": true,
+    ".vscode": true
   }
 }
