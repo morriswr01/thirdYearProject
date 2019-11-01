@@ -1,17 +1,14 @@
 // Module Imports
-import React from 'react';
+import React from "react";
 
 // Component Imports
-import Search from './Search'
+import Search from "./Search";
 
 // scss
-import '../assets/stylesheets/index.scss';
+import "../assets/stylesheets/index.scss";
 
 function App() {
-	return (
-		
-		<Search />
-	);
+    return <Search />;
 }
 
 export default App;

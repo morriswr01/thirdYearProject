@@ -6,10 +6,6 @@
     "client\\package-lock.json": true,
     "client\\public": true,
     "client\\.gitignore": true,
-    ".gitignore": true,
-    "client\\package.json": true,
-    "package.json": true,
-    "README.md": true,
-    ".vscode": true
+    "README.md": true
   }
 }

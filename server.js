@@ -1,7 +1,7 @@
 // Module dependencies
-const express = require('express');
-const mongoose = require('mongoose');
-const config = require('config');
+const express = require("express");
+const mongoose = require("mongoose");
+const config = require("config");
 
 // Initialise the express app
 const app = express();
@@ -13,11 +13,11 @@ app.use(express.json());
 // ...
 
 // Routes
-app.use('/api/listings', require('./routes/api/listings'))
+app.use("/api/listings", require("./routes/api/listings"));
 // /areaData
 
 // Start server and listen on port 5000
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
-})
+});
