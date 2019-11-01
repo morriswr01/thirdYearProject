@@ -1,25 +1,3 @@
 .App {
     text-align: center;
 }
-
-.app-header {
-    color: $shale_grey;
-}
-
-.app-title {
-    margin: 40px 0 0 0;
-    font-size: 8em;
-    font-weight: 200;
-}
-
-.app-subtitle {
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: 300;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-row-gap: 80px;
-}
