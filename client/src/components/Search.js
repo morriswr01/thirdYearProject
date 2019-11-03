@@ -6,12 +6,12 @@ import "../assets/stylesheets/index.scss";
 
 export default function Search() {
     return (
-        <div>
+        <div className="search">
             {/* Login and registration buttons */}
             <div className='nav-container clearfix'>
                 {/* Login and registration buttons */}
-                <Button color='primary'> Login </Button>
-                <Button color='danger'> Register </Button>
+                <Button> Login </Button>
+                <Button> Register </Button>
             </div>
             {/* Title and subheading */}
             <header className='search-header'>
@@ -23,6 +23,9 @@ export default function Search() {
                 </div>
             </header>
             {/* Search Function and filtering */}
+            <div className="search-box">
+                
+            </div>
         </div>
     );
 }
