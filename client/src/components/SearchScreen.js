@@ -9,12 +9,12 @@ import "../assets/stylesheets/index.scss";
 
 export default function SearchScreen() {
     return (
-        <div>
+        <div className="search">
             {/* Login and registration buttons */}
             <div className='nav-container clearfix'>
                 {/* Login and registration buttons */}
-                <Button color='primary'> Login </Button>
-                <Button color='danger'> Register </Button>
+                <Button> Login </Button>
+                <Button> Register </Button>
             </div>
             {/* Title and subheading */}
             <header className='search-header'>

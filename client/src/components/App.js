@@ -7,8 +7,6 @@ import Search from "./SearchScreen";
 // scss
 import "../assets/stylesheets/index.scss";
 
-function App() {
+export default function App() {
     return <Search />;
 }
-
-export default App;
