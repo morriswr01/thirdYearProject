@@ -2,7 +2,7 @@
 import React from "react";
 
 // Component Imports
-import Search from "./Search";
+import Search from "./SearchScreen";
 
 // scss
 import "../assets/stylesheets/index.scss";

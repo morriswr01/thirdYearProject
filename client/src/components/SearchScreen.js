@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "reactstrap";
+import { Button, Input, Label } from "reactstrap";
 
 // SCSS
 import "../assets/stylesheets/index.scss";
 
-export default function Search() {
+export default function SearchScreen() {
     return (
         <div>
             {/* Login and registration buttons */}
@@ -23,6 +23,9 @@ export default function Search() {
                 </div>
             </header>
             {/* Search Function and filtering */}
+            <div className='search-function'>
+                <Input placeholder="Please enter text"/>
+            </div>
         </div>
     );
 }
