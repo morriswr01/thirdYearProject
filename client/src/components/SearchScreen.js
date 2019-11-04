@@ -1,5 +1,8 @@
 import React from "react";
-import { Button, Input, Label } from "reactstrap";
+import { Button } from "reactstrap";
+
+import SearchBox from "./SearchBox";
+import SearchFilter from "./SearchFilter";
 
 // SCSS
 import "../assets/stylesheets/index.scss";
@@ -24,7 +27,9 @@ export default function SearchScreen() {
             </header>
             {/* Search Function and filtering */}
             <div className='search-function'>
-                <Input placeholder="Please enter text"/>
+                <SearchBox />
+                {/* Filtering Section */}
+                <SearchFilter />
             </div>
         </div>
     );
