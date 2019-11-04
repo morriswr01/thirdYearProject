@@ -13,8 +13,8 @@ export default function SearchScreen() {
             {/* Login and registration buttons */}
             <div className='nav-container clearfix'>
                 {/* Login and registration buttons */}
-                <Button> Login </Button>
-                <Button> Register </Button>
+                <Button color="primary"> Login </Button>
+                <Button color="success"> Register </Button>
             </div>
             {/* Title and subheading */}
             <header className='search-header'>
