@@ -3,11 +3,12 @@ import {
     Form,
     FormGroup,
     Label,
-    Input,
     Button,
     ButtonGroup,
     InputGroup
 } from "reactstrap";
+
+import InputRangeSlider from "./utils/InputRangeSlider";
 
 // SCSS
 import "../assets/stylesheets/index.scss";
@@ -51,15 +52,27 @@ export default function SearchFilter() {
                     </InputGroup>
                 </FormGroup>
                 <FormGroup>
-                    <Label for='exampleSelect'>Price</Label>
-                    <Input
-                        type='range'
-                        min='1000'
-                        max='100000'
-                        className='house-price-slider'
-                    />
+                    <Label for='num-bedrooms-slider'>Bedrooms</Label>
+                    <div className='num-bedrooms-slider'>
+                        <InputRangeSlider />
+                    </div>
                 </FormGroup>
             </Form>
         </div>
     );
+}
+
+// Bootstrap
+// eslint-disable-next-line
+{
+    /* <FormGroup>
+    <Label for='house-price-slider'>Price</Label>
+    <Input
+        type='range'
+        min='1'
+        max='100000'
+        className='house-price-slider'
+        id='house-price-slider'
+    />
+</FormGroup> */
 }
