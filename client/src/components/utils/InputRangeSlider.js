@@ -6,17 +6,24 @@ import "react-input-range/lib/css/index.css";
 export default function InputRangeSlider(props) {
     const { minValue, maxValue } = props;
     const multiplier = props.multiplier || 1;
-    
+
     const [range, setRange] = useState({
         value: { min: minValue, max: maxValue }
     });
 
     const handleRangeChange = newRange => {
         setRange({ value: newRange });
+        const newRangeMult = {
+            min: newRange.min * multiplier,
+            max: newRange.max * multiplier
+        };
+        props.onChange(newRangeMult);
     };
 
     const formatLabel = value => {
-        return value >= maxValue ? `${value*multiplier}+` : value*multiplier;
+        return value >= maxValue
+            ? `${value * multiplier}+`
+            : value * multiplier;
     };
 
     return (

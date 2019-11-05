@@ -16,6 +16,7 @@ import "../assets/stylesheets/index.scss";
 export default function SearchFilter() {
     const [checkedButtons, setCheckedButtons] = useState([]);
     const [radioButtons, setRadioButtons] = useState(null);
+    
 
     const onCheckboxBtnClick = selected => {
         const index = checkedButtons.indexOf(selected);
@@ -26,6 +27,17 @@ export default function SearchFilter() {
         }
         setCheckedButtons([...checkedButtons]);
     };
+
+    const onSubmit = () => {
+        const selectedHouseTypes = checkedButtons;
+        const selctedSearchRadius = radioButtons;
+
+    }
+
+    const handleRangeChange = (values) => {
+        console.log(values);
+    };
+
 
     return (
         <div className='search-filter'>
@@ -55,13 +67,13 @@ export default function SearchFilter() {
                 <FormGroup>
                     <Label for='house-price-slider'>House Price</Label>
                     <div className='house-price-slider'>
-                        <InputRangeSlider minValue={0} maxValue={50} multiplier={20000} />
+                        <InputRangeSlider minValue={0} maxValue={50} multiplier={20000}  onChange={handleRangeChange} />
                     </div>
                 </FormGroup>
                 <FormGroup>
                     <Label for='num-bedrooms-slider'>Bedrooms</Label>
                     <div className='num-bedrooms-slider'>
-                        <InputRangeSlider minValue={1} maxValue={5} />
+                        <InputRangeSlider minValue={1} maxValue={5} onChange={handleRangeChange} />
                     </div>
                 </FormGroup>
                 <FormGroup>
