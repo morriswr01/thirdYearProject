@@ -13,10 +13,13 @@ import InputRangeSlider from "./utils/InputRangeSlider";
 // SCSS
 import "../assets/stylesheets/index.scss";
 
-export default function SearchFilter() {
+export default function SearchFilter(props) {
     const [checkedButtons, setCheckedButtons] = useState([]);
     const [radioButtons, setRadioButtons] = useState(null);
-    
+    const [sliders, setSliders] = useState({
+        housePrice: { min: 0, max: 1000000 },
+        numBedrooms: { min: 1, max: 5 }
+    });
 
     const onCheckboxBtnClick = selected => {
         const index = checkedButtons.indexOf(selected);
@@ -28,16 +31,29 @@ export default function SearchFilter() {
         setCheckedButtons([...checkedButtons]);
     };
 
-    const onSubmit = () => {
-        const selectedHouseTypes = checkedButtons;
-        const selctedSearchRadius = radioButtons;
+    const onSubmit = e => {
+        const houseTypes =
+            checkedButtons.length === 0 ? [1, 2] : checkedButtons;
+        const searchRadius = radioButtons === null ? 5 : radioButtons;
+        const priceRange = sliders.housePrice;
+        const numBedrooms = sliders.numBedrooms;
 
-    }
-
-    const handleRangeChange = (values) => {
-        console.log(values);
+        props.onSubmit(houseTypes, searchRadius, priceRange, numBedrooms);
     };
 
+    const handleHousePriceChange = values => {
+        setSliders(currentSliders => ({
+            ...currentSliders,
+            housePrice: { ...values }
+        }));
+    };
+
+    const handleNumBedsChange = values => {
+        setSliders(currentSliders => ({
+            ...currentSliders,
+            numBedrooms: { ...values }
+        }));
+    };
 
     return (
         <div className='search-filter'>
@@ -67,13 +83,22 @@ export default function SearchFilter() {
                 <FormGroup>
                     <Label for='house-price-slider'>House Price</Label>
                     <div className='house-price-slider'>
-                        <InputRangeSlider minValue={0} maxValue={50} multiplier={20000}  onChange={handleRangeChange} />
+                        <InputRangeSlider
+                            minValue={0}
+                            maxValue={50}
+                            multiplier={20000}
+                            onChange={handleHousePriceChange}
+                        />
                     </div>
                 </FormGroup>
                 <FormGroup>
                     <Label for='num-bedrooms-slider'>Bedrooms</Label>
                     <div className='num-bedrooms-slider'>
-                        <InputRangeSlider minValue={1} maxValue={5} onChange={handleRangeChange} />
+                        <InputRangeSlider
+                            minValue={1}
+                            maxValue={5}
+                            onChange={handleNumBedsChange}
+                        />
                     </div>
                 </FormGroup>
                 <FormGroup>
@@ -118,6 +143,13 @@ export default function SearchFilter() {
                         </ButtonGroup>
                     </InputGroup>
                 </FormGroup>
+                <Button
+                    className='search-submit-btn'
+                    onClick={onSubmit}
+                    color='success'
+                >
+                    Find Houses
+                </Button>
             </Form>
         </div>
     );

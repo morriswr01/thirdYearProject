@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "reactstrap";
 
 import SearchBox from "./SearchBox";
@@ -8,13 +8,31 @@ import SearchFilter from "./SearchFilter";
 import "../assets/stylesheets/index.scss";
 
 export default function SearchScreen() {
+    const [searchText, setSearchText] = useState("");
+
+    const handleSearchTextChange = e => {
+        const { value } = e.target;
+        setSearchText(value);
+    };
+
+    const handleSubmit = (
+        houseTypes,
+        searchRadius,
+        priceRange,
+        numBedrooms
+    ) => {
+        window.alert(
+            ` Location:${searchText}\n Type:${houseTypes}\n SearchRadius:${searchRadius}\n Min Price: ${priceRange.min}\n Max Price: ${priceRange.max}\n MinBedrooms: ${numBedrooms.min}\n MaxBedrooms: ${numBedrooms.max}`
+        );
+    };
+
     return (
-        <div className="search">
+        <div className='search'>
             {/* Login and registration buttons */}
             <div className='nav-container clearfix'>
                 {/* Login and registration buttons */}
-                <Button color="primary"> Login </Button>
-                <Button color="success"> Register </Button>
+                <Button color='primary'> Login </Button>
+                <Button color='success'> Register </Button>
             </div>
             {/* Title and subheading */}
             <header className='search-header'>
@@ -27,9 +45,12 @@ export default function SearchScreen() {
             </header>
             {/* Search Function and filtering */}
             <div className='search-function'>
-                <SearchBox />
+                <SearchBox
+                    value={searchText}
+                    onSearchTextChange={handleSearchTextChange}
+                />
                 {/* Filtering Section */}
-                <SearchFilter />
+                <SearchFilter onSubmit={handleSubmit} />
             </div>
         </div>
     );
