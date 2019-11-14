@@ -16,10 +16,6 @@ import "../assets/stylesheets/index.scss";
 export default function SearchFilter(props) {
     const [checkedButtons, setCheckedButtons] = useState([]);
     const [radioButtons, setRadioButtons] = useState(null);
-    const [sliders, setSliders] = useState({
-        housePrice: { min: 0, max: 1000000 },
-        numBedrooms: { min: 1, max: 5 }
-    });
 
     const onSubmit = e => {
         props.handleSubmit(radioButtons);

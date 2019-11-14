@@ -12,7 +12,7 @@ export default class SearchScreen extends Component {
         super(props);
         this.state = {
             searchCriteria: {
-                searchText: "",
+                postcode: "",
                 houseTypes: [],
                 searchRadius: null,
                 housePrice: { min: 0, max: 1000000 },
@@ -21,12 +21,11 @@ export default class SearchScreen extends Component {
         };
     }
 
-    handleSearchTextChange = e => {
-        const { value } = e.target;
+    handleSearchTextChange = postcode => {
         this.setState({
             searchCriteria: {
                 ...this.state.searchCriteria,
-                searchText: value
+                postcode
             }
         });
     };
@@ -41,7 +40,7 @@ export default class SearchScreen extends Component {
     };
 
     handleSubmit = (radius) => {
-        const {searchText, houseTypes, searchRadius, housePrice, numBedrooms} = this.state.searchCriteria;
+        const {searchText, houseTypes, housePrice, numBedrooms} = this.state.searchCriteria;
         window.alert(
             ` Location:${searchText}\n Type:${houseTypes}\n SearchRadius:${radius}\n Min Price: ${housePrice.min}\n Max Price: ${housePrice.max}\n MinBedrooms: ${numBedrooms.min}\n MaxBedrooms: ${numBedrooms.max}`
         );
@@ -68,7 +67,7 @@ export default class SearchScreen extends Component {
                 <div className='search-function'>
                     <SearchBox
                         value={this.state.searchText}
-                        onSearchTextChange={this.handleSearchTextChange}
+                        handleSearchTextChange={this.handleSearchTextChange}
                     />
                     {/* Filtering Section */}
                     <SearchFilter
