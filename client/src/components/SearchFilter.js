@@ -21,38 +21,34 @@ export default function SearchFilter(props) {
         numBedrooms: { min: 1, max: 5 }
     });
 
-    const onCheckboxBtnClick = selected => {
-        const index = checkedButtons.indexOf(selected);
+    const onSubmit = e => {
+        props.handleSubmit(radioButtons);
+    };
+
+    const onHousePriceChange = values => {
+        props.handleFilterChange("housePrice", values);
+    };
+
+    const onNumBedsChange = values => {
+        props.handleFilterChange("numBedrooms", values);
+    };
+
+    const onHouseTypeChange = type => {
+        const index = checkedButtons.indexOf(type);
         if (index < 0) {
-            checkedButtons.push(selected);
+            checkedButtons.push(type);
         } else {
             checkedButtons.splice(index, 1);
         }
         setCheckedButtons([...checkedButtons]);
+
+        props.handleFilterChange("houseTypes", checkedButtons);
     };
 
-    const onSubmit = e => {
-        const houseTypes =
-            checkedButtons.length === 0 ? [1, 2] : checkedButtons;
-        const searchRadius = radioButtons === null ? 5 : radioButtons;
-        const priceRange = sliders.housePrice;
-        const numBedrooms = sliders.numBedrooms;
+    const onSearchRadiusChange = radius => {
+        setRadioButtons(radius);
 
-        props.onSubmit(houseTypes, searchRadius, priceRange, numBedrooms);
-    };
-
-    const handleHousePriceChange = values => {
-        setSliders(currentSliders => ({
-            ...currentSliders,
-            housePrice: { ...values }
-        }));
-    };
-
-    const handleNumBedsChange = values => {
-        setSliders(currentSliders => ({
-            ...currentSliders,
-            numBedrooms: { ...values }
-        }));
+        props.handleFilterChange("searchRadius", radioButtons)
     };
 
     return (
@@ -65,14 +61,14 @@ export default function SearchFilter(props) {
                         <ButtonGroup className='multi-choice-buttons'>
                             <Button
                                 color='primary'
-                                onClick={() => onCheckboxBtnClick(1)}
+                                onClick={() => onHouseTypeChange(1)}
                                 active={checkedButtons.includes(1)}
                             >
                                 Flats/Apartments
                             </Button>
                             <Button
                                 color='primary'
-                                onClick={() => onCheckboxBtnClick(2)}
+                                onClick={() => onHouseTypeChange(2)}
                                 active={checkedButtons.includes(2)}
                             >
                                 Houses
@@ -87,7 +83,7 @@ export default function SearchFilter(props) {
                             minValue={0}
                             maxValue={50}
                             multiplier={20000}
-                            onChange={handleHousePriceChange}
+                            onChange={onHousePriceChange}
                         />
                     </div>
                 </FormGroup>
@@ -97,7 +93,7 @@ export default function SearchFilter(props) {
                         <InputRangeSlider
                             minValue={1}
                             maxValue={5}
-                            onChange={handleNumBedsChange}
+                            onChange={onNumBedsChange}
                         />
                     </div>
                 </FormGroup>
@@ -107,35 +103,35 @@ export default function SearchFilter(props) {
                         <ButtonGroup className='multi-choice-buttons'>
                             <Button
                                 color='primary'
-                                onClick={() => setRadioButtons(1)}
+                                onClick={() => onSearchRadiusChange(1)}
                                 active={radioButtons === 1}
                             >
                                 1mi
                             </Button>
                             <Button
                                 color='primary'
-                                onClick={() => setRadioButtons(2)}
+                                onClick={() => onSearchRadiusChange(2)}
                                 active={radioButtons === 2}
                             >
                                 5mi
                             </Button>
                             <Button
                                 color='primary'
-                                onClick={() => setRadioButtons(3)}
+                                onClick={() => onSearchRadiusChange(3)}
                                 active={radioButtons === 3}
                             >
                                 10mi
                             </Button>
                             <Button
                                 color='primary'
-                                onClick={() => setRadioButtons(4)}
+                                onClick={() => onSearchRadiusChange(4)}
                                 active={radioButtons === 4}
                             >
                                 20mi
                             </Button>
                             <Button
                                 color='primary'
-                                onClick={() => setRadioButtons(5)}
+                                onClick={() => onSearchRadiusChange(5)}
                                 active={radioButtons === 5}
                             >
                                 20+
