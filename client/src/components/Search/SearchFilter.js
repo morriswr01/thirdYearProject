@@ -8,10 +8,10 @@ import {
     InputGroup
 } from "reactstrap";
 
-import InputRangeSlider from "./utils/InputRangeSlider";
+import InputRangeSlider from "../utils/InputRangeSlider";
 
 // SCSS
-import "../assets/stylesheets/index.scss";
+import "../../assets/stylesheets/index.scss";
 
 export default function SearchFilter(props) {
     const [checkedButtons, setCheckedButtons] = useState([]);

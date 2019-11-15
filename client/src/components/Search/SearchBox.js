@@ -3,7 +3,7 @@ import { Input } from "reactstrap";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import places from "places.js";
-import "../assets/stylesheets/index.scss";
+import "../../assets/stylesheets/index.scss";
 
 export default class SearchBox extends Component {
     // eslint-disable-next-line
@@ -16,6 +16,7 @@ export default class SearchBox extends Component {
     }
 
     componentDidMount() {
+        // Move into config file
         let placesAutoComplete = places({
             appId: "plWMGTTHNDXS",
             apiKey: "54a8cdecc5e1d5fe5cd3741e0ea57723",

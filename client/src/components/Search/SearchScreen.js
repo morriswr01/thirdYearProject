@@ -5,7 +5,7 @@ import SearchBox from "./SearchBox";
 import SearchFilter from "./SearchFilter";
 
 // SCSS
-import "../assets/stylesheets/index.scss";
+import "../../assets/stylesheets/index.scss";
 
 export default class SearchScreen extends Component {
     constructor(props) {
