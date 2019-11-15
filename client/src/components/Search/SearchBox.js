@@ -11,6 +11,7 @@ export default class SearchBox extends Component {
         super(props);
         this.state = {
             searchPostCode: "",
+            latlng: {},
             searchText: ""
         };
     }
@@ -21,20 +22,22 @@ export default class SearchBox extends Component {
             appId: "plWMGTTHNDXS",
             apiKey: "54a8cdecc5e1d5fe5cd3741e0ea57723",
             container: document.querySelector("#address-input"),
-            language: "en"
+            language: "en",
+            countries: ["GB"]
         });
 
         placesAutoComplete.on("change", e => {
             // If autocomplete finds a value, set the postcode
             this.setState({
                 ...this.state,
+                latlng: e.suggestion.latlng,
                 searchPostCode: e.suggestion.postcode
             });
 
             // If the postcode is set pass it to the parent so that it can be used in submission
             if (this.state.searchPostCode !== "") {
                 console.log("Search address is now valid. You can submit");
-                this.props.handleSearchTextChange(this.state.searchPostCode);
+                this.props.handleSearchTextChange(this.state.searchPostCode, this.state.latlng);
             }
         });
     }
@@ -46,7 +49,7 @@ export default class SearchBox extends Component {
         this.setState({
             ...this.state,
             searchText: e.target.value
-        })
+        });
     };
 
     render() {

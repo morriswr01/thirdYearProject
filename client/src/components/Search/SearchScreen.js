@@ -13,6 +13,7 @@ export default class SearchScreen extends Component {
         this.state = {
             searchCriteria: {
                 postcode: "",
+                latlng: {},
                 houseTypes: [],
                 searchRadius: null,
                 housePrice: { min: 0, max: 1000000 },
@@ -21,11 +22,12 @@ export default class SearchScreen extends Component {
         };
     }
 
-    handleSearchTextChange = postcode => {
+    handleSearchTextChange = (postcode, latlng) => {
         this.setState({
             searchCriteria: {
                 ...this.state.searchCriteria,
-                postcode
+                postcode,
+                latlng
             }
         });
     };
@@ -40,9 +42,9 @@ export default class SearchScreen extends Component {
     };
 
     handleSubmit = (radius) => {
-        const {searchText, houseTypes, housePrice, numBedrooms} = this.state.searchCriteria;
+        const {postcode, latlng, houseTypes, housePrice, numBedrooms} = this.state.searchCriteria;
         window.alert(
-            ` Location:${searchText}\n Type:${houseTypes}\n SearchRadius:${radius}\n Min Price: ${housePrice.min}\n Max Price: ${housePrice.max}\n MinBedrooms: ${numBedrooms.min}\n MaxBedrooms: ${numBedrooms.max}`
+            ` Location:${postcode}\nLatlng:${latlng.lat}\n Type:${houseTypes}\n SearchRadius:${radius}\n Min Price: ${housePrice.min}\n Max Price: ${housePrice.max}\n MinBedrooms: ${numBedrooms.min}\n MaxBedrooms: ${numBedrooms.max}`
         );
     };
     render() {
