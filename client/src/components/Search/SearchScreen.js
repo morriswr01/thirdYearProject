@@ -20,8 +20,9 @@ export default class SearchScreen extends Component {
                 numBedrooms: { min: 1, max: 5 }
             }
         };
-    }
+    };
 
+    // Get postcode and latitude/longitude from the search box component
     handleSearchTextChange = (postcode, latlng) => {
         this.setState({
             searchCriteria: {
@@ -32,6 +33,7 @@ export default class SearchScreen extends Component {
         });
     };
 
+    // Get updated sliders from filter box
     handleFilterChange = (key, values) => {
         this.setState({
             searchCriteria: {
@@ -47,6 +49,7 @@ export default class SearchScreen extends Component {
             ` Location:${postcode}\nLatlng:${latlng.lat}\n Type:${houseTypes}\n SearchRadius:${radius}\n Min Price: ${housePrice.min}\n Max Price: ${housePrice.max}\n MinBedrooms: ${numBedrooms.min}\n MaxBedrooms: ${numBedrooms.max}`
         );
     };
+
     render() {
         return (
             <div className='search'>

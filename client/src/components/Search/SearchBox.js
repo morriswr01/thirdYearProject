@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Input } from "reactstrap";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import places from "places.js";
 import "../../assets/stylesheets/index.scss";
 
@@ -64,9 +62,6 @@ export default class SearchBox extends Component {
                     placeholder='Search'
                     id='address-input'
                 />
-                {/* <span className='search-box-icon'>
-                    <FontAwesomeIcon icon={faSearch} />
-                </span> */}
             </div>
         );
     }
