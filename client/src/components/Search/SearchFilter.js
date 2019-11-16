@@ -9,6 +9,12 @@ import {
 } from "reactstrap";
 
 import InputRangeSlider from "../utils/InputRangeSlider";
+import {
+    SET_HOUSE_TYPE,
+    SET_SEARCH_RADIUS,
+    SET_HOUSE_PRICE,
+    SET_NUM_BEDROOMS
+} from "../../actions/types";
 
 // SCSS
 import "../../assets/stylesheets/index.scss";
@@ -22,11 +28,11 @@ export default function SearchFilter(props) {
     };
 
     const onHousePriceChange = values => {
-        props.handleFilterChange("housePrice", values);
+        props.handleFilterChange(SET_HOUSE_PRICE, values);
     };
 
     const onNumBedsChange = values => {
-        props.handleFilterChange("numBedrooms", values);
+        props.handleFilterChange(SET_NUM_BEDROOMS, values);
     };
 
     const onHouseTypeChange = type => {
@@ -38,13 +44,13 @@ export default function SearchFilter(props) {
         }
         setCheckedButtons([...checkedButtons]);
 
-        props.handleFilterChange("houseTypes", checkedButtons);
+        props.handleFilterChange(SET_HOUSE_TYPE, checkedButtons);
     };
 
     const onSearchRadiusChange = radius => {
         setRadioButtons(radius);
 
-        props.handleFilterChange("searchRadius", radioButtons)
+        props.handleFilterChange(SET_SEARCH_RADIUS, radioButtons);
     };
 
     return (

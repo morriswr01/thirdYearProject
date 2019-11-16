@@ -1,19 +1,56 @@
-// import {} from '../actions'
-
+import {
+    // GET_SEARCH,
+    // GET_LOCATION,
+    SET_LOCATION,
+    SET_HOUSE_TYPE,
+    SET_SEARCH_RADIUS,
+    SET_HOUSE_PRICE,
+    SET_NUM_BEDROOMS
+} from "../actions/types";
 
 const initialState = {
-    location : {
+    location: {
         postcode: "",
         latlng: {}
     },
     houseTypes: [],
-    searchRadius: null,
+    searchRadius: 20,
     housePrice: { min: 0, max: 1000000 },
     numBedrooms: { min: 1, max: 5 }
 };
 
 export default (state = initialState, action) => {
-    switch (action.type) {    
+    switch (action.type) {
+        // case GET_SEARCH:
+        //     return {
+
+        //     }
+        // case GET_LOCATION:
+        case SET_LOCATION:
+            return {
+                ...state,
+                location: action.payload
+            };
+        case SET_HOUSE_TYPE:
+            return {
+                ...state,
+                houseTypes: action.payload
+            };
+        case SET_SEARCH_RADIUS:
+            return {
+                ...state,
+                searchRadius: action.payload
+            };
+        case SET_HOUSE_PRICE:
+            return {
+                ...state,
+                housePrice: action.payload
+            };
+        case SET_NUM_BEDROOMS:
+            return {
+                ...state,
+                numBedrooms: action.payload
+            };
         default:
             return state;
     }

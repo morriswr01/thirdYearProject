@@ -51,7 +51,7 @@ export default class SearchBox extends Component {
     };
 
     render() {
-        const { searchText } = this.props;
+        const { searchText } = this.state;
 
         return (
             <div className='search-box'>

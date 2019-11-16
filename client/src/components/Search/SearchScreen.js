@@ -1,52 +1,65 @@
 import React, { Component } from "react";
+
+// Redux
+import { connect } from "react-redux";
+import {
+    setLocation,
+    setHouseType,
+    setSearchRadius,
+    setHousePrice,
+    setNumBedooms
+} from "../../actions/searchActions";
+// import PropTypes from "prop-types";
+
+// Aesthetic
 import { Button } from "reactstrap";
 
+// Components
 import SearchBox from "./SearchBox";
 import SearchFilter from "./SearchFilter";
 
 // SCSS
 import "../../assets/stylesheets/index.scss";
+import {
+    SET_NUM_BEDROOMS,
+    SET_HOUSE_TYPE,
+    SET_SEARCH_RADIUS
+} from "../../actions/types";
 
-export default class SearchScreen extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            searchCriteria: {
-                postcode: "",
-                latlng: {},
-                houseTypes: [],
-                searchRadius: null,
-                housePrice: { min: 0, max: 1000000 },
-                numBedrooms: { min: 1, max: 5 }
-            }
-        };
-    };
-
+class SearchScreen extends Component {
     // Get postcode and latitude/longitude from the search box component
     handleSearchTextChange = (postcode, latlng) => {
-        this.setState({
-            searchCriteria: {
-                ...this.state.searchCriteria,
-                postcode,
-                latlng
-            }
-        });
+        const location = { postcode, latlng };
+        this.props.setLocation(location);
     };
 
     // Get updated sliders from filter box
+    // ========= FIX THIS ==================
     handleFilterChange = (key, values) => {
-        this.setState({
-            searchCriteria: {
-                ...this.state.searchCriteria,
-                [key]: values
-            }
-        });
+        switch (key) {
+            case "SET_HOUSE_PRICE":
+                this.props.setHousePrice(values);
+                break;
+            case "SET_NUM_BEDROOMS":
+                this.props.setNumBedooms(values);
+                break;
+            case "SET_HOUSE_TYPE":
+                this.props.setHouseType(values);
+                break;
+            case "SET_SEARCH_RADIUS":
+                this.props.setSearchRadius(values);
+                break;
+            default:
+                break;
+        }
     };
 
-    handleSubmit = (radius) => {
-        const {postcode, latlng, houseTypes, housePrice, numBedrooms} = this.state.searchCriteria;
+    handleSubmit = radius => {
+        const { location, houseTypes, housePrice, numBedrooms } = this.props;
+        const { postcode, latlng } = location;
+
         window.alert(
-            ` Location:${postcode}\nLatlng:${latlng.lat}\n Type:${houseTypes}\n SearchRadius:${radius}\n Min Price: ${housePrice.min}\n Max Price: ${housePrice.max}\n MinBedrooms: ${numBedrooms.min}\n MaxBedrooms: ${numBedrooms.max}`
+            ` Location:${postcode}\n Latlng:${latlng.lat}\n Type:${houseTypes}\n SearchRadius:${radius}\n Min Price: ${housePrice.min}\n Max Price: ${housePrice.max}\n MinBedrooms: ${numBedrooms.min}\n MaxBedrooms: ${numBedrooms.max}`
         );
     };
 
@@ -71,7 +84,6 @@ export default class SearchScreen extends Component {
                 {/* Search Function and filtering */}
                 <div className='search-function'>
                     <SearchBox
-                        value={this.state.searchText}
                         handleSearchTextChange={this.handleSearchTextChange}
                     />
                     {/* Filtering Section */}
@@ -84,3 +96,29 @@ export default class SearchScreen extends Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+    const {
+        location,
+        houseTypes,
+        searchRadius,
+        housePrice,
+        numBedrooms
+    } = state.search;
+
+    return {
+        location,
+        houseTypes,
+        searchRadius,
+        housePrice,
+        numBedrooms
+    };
+};
+
+export default connect(mapStateToProps, {
+    setLocation,
+    setHouseType,
+    setSearchRadius,
+    setHousePrice,
+    setNumBedooms
+})(SearchScreen);
