@@ -6,3 +6,4 @@ export const SET_HOUSE_TYPE = "SET_HOUSE_TYPE";
 export const SET_SEARCH_RADIUS = "SET_SEARCH_RADIUS";
 export const SET_HOUSE_PRICE = "SET_HOUSE_PRICE";
 export const SET_NUM_BEDROOMS = "SET_NUM_BEDROOMS";
+export const GET_LISTINGS = "GET_LISTINGS";

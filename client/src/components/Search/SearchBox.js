@@ -34,7 +34,6 @@ export default class SearchBox extends Component {
 
             // If the postcode is set pass it to the parent so that it can be used in submission
             if (this.state.searchPostCode !== "") {
-                console.log("Search address is now valid. You can submit");
                 this.props.handleSearchTextChange(this.state.searchPostCode, this.state.latlng);
             }
         });
@@ -42,7 +41,6 @@ export default class SearchBox extends Component {
 
     onSearchTextChange = e => {
         if (this.state.searchPostCode === "") {
-            console.log("Search address not valid.");
         }
         this.setState({
             ...this.state,

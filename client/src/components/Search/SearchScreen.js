@@ -3,13 +3,13 @@ import React, { Component } from "react";
 // Redux
 import { connect } from "react-redux";
 import {
+    getListings,
     setLocation,
     setHouseType,
     setSearchRadius,
     setHousePrice,
     setNumBedooms
 } from "../../actions/searchActions";
-// import PropTypes from "prop-types";
 
 // Aesthetic
 import { Button } from "reactstrap";
@@ -20,11 +20,6 @@ import SearchFilter from "./SearchFilter";
 
 // SCSS
 import "../../assets/stylesheets/index.scss";
-import {
-    SET_NUM_BEDROOMS,
-    SET_HOUSE_TYPE,
-    SET_SEARCH_RADIUS
-} from "../../actions/types";
 
 class SearchScreen extends Component {
     // Get postcode and latitude/longitude from the search box component
@@ -54,14 +49,10 @@ class SearchScreen extends Component {
         }
     };
 
-    handleSubmit = radius => {
-        const { location, houseTypes, housePrice, numBedrooms } = this.props;
-        const { postcode, latlng } = location;
-
-        window.alert(
-            ` Location:${postcode}\n Latlng:${latlng.lat}\n Type:${houseTypes}\n SearchRadius:${radius}\n Min Price: ${housePrice.min}\n Max Price: ${housePrice.max}\n MinBedrooms: ${numBedrooms.min}\n MaxBedrooms: ${numBedrooms.max}`
-        );
+    handleSubmit = () => {
+        this.props.getListings();
     };
+
 
     render() {
         return (
@@ -103,7 +94,8 @@ const mapStateToProps = state => {
         houseTypes,
         searchRadius,
         housePrice,
-        numBedrooms
+        numBedrooms,
+        result
     } = state.search;
 
     return {
@@ -111,11 +103,13 @@ const mapStateToProps = state => {
         houseTypes,
         searchRadius,
         housePrice,
-        numBedrooms
+        numBedrooms,
+        result
     };
 };
 
 export default connect(mapStateToProps, {
+    getListings,
     setLocation,
     setHouseType,
     setSearchRadius,

@@ -21,7 +21,7 @@ import "../../assets/stylesheets/index.scss";
 
 export default function SearchFilter(props) {
     const [checkedButtons, setCheckedButtons] = useState([]);
-    const [radioButtons, setRadioButtons] = useState(null);
+    const [radioButtons, setRadioButtons] = useState(1);
 
     const onSubmit = e => {
         props.handleSubmit(radioButtons);
@@ -50,7 +50,7 @@ export default function SearchFilter(props) {
     const onSearchRadiusChange = radius => {
         setRadioButtons(radius);
 
-        props.handleFilterChange(SET_SEARCH_RADIUS, radioButtons);
+        props.handleFilterChange(SET_SEARCH_RADIUS, radius);
     };
 
     return (
@@ -112,29 +112,29 @@ export default function SearchFilter(props) {
                             </Button>
                             <Button
                                 color='primary'
-                                onClick={() => onSearchRadiusChange(2)}
-                                active={radioButtons === 2}
+                                onClick={() => onSearchRadiusChange(2.5)}
+                                active={radioButtons === 2.5}
                             >
-                                5mi
-                            </Button>
-                            <Button
-                                color='primary'
-                                onClick={() => onSearchRadiusChange(3)}
-                                active={radioButtons === 3}
-                            >
-                                10mi
-                            </Button>
-                            <Button
-                                color='primary'
-                                onClick={() => onSearchRadiusChange(4)}
-                                active={radioButtons === 4}
-                            >
-                                20mi
+                                2.5mi
                             </Button>
                             <Button
                                 color='primary'
                                 onClick={() => onSearchRadiusChange(5)}
                                 active={radioButtons === 5}
+                            >
+                                5mi
+                            </Button>
+                            <Button
+                                color='primary'
+                                onClick={() => onSearchRadiusChange(10)}
+                                active={radioButtons === 10}
+                            >
+                                10mi
+                            </Button>
+                            <Button
+                                color='primary'
+                                onClick={() => onSearchRadiusChange(20)}
+                                active={radioButtons === 20}
                             >
                                 20+
                             </Button>
@@ -151,19 +151,4 @@ export default function SearchFilter(props) {
             </Form>
         </div>
     );
-}
-
-// Bootstrap
-// eslint-disable-next-line
-{
-    /* <FormGroup>
-    <Label for='house-price-slider'>Price</Label>
-    <Input
-        type='range'
-        min='1'
-        max='100000'
-        className='house-price-slider'
-        id='house-price-slider'
-    />
-</FormGroup> */
 }

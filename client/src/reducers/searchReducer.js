@@ -1,6 +1,5 @@
 import {
-    // GET_SEARCH,
-    // GET_LOCATION,
+    GET_LISTINGS,
     SET_LOCATION,
     SET_HOUSE_TYPE,
     SET_SEARCH_RADIUS,
@@ -16,16 +15,19 @@ const initialState = {
     houseTypes: [],
     searchRadius: 20,
     housePrice: { min: 0, max: 1000000 },
-    numBedrooms: { min: 1, max: 5 }
+    numBedrooms: { min: 1, max: 5 },
+    result: {},
+    listings: []
 };
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        // case GET_SEARCH:
-        //     return {
-
-        //     }
-        // case GET_LOCATION:
+        case GET_LISTINGS:
+            return {
+                ...state,
+                result: action.payload,
+                listings: action.payload.response.listings
+            }
         case SET_LOCATION:
             return {
                 ...state,
