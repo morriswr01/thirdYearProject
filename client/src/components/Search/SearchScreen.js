@@ -53,7 +53,6 @@ class SearchScreen extends Component {
         this.props.getListings();
     };
 
-
     render() {
         return (
             <div className='search'>
