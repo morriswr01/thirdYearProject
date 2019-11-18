@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 // Redux
 import { connect } from "react-redux";
+import { Redirect } from "react-router";
 import {
     getListings,
     setLocation,
@@ -54,7 +55,9 @@ class SearchScreen extends Component {
     };
 
     render() {
-        return (
+        return this.props.listings.length !== 0 ? (
+            <Redirect to='/listings' />
+        ) : (
             <div className='search'>
                 {/* Login and registration buttons */}
                 <div className='nav-container clearfix'>
@@ -94,7 +97,8 @@ const mapStateToProps = state => {
         searchRadius,
         housePrice,
         numBedrooms,
-        result
+        result,
+        listings
     } = state.search;
 
     return {
@@ -103,7 +107,8 @@ const mapStateToProps = state => {
         searchRadius,
         housePrice,
         numBedrooms,
-        result
+        result,
+        listings
     };
 };
 
