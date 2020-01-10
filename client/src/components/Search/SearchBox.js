@@ -10,7 +10,8 @@ export default class SearchBox extends Component {
         this.state = {
             searchPostCode: "",
             latlng: {},
-            searchText: ""
+            searchText: "",
+            fullAddress: ""
         };
     }
 
@@ -29,12 +30,16 @@ export default class SearchBox extends Component {
             this.setState({
                 ...this.state,
                 latlng: e.suggestion.latlng,
-                searchPostCode: e.suggestion.postcode
+                searchPostCode: e.suggestion.postcode,
+                searchText: e.suggestion.value
             });
 
             // If the postcode is set pass it to the parent so that it can be used in submission
             if (this.state.searchPostCode !== "") {
-                this.props.handleSearchTextChange(this.state.searchPostCode, this.state.latlng);
+                this.props.handleSearchTextChange(
+                    this.state.searchPostCode,
+                    this.state.latlng
+                );
             }
         });
     }

@@ -1,0 +1,11 @@
+.overlayContainer {
+    display: grid;
+    grid-template-columns: sidebar listing listing;
+    grid-gap: 10px;
+}
+.listingsSidebar {
+    background-color: white;
+    grid-area: sidebar;
+    z-index: -1;
+    height: 100vh;
+}
