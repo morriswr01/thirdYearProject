@@ -5,6 +5,9 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router";
 
 import Map from "./Map";
+import ListingsSidebar from "./ListingsSidebar";
+
+import "../../assets/stylesheets/listings.scss";
 
 class Listings extends Component {
     listing = [
@@ -49,15 +52,19 @@ class Listings extends Component {
     ];
 
     render() {
-        // return this.props.listings.length === 0 ? (
-        //     <Redirect to='/' />
-        // ) :
-        return (
-            <div>
+        return this.props.listings.length === 0 ? (
+            <Redirect to='/' />
+        ) : (
+            // return (
+            <div className='resultsContainer'>
+                <div className='listingsSidebar'>
+                    <ListingsSidebar />
+                </div>
+
                 <Map
-                    listings={this.listing}
-                    // listings={this.props.listings}
-                    // location={this.props.location}
+                    // listings={this.listing}
+                    listings={this.props.listings}
+                    location={this.props.location}
                 />
             </div>
         );
@@ -65,8 +72,8 @@ class Listings extends Component {
 }
 
 const mapStateToProps = state => ({
-    // location: state.search.location,
-    // listings: state.search.listings
+    location: state.search.location,
+    listings: state.search.listings
 });
 
 export default connect(mapStateToProps)(Listings);

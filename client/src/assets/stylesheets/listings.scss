@@ -1,11 +1,13 @@
-.overlayContainer {
+.resultsContainer {
     display: grid;
-    grid-template-columns: sidebar listing listing;
-    grid-gap: 10px;
-}
-.listingsSidebar {
-    background-color: white;
-    grid-area: sidebar;
-    z-index: -1;
+    grid-template-columns: 1fr 2fr;
     height: 100vh;
 }
+
+// .listingsSidebar {
+//     display: inline;
+// }
+
+// .map {
+//     display: inline;
+// }
