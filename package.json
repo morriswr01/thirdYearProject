@@ -23,7 +23,7 @@
     "concurrently": "^5.0.0",
     "config": "^3.2.3",
     "express": "^4.17.1",
-    "mongoose": "^5.7.4",
+    "mongoose": "^5.7.5",
     "prop-types": "^15.7.2",
     "request": "^2.88.0"
   }
