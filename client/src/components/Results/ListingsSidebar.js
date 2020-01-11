@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
 
-export default function ListingsSidebar() {
+import Listing from "./Listing";
+
+export default function ListingsSidebar(props) {
+    const { listings } = props;
+
     return (
-        <div className="listingsSidebar">
-            Hello World
+        <div className='sidebar'>
+            {listings.map((listing, i) => (
+                <Listing key={i} listingNumber={i} listing={listing} />
+            ))}
         </div>
-    )
+    );
 }
+
+ListingsSidebar.propTypes = {
+    listings: PropTypes.array.isRequired
+};

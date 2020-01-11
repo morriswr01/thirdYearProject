@@ -1,13 +1,39 @@
+@import "./config";
+
 .resultsContainer {
     display: grid;
     grid-template-columns: 1fr 2fr;
     height: 100vh;
 }
 
-// .listingsSidebar {
-//     display: inline;
-// }
+.sidebar {
+    height: 100vh;
+    overflow: scroll;
+    // background-color: $black-blue;
+    background-color: darken($shale-grey, 10%);
 
-// .map {
-//     display: inline;
-// }
+    .sidebarListing {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        height: 15vh;
+        background-color: $shale_grey;
+        // border-style: solid hidden hidden hidden;
+        // border-width: 2px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        transition: 0.3s;
+        margin: 10px;
+
+        h3,
+        h5,
+        p {
+            margin: 0 auto;
+        }
+
+        img {
+            width: 80%;
+            height: auto;
+            margin: auto;
+        }
+    }
+}

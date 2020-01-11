@@ -17,7 +17,7 @@ router.post("/nestoria", (req, res) => {
         numBedrooms
     } = req.body;
 
-    console.log(req.body);
+    // console.log(req.body);
 
     request(
         `https://api.nestoria.co.uk/api?action=search_listings&centre_point=${location.latlng.lat},${location.latlng.lng},${searchRadius}mi&bedroom_min=${numBedrooms.min}&bedroom_max=${numBedrooms.max}&price_min=${housePrice.min}&price_max=${housePrice.max}&number_of_results=50&page=1&encoding=json`,
