@@ -24,9 +24,7 @@ class Listings extends Component {
                     // listings={this.props.listings}
                     // location={this.props.location}
                 />
-                <div className='listingsSidebar'>
-                    <ListingsSidebar listings={listings.listings} />
-                </div>
+                <ListingsSidebar listings={listings.listings} />
             </div>
         );
     }

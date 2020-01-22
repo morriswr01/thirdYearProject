@@ -4,36 +4,112 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     height: 100vh;
-}
+    background-color: $shale_grey;
+    // background-color: #282c34;
 
-.sidebar {
-    height: 100vh;
-    overflow: scroll;
-    // background-color: $black-blue;
-    background-color: darken($shale-grey, 10%);
+    .listingsSidebar {
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.05);
+        border-radius: 20px 0 0 20px;
+        z-index: 10;
 
-    .sidebarListing {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        height: 15vh;
-        background-color: $shale_grey;
-        // border-style: solid hidden hidden hidden;
-        // border-width: 2px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        transition: 0.3s;
-        margin: 10px;
+        .navBar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 10vh;
+            padding: 30px 5%;
 
-        h3,
-        h5,
-        p {
-            margin: 0 auto;
+            a,
+            button {
+                color: white;
+                text-decoration: none;
+            }
+
+            button {
+                padding: 9px 25px;
+                background-color: #00b074;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: all 0.3s ease 0s;
+            }
+
+            button:hover {
+                background-color: darken(#00b074, 10%);
+            }
+
+            .back {
+                padding: 9px 25px;
+                background-color: #d9534f;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: all 0.3s ease 0s;
+            }
+
+            .loginButtons {
+                button {
+                    margin-right: 10px;
+                }
+            }
         }
 
-        img {
-            width: 80%;
-            height: auto;
-            margin: auto;
+        .resultTitle {
+            font-size: 50px;
+            margin: 30px;
+            height: 5vh;
+            .searchAddress {
+                padding-left: 10px;
+                color: lighten($color: #3b3b3b, $amount: 30%);
+                font-weight: bolder;
+                text-decoration: underline;
+            }
+        }
+
+        .sortAndFilter {
+            font-size: 30px;
+            margin: 30px;
+            height: 5vh;
+        }
+
+        .sidebarListings {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 80vh;
+            overflow-x: hidden; //horizontal
+            overflow-y: scroll; //vertical
+
+            .sidebarListing {
+                transition: 0.4s;
+
+                &:hover {
+                    background-color: darken($shale_grey, 10%);
+                    border: 15px solid #00b074;
+                    transition: 0.4s;
+                }
+
+                display: grid;
+                grid-template-rows: 1fr 2fr;
+                height: 38vh;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                padding: 10px;
+                margin: 10px;
+                overflow: hidden;
+
+                h3,
+                h5,
+                p {
+                    margin: 0 auto;
+                }
+
+                img {
+                    width: 80%;
+                    height: auto;
+                    margin: auto;
+                    border-radius: 5px;
+                }
+            }
         }
     }
 }
