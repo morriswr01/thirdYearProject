@@ -19,15 +19,14 @@ class Listings extends Component {
         // ) : (
         return (
             <div className='resultsContainer'>
-                <div className='listingsSidebar'>
-                    <ListingsSidebar listings={listings.listings} />
-                </div>
-
                 <Map
                     listings={listings.listings}
                     // listings={this.props.listings}
                     // location={this.props.location}
                 />
+                <div className='listingsSidebar'>
+                    <ListingsSidebar listings={listings.listings} />
+                </div>
             </div>
         );
     }

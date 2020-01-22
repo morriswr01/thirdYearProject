@@ -76,7 +76,7 @@ class Map extends Component {
 
     handleSelectedListingChange = (id) => {
         console.log("Marker " + id + " selected");
-        this.props.setSelectedListing(5);
+        this.props.setSelectedListing(id);
     }
 
     render() {
