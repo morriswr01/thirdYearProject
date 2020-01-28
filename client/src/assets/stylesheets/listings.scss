@@ -4,8 +4,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
+    // width: 150vw;
+    width: 100vw;
     background-color: $shale_grey;
     // background-color: #282c34;
+    overflow: hidden;
 
     .listingsSidebar {
         box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
@@ -55,11 +58,11 @@
         }
 
         .resultTitle {
-            font-size: 2vw;
             margin: 0 30px;
             max-height: 5vh;
 
             h1 {
+                font-size: 2.5rem;
                 margin: 0;
             }
 
@@ -88,12 +91,22 @@
             }
         }
         @media screen and (max-width: 1400px) {
+            .resultTitle {
+                h1 {
+                    font-size: 2rem;
+                }
+            }
             .sidebarListings {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }
         }
         @media screen and (max-width: 900px) {
+            .resultTitle {
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
             .sidebarListings {
                 display: grid;
                 grid-template-columns: 1fr;
@@ -105,6 +118,14 @@
             overflow-y: scroll; //vertical
 
             .sidebarListing {
+                display: grid;
+                grid-template-rows: 1fr 2fr;
+                height: 38vh;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 10px;
+                overflow: hidden;
+
                 transition: 0.4s;
 
                 &:hover {
@@ -126,14 +147,6 @@
                     }
                 }
 
-                display: grid;
-                grid-template-rows: 1fr 2fr;
-                height: 38vh;
-                border-radius: 5px;
-                padding: 10px;
-                margin: 10px;
-                overflow: hidden;
-
                 h3,
                 h5,
                 p {
@@ -149,10 +162,16 @@
                 }
                 .sidebarListingInfo {
                     position: relative;
+                    // display: flex;
+                    // flex-direction: column;
 
                     // in order from top to bottom
                     .title {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
                         font-size: 2vh;
+                        overflow: hidden;
                     }
 
                     .summary {

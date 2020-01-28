@@ -18,18 +18,14 @@ class Listings extends Component {
         //     <Redirect to='/' />
         // ) : (
         return (
-            <div className='results'>
-                <div className='resultsContainer'>
-                    <Map
-                        // listings={listings.listings}
-                        listings={this.props.listings}
-                        // location={this.props.location}
-                    />
-                    <ListingsSidebar listings={listings.listings} />
-                </div>
-                <div className="fullScreenContainer">
-                    
-                </div>
+            <div className='resultsContainer'>
+                <Map
+                    // listings={listings.listings}
+                    listings={this.props.listings}
+                    // location={this.props.location}
+                />
+                <ListingsSidebar listings={listings.listings} />
+                {/* Put full screen view here */}
             </div>
         );
     }
