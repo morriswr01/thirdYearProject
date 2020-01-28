@@ -11,7 +11,10 @@ export default function ListingsSidebar(props) {
         <div className='listingsSidebar'>
             <Nav />
             <div className='resultTitle'>
-                150 Results for <text className='searchAddress'>Coventry, CV5 6GB</text>
+                <h1>
+                    150 Results for{" "}
+                    <p className='searchAddress'>Coventry, CV5 6GB</p>
+                </h1>
             </div>
             <div className='sortAndFilter'>
                 <h4>Filters and SortBy</h4>

@@ -20,8 +20,8 @@ class Listings extends Component {
         return (
             <div className='resultsContainer'>
                 <Map
-                    listings={listings.listings}
-                    // listings={this.props.listings}
+                    // listings={listings.listings}
+                    listings={this.props.listings}
                     // location={this.props.location}
                 />
                 <ListingsSidebar listings={listings.listings} />
@@ -32,7 +32,7 @@ class Listings extends Component {
 
 const mapStateToProps = state => ({
     // location: state.search.location,
-    // listings: state.search.listings
+    listings: state.search.listings
 });
 
 export default connect(mapStateToProps)(Listings);

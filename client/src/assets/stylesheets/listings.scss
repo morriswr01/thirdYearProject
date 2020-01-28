@@ -2,13 +2,13 @@
 
 .resultsContainer {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     height: 100vh;
     background-color: $shale_grey;
     // background-color: #282c34;
 
     .listingsSidebar {
-        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
         border-radius: 20px 0 0 20px;
         z-index: 10;
 
@@ -55,9 +55,18 @@
         }
 
         .resultTitle {
-            font-size: 50px;
-            margin: 30px;
-            height: 5vh;
+            font-size: 2vw;
+            margin: 0 30px;
+            max-height: 5vh;
+
+            h1 {
+                margin: 0;
+            }
+
+            p {
+                display: inline;
+            }
+
             .searchAddress {
                 padding-left: 10px;
                 color: lighten($color: #3b3b3b, $amount: 30%);
@@ -68,7 +77,7 @@
 
         .sortAndFilter {
             font-size: 30px;
-            margin: 30px;
+            margin: 0 30px;
             height: 5vh;
         }
 
@@ -83,15 +92,29 @@
                 transition: 0.4s;
 
                 &:hover {
-                    background-color: darken($shale_grey, 10%);
-                    border: 15px solid #00b074;
-                    transition: 0.4s;
+                    img {
+                        border-radius: 5px;
+                        border: 3px solid #00b074;
+                        padding: 3px;
+                        transition: 0.4s;
+                    }
+                    background-color: darken($shale_grey, 5%);
+                    // border: 5px solid #00b074;
+                }
+
+                &.selected {
+                    img {
+                        border-radius: 5px;
+                        border: 3px solid #00b074;
+                        padding: 3px;
+                        transition: 0.4s;
+                    }
                 }
 
                 display: grid;
                 grid-template-rows: 1fr 2fr;
                 height: 38vh;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                 border-radius: 5px;
                 padding: 10px;
                 margin: 10px;
@@ -99,15 +122,17 @@
 
                 h3,
                 h5,
+                h4,
                 p {
                     margin: 0 auto;
                 }
 
                 img {
-                    width: 80%;
+                    width: 100%;
                     height: auto;
                     margin: auto;
                     border-radius: 5px;
+                    transition: 0.4s;
                 }
             }
         }
