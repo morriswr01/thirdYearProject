@@ -4,7 +4,8 @@ import {
 } from "../actions/types";
 
 const initialState = {
-    selectedListing: 0
+    selectedListing: null,
+    fullscreen: false
 };
 
 export default (state = initialState, action) => {
@@ -12,6 +13,7 @@ export default (state = initialState, action) => {
         case SET_SELECTED_LISTING:
             return {
                 ...state,
+                fullscreen: action.payload == state.selectedListing,
                 selectedListing: action.payload
             };
         // case GET_SELECTED_LISTING:

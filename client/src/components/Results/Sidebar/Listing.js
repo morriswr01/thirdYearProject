@@ -35,7 +35,10 @@ class Listing extends React.Component {
                     <h3 className='title'>{title}</h3>
                     <p className='summary'>{summary}</p>
                     <p className='bedNum'>Bedrooms: {bedroom_number}</p>
-                    <h5 className='price'>{price_formatted}</h5>
+                    <div className='price'>
+                        <hr></hr>
+                        <h5>{price_formatted}</h5>
+                    </div>
                 </div>
             </div>
         );

@@ -81,7 +81,6 @@
             height: 5vh;
         }
 
-        /* On screens that are 600px wide or less, the background color is olive */
         @media screen and (min-width: 1400px) {
             .sidebarListings {
                 display: grid;
@@ -101,8 +100,6 @@
             }
         }
         .sidebarListings {
-            // display: grid;
-            // grid-template-columns: 1fr 1fr;
             height: 80vh;
             overflow-x: hidden; //horizontal
             overflow-y: scroll; //vertical
@@ -118,7 +115,6 @@
                         transition: 0.4s;
                     }
                     background-color: darken($shale_grey, 5%);
-                    // border: 5px solid #00b074;
                 }
 
                 &.selected {
@@ -144,7 +140,6 @@
                     margin: 0 auto;
                 }
 
-                // in order from top to bottom
                 img {
                     width: 100%;
                     height: auto;
@@ -152,21 +147,29 @@
                     border-radius: 5px;
                     transition: 0.4s;
                 }
+                .sidebarListingInfo {
+                    position: relative;
 
-                .title {
-                    font-size: 2vh;
-                }
+                    // in order from top to bottom
+                    .title {
+                        font-size: 2vh;
+                    }
 
-                .summary {
-                    font-size: 1vh;
-                }
+                    .summary {
+                        font-size: 1vh;
+                    }
 
-                .bedNum {
-                    font-size: 1vh;
-                }
+                    .bedNum {
+                        font-size: 1vh;
+                    }
 
-                .price {
-                    font-size: 1.5vh;
+                    .price {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        font-size: 1.5vh;
+                        color: #00b074;
+                    }
                 }
             }
         }
