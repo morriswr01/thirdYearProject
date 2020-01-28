@@ -81,9 +81,28 @@
             height: 5vh;
         }
 
+        /* On screens that are 600px wide or less, the background color is olive */
+        @media screen and (min-width: 1400px) {
+            .sidebarListings {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        @media screen and (max-width: 1400px) {
+            .sidebarListings {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            .sidebarListings {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
         .sidebarListings {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            // display: grid;
+            // grid-template-columns: 1fr 1fr;
             height: 80vh;
             overflow-x: hidden; //horizontal
             overflow-y: scroll; //vertical
@@ -114,7 +133,6 @@
                 display: grid;
                 grid-template-rows: 1fr 2fr;
                 height: 38vh;
-                // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                 border-radius: 5px;
                 padding: 10px;
                 margin: 10px;
@@ -122,17 +140,33 @@
 
                 h3,
                 h5,
-                h4,
                 p {
                     margin: 0 auto;
                 }
 
+                // in order from top to bottom
                 img {
                     width: 100%;
                     height: auto;
                     margin: auto;
                     border-radius: 5px;
                     transition: 0.4s;
+                }
+
+                .title {
+                    font-size: 2vh;
+                }
+
+                .summary {
+                    font-size: 1vh;
+                }
+
+                .bedNum {
+                    font-size: 1vh;
+                }
+
+                .price {
+                    font-size: 1.5vh;
                 }
             }
         }

@@ -32,10 +32,10 @@ class Listing extends React.Component {
             >
                 <img src={img_url} alt='House' className='sidebarListingImg' />
                 <div className='sidebarListingInfo'>
-                    <h3>{title}</h3>
-                    <p>{summary}</p>
-                    <p>{bedroom_number}</p>
-                    <h5>{price_formatted}</h5>
+                    <h3 className='title'>{title}</h3>
+                    <p className='summary'>{summary}</p>
+                    <p className='bedNum'>Bedrooms: {bedroom_number}</p>
+                    <h5 className='price'>{price_formatted}</h5>
                 </div>
             </div>
         );
