@@ -22,7 +22,7 @@ class Listing extends React.Component {
             <div
                 // className='sidebarListing'
                 className={
-                    this.props.listingNumber == this.props.selectedListing
+                    this.props.listingNumber === this.props.selectedListing
                         ? "sidebarListing selected"
                         : "sidebarListing"
                 }

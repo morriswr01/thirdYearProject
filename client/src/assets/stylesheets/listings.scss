@@ -194,3 +194,19 @@
         }
     }
 }
+
+// Animations for react transition groups
+.sidebar-enter {
+    transform: translate(100%);
+}
+.sidebar-enter.sidebar-enter-active {
+    transform: translate(0%);
+    transition: transform 1000ms ease-in-out;
+}
+.sidebar-leave {
+    transform: translate(0%);
+}
+.sidebar-leave.sidebar-leave-active {
+    transform: translate(-100%);
+    transition: transform 1000ms ease-in-out;
+}

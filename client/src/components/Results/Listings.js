@@ -4,6 +4,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 // eslint-disable-next-line
 import { Redirect } from "react-router";
+import {
+    ReactCSSTransitionGroup,
+    CSSTransitionGroup
+} from "react-transition-group";
 
 import Map from "./Map";
 import ListingsSidebar from "./ListingsSidebar";
@@ -13,6 +17,13 @@ import * as listings from "../../assets/Listings";
 import "../../assets/stylesheets/listings.scss";
 
 class Listings extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            fullscreen: false
+        };
+    }
+
     render() {
         // return this.props.listings.length === 0 ? (
         //     <Redirect to='/' />
@@ -24,7 +35,15 @@ class Listings extends Component {
                     listings={this.props.listings}
                     // location={this.props.location}
                 />
-                <ListingsSidebar listings={listings.listings} />
+                <CSSTransitionGroup
+                    transitionName='sidebar'
+                    in={this.state.fullscreen}
+                    timeout={400}
+                    unmountOnExit
+                    appear
+                >
+                    <ListingsSidebar key={1} listings={listings.listings} />
+                </CSSTransitionGroup>
                 {/* Put full screen view here */}
             </div>
         );

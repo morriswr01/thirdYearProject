@@ -13,7 +13,7 @@ export default (state = initialState, action) => {
         case SET_SELECTED_LISTING:
             return {
                 ...state,
-                fullscreen: action.payload == state.selectedListing,
+                fullscreen: action.payload === state.selectedListing,
                 selectedListing: action.payload
             };
         // case GET_SELECTED_LISTING:
