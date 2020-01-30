@@ -4,13 +4,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router";
 import {
-    getListings,
     setLocation,
     setHouseType,
     setSearchRadius,
     setHousePrice,
     setNumBedooms
 } from "../../actions/searchActions";
+import { getListings } from "../../actions/listingActions";
 
 // Aesthetic
 import { Button } from "reactstrap";
@@ -55,9 +55,10 @@ class SearchScreen extends Component {
     };
 
     render() {
-        return this.props.listings.length !== 0 ? (
-            <Redirect to='/listings' />
-        ) : (
+        // return this.props.listings.length !== 0 ? (
+        //     <Redirect to='/listings' />
+        // ) : 
+        return (
             <div className='search'>
                 {/* Login and registration buttons */}
                 <div className='nav-container clearfix'>
@@ -97,9 +98,10 @@ const mapStateToProps = state => {
         searchRadius,
         housePrice,
         numBedrooms,
-        result,
-        listings
+        result
     } = state.search;
+
+    const { listings } = state.listings;
 
     return {
         location,

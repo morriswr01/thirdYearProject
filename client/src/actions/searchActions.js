@@ -1,5 +1,3 @@
-import axios from "axios";
-
 import {
     GET_SEARCH,
     GET_LOCATION,
@@ -7,8 +5,7 @@ import {
     SET_HOUSE_TYPE,
     SET_SEARCH_RADIUS,
     SET_HOUSE_PRICE,
-    SET_NUM_BEDROOMS,
-    GET_LISTINGS
+    SET_NUM_BEDROOMS
 } from "./types";
 
 export const getSearch = () => ({
@@ -17,34 +14,6 @@ export const getSearch = () => ({
 export const getLocation = () => ({
     type: GET_LOCATION
 });
-
-export const getListings = () => (dispatch, getState) => {
-    const {
-        location,
-        houseTypes,
-        searchRadius,
-        housePrice,
-        numBedrooms
-    } = getState().search;
-
-    // console.log(location);
-
-    axios
-        .post("/api/listings/nestoria?", {
-            location,
-            houseTypes,
-            searchRadius,
-            housePrice,
-            numBedrooms
-        })
-        .then(res => {
-            dispatch({
-                type: GET_LISTINGS,
-                payload: res.data
-            });
-        })
-        .catch(err => console.log(err.response.data));
-};
 
 export const setLocation = locationObj => ({
     type: SET_LOCATION,

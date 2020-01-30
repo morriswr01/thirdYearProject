@@ -11,13 +11,13 @@ body {
     /* position: fixed;
     left: 0;
     top: 0; */
-    /* transition: transform 0.4s cubic-bezier(0, 0.52, 0, 1); */
+    transition: transform 0.4s cubic-bezier(0, 0.52, 0, 1);
     background-color: aqua;
     width: 50vw;
     height: 100vh;
 }
 
-.slideComp-enter {
+/* .slideComp-enter {
     transform: translate3d(0vw, 0, 0);
 }
 .slideComp-enter-active {
@@ -30,16 +30,16 @@ body {
 .slideComp-exit-active {
     transform: translate3d(0vw, 0, 0);
     transition: transform 0.4s cubic-bezier(0, 0.52, 0, 1);
-}
+} */
 
-/* .SlideyComponent.hide {
+.SlideyComponent.hide {
     transform: translate3d(-50vw, 0, 0);
 }
 
 .SlideyComponent.show {
     transform: translate3d(0vw, 0, 0);
     overflow: hidden;
-} */
+}
 
 /* .SlideyComponentReact-enter {
     transform: translate3d(0vw, 0, 0);

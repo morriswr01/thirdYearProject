@@ -4,13 +4,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 // eslint-disable-next-line
 import { Redirect } from "react-router";
-import {
-    ReactCSSTransitionGroup,
-    CSSTransitionGroup
-} from "react-transition-group";
 
 import Map from "./Map";
 import ListingsSidebar from "./ListingsSidebar";
+import FullScreenListing from "./FullScreenListing";
 
 import * as listings from "../../assets/Listings";
 
@@ -19,9 +16,6 @@ import "../../assets/stylesheets/listings.scss";
 class Listings extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            fullscreen: false
-        };
     }
 
     render() {
@@ -29,15 +23,23 @@ class Listings extends Component {
         //     <Redirect to='/' />
         // ) : (
         return (
-            <div className='resultsContainer'>
-                <Map
-                    // listings={listings.listings}
-                    listings={this.props.listings}
-                    // location={this.props.location}
-                />
+            <div
+                className={
+                    this.props.fullscreen
+                        ? "resultsContainer fullscreen"
+                        : "resultsContainer"
+                }
+            >
+                <FullScreenListing listings={listings.listings} />
+                <div className='nonFullScreen'>
+                    <Map
+                        // listings={listings.listings}
+                        listings={this.props.listings}
+                        // location={this.props.location}
+                    />
 
-                <ListingsSidebar key={1} listings={listings.listings} />
-                {/* Put full screen view here */}
+                    <ListingsSidebar listings={listings.listings} />
+                </div>
             </div>
         );
     }
@@ -45,7 +47,8 @@ class Listings extends Component {
 
 const mapStateToProps = state => ({
     // location: state.search.location,
-    listings: state.search.listings
+    listings: state.listings.listings,
+    fullscreen: state.listings.fullscreen
 });
 
 export default connect(mapStateToProps)(Listings);
