@@ -35,15 +35,8 @@ class Listings extends Component {
                     listings={this.props.listings}
                     // location={this.props.location}
                 />
-                <CSSTransitionGroup
-                    transitionName='sidebar'
-                    in={this.state.fullscreen}
-                    timeout={400}
-                    unmountOnExit
-                    appear
-                >
-                    <ListingsSidebar key={1} listings={listings.listings} />
-                </CSSTransitionGroup>
+
+                <ListingsSidebar key={1} listings={listings.listings} />
                 {/* Put full screen view here */}
             </div>
         );
