@@ -1,8 +1,9 @@
 import { SET_SELECTED_LISTING, GET_LISTINGS } from "../actions/types";
 
 const initialState = {
-    selectedListing: null,
+    selectedListing: {},
     fullscreen: false,
+    // listings: [],
     listings: [
         {
             bathroom_number: "",
@@ -1045,11 +1046,9 @@ export default (state = initialState, action) => {
         case SET_SELECTED_LISTING:
             return {
                 ...state,
-                fullscreen: action.payload === state.selectedListing,
+                fullscreen: action.payload.listingNumber === state.selectedListing.listingNumber,
                 selectedListing: action.payload
             };
-        // case GET_SELECTED_LISTING:
-        //     break;
         default:
             return state;
     }

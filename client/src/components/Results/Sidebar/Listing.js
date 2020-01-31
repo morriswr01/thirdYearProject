@@ -20,14 +20,18 @@ class Listing extends React.Component {
 
         return (
             <div
-                // className='sidebarListing'
                 className={
-                    this.props.listingNumber === this.props.selectedListing
+                    this.props.listingNumber ===
+                    this.props.selectedListing.listingNumber
                         ? "sidebarListing selected"
                         : "sidebarListing"
                 }
                 onClick={() =>
-                    this.props.setSelectedListing(this.props.listingNumber)
+                    // this.props.setSelectedListing(this.props.listingNumber)
+                    this.props.setSelectedListing({
+                        ...this.props.listing,
+                        listingNumber: this.props.listingNumber
+                    })
                 }
             >
                 <img src={img_url} alt='House' className='sidebarListingImg' />

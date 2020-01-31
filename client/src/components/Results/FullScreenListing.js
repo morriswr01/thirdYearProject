@@ -5,21 +5,15 @@ import { connect } from "react-redux";
 import { setSelectedListing } from "../../actions/listingActions";
 
 function FullScreenListing(props) {
-    const { listings } = props;
-
     return (
         <div
             className='fullscreenListing'
             onClick={() =>
-                props.setSelectedListing(props.selectedListing + 1)
+                props.setSelectedListing({})
             }
         ></div>
     );
 }
-
-FullScreenListing.propTypes = {
-    listings: PropTypes.array.isRequired
-};
 
 const mapStateToProps = state => ({
     // location: state.search.location,

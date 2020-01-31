@@ -13,32 +13,14 @@ import mapStyles from "../../assets/mapStyles";
 
 const MapComponent = props => {
     // eslint-disable-next-line
-    // const [selectedListing, setSelectedListing] = useState(null);
-
-    // eslint-disable-next-line
     const { location, listings } = props;
-
-    // useEffect(() => {
-    //     const listener = e => {
-    //         if (e.key === "Escape") {
-    //             setSelectedListing(null);
-    //         }
-    //     };
-    //     window.addEventListener("keydown", listener);
-
-    //     return () => {
-    //         window.removeEventListener("keydown", listener);
-    //     };
-    // }, []);
 
     return (
         <GoogleMap
             defaultZoom={15}
             defaultCenter={{
-                lat: 52.4081,
-                lng: -1.5105
-                // lat: location.latlng.lat,
-                // lng: location.latlng.lng
+                lat: location.latlng.lat,
+                lng: location.latlng.lng
             }}
             defaultOptions={{ styles: mapStyles }}
         >
@@ -47,14 +29,6 @@ const MapComponent = props => {
                     key={id}
                     listingNumber={id}
                     position={{ lat: listing.latitude, lng: listing.longitude }}
-                    // onClick={e => {
-                    //     console.log("Selected listing " + i);
-                    //     if (selectedListing !== i) {
-                    //         setSelectedListing(i);
-                    //     } else {
-                    //         setSelectedListing(null);
-                    //     }
-                    // }}
                     onClick={e => {
                         console.log("Selected listing " + id);
                         props.onMarkerClick(id);
@@ -72,12 +46,10 @@ const MapComponent = props => {
 const MapWrapped = withScriptjs(withGoogleMap(MapComponent));
 
 class Map extends Component {
-    
-
-    handleSelectedListingChange = (id) => {
+    handleSelectedListingChange = id => {
         console.log("Marker " + id + " selected");
         this.props.setSelectedListing(id);
-    }
+    };
 
     render() {
         return (
@@ -85,7 +57,7 @@ class Map extends Component {
                 <MapWrapped
                     listings={this.props.listings}
                     onMarkerClick={this.handleSelectedListingChange}
-                    // location={location}
+                    location={this.props.location}
                     googleMapURL='https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAziShsAiM9ER0H6IrqETIrE00yzcOx124'
                     loadingElement={<div style={{ height: `100%` }} />}
                     containerElement={<div style={{ height: `100%` }} />}

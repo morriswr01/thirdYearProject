@@ -3,7 +3,7 @@
 .resultsContainer.fullscreen {
     .fullscreenListing {
         // display: block;
-        transform: translate3d(50vw, 0, 0);
+        transform: translate3d(75vw, 0, 0);
         // width: 75vw;
     }
 
@@ -229,7 +229,7 @@
         transition: all 1s;
         position: absolute;
         top: 0;
-        left: -75vh;
+        left: -75vw;
         height: 100vh;
         width: 75vw;
         background-color: palevioletred;

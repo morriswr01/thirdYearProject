@@ -2,9 +2,9 @@ import axios from "axios";
 
 import { SET_SELECTED_LISTING, GET_LISTINGS } from "./types";
 
-export const setSelectedListing = id => ({
+export const setSelectedListing = listingObj => ({
     type: SET_SELECTED_LISTING,
-    payload: id
+    payload: listingObj
 });
 
 export const getListings = () => (dispatch, getState) => {

@@ -10,23 +10,16 @@ import {
 const initialState = {
     location: {
         postcode: "",
-        latlng: {}
+        latlng: { lat: 52.4081, lng: -1.5105 }
     },
     houseTypes: [],
     searchRadius: 20,
     housePrice: { min: 0, max: 1000000 },
-    numBedrooms: { min: 1, max: 5 },
-    result: {}
+    numBedrooms: { min: 1, max: 5 }
 };
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case GET_LISTINGS:
-            return {
-                ...state,
-                result: action.payload,
-                listings: action.payload.response.listings
-            };
         case SET_LOCATION:
             return {
                 ...state,
