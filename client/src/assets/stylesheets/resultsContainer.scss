@@ -1,0 +1,27 @@
+@import "./config";
+
+.resultsContainer.fullscreen {
+    .fullscreenListing {
+        transform: translate3d(75vw, 0, 0);
+    }
+
+    .amenities {
+        transform: translate3d(0, -30vh, 0);
+    }
+
+    .nonFullScreen {
+        transform: translate3d(50vw, 0, 0);
+
+        .map {
+            transform: translate3d(25vw, 0, 0);
+            width: 25vw;
+        }
+    }
+}
+
+.resultsContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: $shale_grey;
+    overflow: hidden;
+}

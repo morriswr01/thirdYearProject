@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Listing from "./Sidebar/Listing";
-import Nav from "./Sidebar/Nav";
+import Listing from "./Listing";
+import Nav from "./Nav";
 
 export default function ListingsSidebar(props) {
     const { listings } = props;

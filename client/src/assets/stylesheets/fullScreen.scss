@@ -1,0 +1,72 @@
+.fullscreenListing {
+    display: flex;
+
+    // Postion
+    position: absolute;
+    top: 0;
+    left: -75vw;
+
+    // Size
+    height: 100vh;
+    width: 75vw;
+
+    // Transitions
+    transition: all 1s;
+
+    background-color: $shale_grey;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 20px 20px 0;
+
+    // Appearence
+    z-index: 10;
+}
+
+.houseInfo {
+    height: 100vh;
+    width: 70%;
+    background-color: $shale_grey;
+}
+
+.areaInfo {
+    height: 100vh;
+    width: 30%;
+}
+
+.amenitiesContainer {
+    overflow: hidden;
+
+    // Postion
+    position: absolute;
+    right: 0vw;
+    bottom: 0vh;
+
+    // Content behaviour
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    // Size
+    height: 30vh;
+    width: 25vw;
+
+    background-color: transparent;
+
+    z-index: 15;
+
+    .amenities {
+        // Transitions
+        transition: all 1s;
+
+        // Size
+        height: 100%;
+        width: 80%;
+        margin: 20px auto;
+
+        position: relative;
+        bottom: -30vh;
+
+        background-color: $shale_grey;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+    }
+}

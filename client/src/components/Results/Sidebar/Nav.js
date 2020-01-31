@@ -10,12 +10,8 @@ export default function Nav() {
             </a>
             <h1>Pins</h1>
             <div className='loginButtons'>
-                <a href='#'>
-                    <button>Login</button>
-                </a>
-                <a href='#'>
-                    <button>Register</button>
-                </a>
+                <button>Login</button>
+                <button>Register</button>
             </div>
         </div>
     );

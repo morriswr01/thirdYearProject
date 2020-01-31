@@ -1,6 +1,9 @@
 @import "./config";
 @import "./app";
 @import "./search";
+@import "./resultsContainer.scss";
+@import "./fullScreen.scss";
+@import "./nonFullScreen.scss";
 
 * {
     box-sizing: border-box;

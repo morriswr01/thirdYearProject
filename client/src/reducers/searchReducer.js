@@ -1,5 +1,4 @@
 import {
-    GET_LISTINGS,
     SET_LOCATION,
     SET_HOUSE_TYPE,
     SET_SEARCH_RADIUS,

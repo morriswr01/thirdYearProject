@@ -5,10 +5,6 @@ import { connect } from "react-redux";
 import { setSelectedListing } from "../../../actions/listingActions";
 
 class Listing extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const {
             img_url,

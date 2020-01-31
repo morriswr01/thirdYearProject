@@ -6,16 +6,13 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router";
 
 import Map from "./Map";
-import ListingsSidebar from "./ListingsSidebar";
-import FullScreenListing from "./FullScreenListing";
+import ListingsSidebar from "./Sidebar/ListingsSidebar";
+import FullScreenListing from "./Fullscreen/FullScreenListing";
+import Amenities from "./Fullscreen/Amenities";
 
-import "../../assets/stylesheets/listings.scss";
+import "../../assets/stylesheets/index.scss";
 
 class Listings extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         let location = {
             latlng: {
@@ -28,10 +25,6 @@ class Listings extends Component {
                         ? this.props.searchLocation.latlng.lng
                         : this.props.selectedListing.longitude
             }
-            // latlng: {
-            //     lat: this.props.searchLocation.latlng.lat,
-            //     lng: this.props.searchLocation.latlng.lng
-            // }
         };
 
         return this.props.listings.length === 0 ? (
@@ -46,6 +39,7 @@ class Listings extends Component {
                 }
             >
                 <FullScreenListing />
+                <Amenities />
                 <div className='nonFullScreen'>
                     <Map
                         // listings={listings.listings}
