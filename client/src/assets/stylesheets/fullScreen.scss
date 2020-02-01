@@ -24,7 +24,76 @@
 .houseInfo {
     height: 100vh;
     width: 70%;
-    background-color: $shale_grey;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 20px 20px 0;
+
+    .imgContainer {
+        height: 30vh;
+        text-align: center;
+        padding: 40px;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+    .infoContainer {
+        height: 60vh;
+        display: flex;
+        flex-direction: row;
+        .price {
+            margin: 0 10px;
+
+            .priceElement {
+                margin-bottom: 20px;
+            }
+        }
+
+        .info {
+            margin: 0 40px;
+            svg {
+                margin: 0 15px;
+            }
+
+            h4,
+            h3 {
+                padding: 0 25px;
+            }
+        }
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        height: 10vh;
+        margin: 0 20px;
+
+        button {
+            height: 50px;
+            margin: 0 10px;
+        }
+
+        button.back {
+            background-color: #d9534f;
+            &:hover {
+                background-color: darken(#d9534f, 10%);
+            }
+        }
+        button.compare {
+            background-color: #f0ad4e;
+            &:hover {
+                background-color: darken(#f0ad4e, 10%);
+            }
+        }
+        button.login {
+            background-color: #00b074;
+            button:hover {
+                background-color: darken(#00b074, 10%);
+            }
+        }
+    }
 }
 
 .areaInfo {

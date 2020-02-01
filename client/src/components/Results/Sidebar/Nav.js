@@ -1,12 +1,12 @@
 import React from "react";
-import { InlineIcon } from "@iconify/react";
-import { arrowLeft } from "@iconify/icons-fa-solid/arrow-left";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function Nav() {
     return (
         <div className='navBar'>
             <a href='/' className='back'>
-                <InlineIcon icon={arrowLeft} /> Back
+                <FontAwesomeIcon icon={faArrowLeft} /> Back
             </a>
             <h1>Pins</h1>
             <div className='loginButtons'>

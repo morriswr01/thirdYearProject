@@ -25,37 +25,22 @@
             height: 10vh;
             padding: 30px 5%;
 
-            a,
-            button {
-                color: white;
-                text-decoration: none;
-            }
-
-            button {
-                padding: 9px 25px;
-                background-color: #00b074;
-                border: none;
-                border-radius: 50px;
-                cursor: pointer;
-                transition: all 0.3s ease 0s;
-            }
-
-            button:hover {
-                background-color: darken(#00b074, 10%);
-            }
-
             .back {
-                padding: 9px 25px;
                 background-color: #d9534f;
-                border: none;
-                border-radius: 50px;
-                cursor: pointer;
-                transition: all 0.3s ease 0s;
+                text-decoration: none;
+                &:hover {
+                    color: white;
+                    background-color: darken(#d9534f, 10%);
+                }
             }
 
             .loginButtons {
                 button {
                     margin-right: 10px;
+                    background-color: #00b074;
+                }
+                button:hover {
+                    background-color: darken(#00b074, 10%);
                 }
             }
         }
