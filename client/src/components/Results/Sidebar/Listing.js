@@ -23,7 +23,6 @@ class Listing extends React.Component {
                         : "sidebarListing"
                 }
                 onClick={() =>
-                    // this.props.setSelectedListing(this.props.listingNumber)
                     this.props.setSelectedListing({
                         ...this.props.listing,
                         listingNumber: this.props.listingNumber

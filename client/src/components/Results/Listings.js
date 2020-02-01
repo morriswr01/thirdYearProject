@@ -10,9 +10,20 @@ import ListingsSidebar from "./Sidebar/ListingsSidebar";
 import FullScreenListing from "./Fullscreen/FullScreenListing";
 import Amenities from "./Fullscreen/Amenities";
 
+import { getAreaData } from "../../actions/areaActions";
+
 import "../../assets/stylesheets/index.scss";
 
 class Listings extends Component {
+    componentDidMount() {
+        if (this.props.searchLocation.postcode) {
+                this.props.getAreaData({
+                    location: this.props.searchLocation.postcode,
+                    numBedrooms: 2
+                });
+        }
+    }
+
     render() {
         let location = {
             latlng: {
@@ -58,7 +69,8 @@ const mapStateToProps = state => ({
     listings: state.listings.listings,
     searchLocation: state.search.location,
     selectedListing: state.listings.selectedListing,
-    fullscreen: state.listings.fullscreen
+    fullscreen: state.listings.fullscreen,
+    area: state.area
 });
 
-export default connect(mapStateToProps)(Listings);
+export default connect(mapStateToProps, { getAreaData })(Listings);

@@ -9,7 +9,10 @@ import {
 const initialState = {
     location: {
         postcode: "",
-        latlng: { lat: 52.4081, lng: -1.5105 }
+        latlng: {
+            lat: 53.8539,
+            lng: -1.62415
+        }
     },
     houseTypes: [],
     searchRadius: 20,

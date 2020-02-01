@@ -11,14 +11,14 @@ export default function HouseInfo(props) {
         price,
         summary,
         img_url,
-        updated_in_days,
-        datasource_name
+        // updated_in_days,
+        // datasource_name
     } = props.selectedListing;
 
     return (
         <div className='houseInfo'>
             <div className='imgContainer'>
-                <img src={img_url} alt='House Image' />
+                <img src={img_url} alt='House' />
             </div>
             <div className='infoContainer'>
                 <div className='price'>
@@ -29,7 +29,7 @@ export default function HouseInfo(props) {
                     />
                     <PriceElement
                         price={Math.round(price * 1.1)}
-                        subheading='Area Average'
+                        subheading='Average Sale Value'
                     />
                     <PriceElement
                         price={Math.round(price * 1.25)}
@@ -39,10 +39,10 @@ export default function HouseInfo(props) {
                     <hr />
                 </div>
                 <div className='info'>
-                    <TitleBar titleInfo={{title, bedroom_number, summary}} />
+                    <TitleBar titleInfo={{ title, bedroom_number, summary }} />
                 </div>
             </div>
-            <Nav />
+            <Nav setSelectedListing={props.setSelectedListing} />
         </div>
     );
 }

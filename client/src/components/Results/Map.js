@@ -28,10 +28,11 @@ const MapComponent = props => {
                 <Marker
                     key={id}
                     listingNumber={id}
+                    listing={listing}
                     position={{ lat: listing.latitude, lng: listing.longitude }}
                     onClick={e => {
                         console.log("Selected listing " + id);
-                        props.onMarkerClick(id);
+                        props.onMarkerClick(id, listing);
                     }}
                     icon={{
                         url: `https://image.flaticon.com/icons/svg/569/569212.svg`,
@@ -46,9 +47,12 @@ const MapComponent = props => {
 const MapWrapped = withScriptjs(withGoogleMap(MapComponent));
 
 class Map extends Component {
-    handleSelectedListingChange = id => {
+    handleSelectedListingChange = (id, listing) => {
         console.log("Marker " + id + " selected");
-        this.props.setSelectedListing(id);
+        this.props.setSelectedListing({
+            ...listing,
+            listingNumber: id
+        });
     };
 
     render() {
@@ -68,6 +72,10 @@ class Map extends Component {
     }
 }
 
-export default connect(null, {
+const mapStateToProps = state => ({
+    selectedListing: state.listings.selectedListing
+});
+
+export default connect(mapStateToProps, {
     setSelectedListing
 })(Map);

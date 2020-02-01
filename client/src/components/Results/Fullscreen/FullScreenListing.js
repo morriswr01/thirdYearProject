@@ -12,11 +12,11 @@ function FullScreenListing(props) {
     // On component mount, getAreaAnalytics(location)
 
     return (
-        <div
-            className='fullscreenListing'
-            onClick={() => props.setSelectedListing({})}
-        >
-            <HouseInfo selectedListing={props.selectedListing} />
+        <div className='fullscreenListing'>
+            <HouseInfo
+                selectedListing={props.selectedListing}
+                setSelectedListing={props.setSelectedListing}
+            />
             <AreaInfo />
         </div>
     );
