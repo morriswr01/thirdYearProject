@@ -1,6 +1,7 @@
 const express = require("express");
 const request = require("request");
 const config = require("config");
+fs = require("fs");
 
 // Create router
 const router = express.Router();
@@ -15,6 +16,8 @@ router.post("/data", (req, res) => {
     const { location, numBedrooms } = req.body;
 
     console.log(req.body);
+
+    fs.appendFile("propertyAPILog.json", JSON.stringify(req.body));
 
     return res.json({ location: location.replace(/\s/g, ""), numBedrooms });
 
