@@ -11,6 +11,7 @@ export default function HouseInfo(props) {
         price,
         summary,
         img_url,
+        lister_url
         // updated_in_days,
         // datasource_name
     } = props.selectedListing;
@@ -40,6 +41,7 @@ export default function HouseInfo(props) {
                 </div>
                 <div className='info'>
                     <TitleBar titleInfo={{ title, bedroom_number, summary }} />
+                    <a href={lister_url}>{lister_url}</a>
                 </div>
             </div>
             <Nav setSelectedListing={props.setSelectedListing} />

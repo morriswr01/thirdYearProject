@@ -5,8 +5,8 @@ import { listings } from "./listing";
 const initialState = {
     selectedListing: {},
     fullscreen: false,
-    listings: [],
-    // listings: listings
+    // listings: [],
+    listings: listings
 };
 
 export default (state = initialState, action) => {

@@ -1,1 +1,935 @@
-{"location":"LS16 7DJ","numBedrooms":2}{"location":"LS16 7PT","numBedrooms":2}
+{
+    "area": [
+        {
+            "location": "CV5 6gg",
+            "numBedrooms": "2",
+            "soldPrices": {
+                "status": "success",
+                "postcode": "CV5 6GG",
+                "postcode_type": "full",
+                "url": "https://propertydata.co.uk/draw?input=CV5+6GG",
+                "max_age": 18,
+                "data": {
+                    "points_analysed": 20,
+                    "radius": "0.09",
+                    "date_earliest": "2018-08-13",
+                    "date_latest": "2019-11-22",
+                    "average": 193453,
+                    "70pc_range": [178000, 213500],
+                    "80pc_range": [176000, 220000],
+                    "90pc_range": [172000, 220000],
+                    "100pc_range": [144000, 225000],
+                    "raw_data": [
+                        {
+                            "date": "2018-09-28",
+                            "address": "31, Kensington Road, CV5 6GG",
+                            "price": 144000,
+                            "lat": "52.40269100",
+                            "lng": "-1.52897500",
+                            "distance": "0.00"
+                        },
+                        {
+                            "date": "2019-09-13",
+                            "address": "34, Kensington Road, CV5 6GH",
+                            "price": 220000,
+                            "lat": "52.40299600",
+                            "lng": "-1.52897200",
+                            "distance": "0.02"
+                        },
+                        {
+                            "date": "2018-09-07",
+                            "address": "88, Kensington Road, CV5 6GH",
+                            "price": 211000,
+                            "lat": "52.40299600",
+                            "lng": "-1.52897200",
+                            "distance": "0.02"
+                        },
+                        {
+                            "date": "2019-07-02",
+                            "address": "60, Westwood Road, CV5 6GE",
+                            "price": 205000,
+                            "lat": "52.40224900",
+                            "lng": "-1.52864200",
+                            "distance": "0.03"
+                        },
+                        {
+                            "date": "2019-01-25",
+                            "address": "50, Westwood Road, CV5 6GE",
+                            "price": 202000,
+                            "lat": "52.40224900",
+                            "lng": "-1.52864200",
+                            "distance": "0.03"
+                        },
+                        {
+                            "date": "2019-08-20",
+                            "address": "14, Westwood Road, CV5 6GE",
+                            "price": 172000,
+                            "lat": "52.40224900",
+                            "lng": "-1.52864200",
+                            "distance": "0.03"
+                        },
+                        {
+                            "date": "2018-11-19",
+                            "address": "20, Broomfield Road, Earlsdon, CV5 6JX",
+                            "price": 192500,
+                            "lat": "52.40343300",
+                            "lng": "-1.52802700",
+                            "distance": "0.06"
+                        },
+                        {
+                            "date": "2019-01-15",
+                            "address": "18, Broomfield Road, Earlsdon, CV5 6JX",
+                            "price": 213500,
+                            "lat": "52.40343300",
+                            "lng": "-1.52802700",
+                            "distance": "0.06"
+                        },
+                        {
+                            "date": "2019-08-12",
+                            "address": "36, Broomfield Road, Earlsdon, CV5 6JX",
+                            "price": 195000,
+                            "lat": "52.40343300",
+                            "lng": "-1.52802700",
+                            "distance": "0.06"
+                        },
+                        {
+                            "date": "2019-11-22",
+                            "address": "68, Westwood Road, CV5 6GB",
+                            "price": 185000,
+                            "lat": "52.40216600",
+                            "lng": "-1.53045100",
+                            "distance": "0.07"
+                        },
+                        {
+                            "date": "2019-09-13",
+                            "address": "94, Westwood Road, CV5 6GB",
+                            "price": 205000,
+                            "lat": "52.40216600",
+                            "lng": "-1.53045100",
+                            "distance": "0.07"
+                        },
+                        {
+                            "date": "2018-11-30",
+                            "address": "78, Westwood Road, CV5 6GB",
+                            "price": 220000,
+                            "lat": "52.40216600",
+                            "lng": "-1.53045100",
+                            "distance": "0.07"
+                        },
+                        {
+                            "date": "2018-08-24",
+                            "address": "112, Westwood Road, CV5 6GB",
+                            "price": 225000,
+                            "lat": "52.40216600",
+                            "lng": "-1.53045100",
+                            "distance": "0.07"
+                        },
+                        {
+                            "date": "2019-06-28",
+                            "address": "81, Westwood Road, CV5 6GD",
+                            "price": 195000,
+                            "lat": "52.40190500",
+                            "lng": "-1.53030600",
+                            "distance": "0.08"
+                        },
+                        {
+                            "date": "2019-09-06",
+                            "address": "49, Broomfield Road, Earlsdon, CV5 6JY",
+                            "price": 184500,
+                            "lat": "52.40369400",
+                            "lng": "-1.52798000",
+                            "distance": "0.08"
+                        },
+                        {
+                            "date": "2018-08-13",
+                            "address": "93, Westwood Road, CV5 6GD",
+                            "price": 182532,
+                            "lat": "52.40190500",
+                            "lng": "-1.53030600",
+                            "distance": "0.08"
+                        },
+                        {
+                            "date": "2019-02-28",
+                            "address": "71, Broomfield Road, Earlsdon, CV5 6JY",
+                            "price": 176000,
+                            "lat": "52.40369400",
+                            "lng": "-1.52798000",
+                            "distance": "0.08"
+                        },
+                        {
+                            "date": "2019-03-08",
+                            "address": "34, Newcombe Road, Earlsdon, CV5 6NN",
+                            "price": 188000,
+                            "lat": "52.40143900",
+                            "lng": "-1.52837100",
+                            "distance": "0.09"
+                        },
+                        {
+                            "date": "2019-09-12",
+                            "address": "14, Newcombe Road, Earlsdon, CV5 6NN",
+                            "price": 180000,
+                            "lat": "52.40143900",
+                            "lng": "-1.52837100",
+                            "distance": "0.09"
+                        },
+                        {
+                            "date": "2018-10-25",
+                            "address": "105, Broomfield Road, Earlsdon, CV5 6LA",
+                            "price": 178000,
+                            "lat": "52.40352500",
+                            "lng": "-1.53068600",
+                            "distance": "0.09"
+                        }
+                    ]
+                },
+                "process_time": "8.68"
+            },
+            "growth": {
+                "status": "success",
+                "postcode": "CV5 6GG",
+                "postcode_type": "full",
+                "url": "https://propertydata.co.uk/draw?input=CV5+6GG",
+                "data": [
+                    ["Feb 2015", 196147, null],
+                    ["Feb 2016", 207786, "5.9%"],
+                    ["Feb 2017", 223982, "7.8%"],
+                    ["Feb 2018", 238442, "6.5%"],
+                    ["Feb 2019", 242217, "1.6%"],
+                    ["Feb 2020", 242075, "-0.1%"]
+                ],
+                "process_time": "0.45"
+            },
+            "rent": {
+                "status": "success",
+                "postcode": "CV5 6GG",
+                "postcode_type": "full",
+                "url": "https://propertydata.co.uk/draw?input=CV5+6GG",
+                "bedrooms": 2,
+                "data": {
+                    "long_let": {
+                        "points_analysed": 20,
+                        "radius": "0.27",
+                        "unit": "gbp_per_week",
+                        "average": 171,
+                        "70pc_range": [160, 190],
+                        "80pc_range": [159, 190],
+                        "90pc_range": [156, 208],
+                        "100pc_range": [138, 219],
+                        "raw_data": [
+                            {
+                                "price": 173,
+                                "lat": "52.40222400",
+                                "lng": "-1.52858400",
+                                "distance": "0.04",
+                                "type": "Terrace house"
+                            },
+                            {
+                                "price": 162,
+                                "lat": "52.40417100",
+                                "lng": "-1.53040000",
+                                "distance": "0.12",
+                                "type": "Terraced house"
+                            },
+                            {
+                                "price": 167,
+                                "lat": "52.40417100",
+                                "lng": "-1.53040000",
+                                "distance": "0.12",
+                                "type": "Detached house"
+                            },
+                            {
+                                "price": 173,
+                                "lat": "52.40068000",
+                                "lng": "-1.52782600",
+                                "distance": "0.15",
+                                "type": "Flat"
+                            },
+                            {
+                                "price": 208,
+                                "lat": "52.40481600",
+                                "lng": "-1.53031000",
+                                "distance": "0.16",
+                                "type": "Terraced house"
+                            },
+                            {
+                                "price": 162,
+                                "lat": "52.40040900",
+                                "lng": "-1.52872600",
+                                "distance": "0.16",
+                                "type": "Flat"
+                            },
+                            {
+                                "price": 178,
+                                "lat": "52.40036400",
+                                "lng": "-1.52969600",
+                                "distance": "0.16",
+                                "type": "Flat"
+                            },
+                            {
+                                "price": 183,
+                                "lat": "52.40023400",
+                                "lng": "-1.52911000",
+                                "distance": "0.17",
+                                "type": "Flat"
+                            },
+                            {
+                                "price": 156,
+                                "lat": "52.40508700",
+                                "lng": "-1.52938100",
+                                "distance": "0.17",
+                                "type": "Detached house"
+                            },
+                            {
+                                "price": 173,
+                                "lat": "52.40012700",
+                                "lng": "-1.52941800",
+                                "distance": "0.18",
+                                "type": "Flat"
+                            },
+                            {
+                                "price": 179,
+                                "lat": "52.40506400",
+                                "lng": "-1.53111100",
+                                "distance": "0.19",
+                                "type": "Detached house"
+                            },
+                            {
+                                "price": 162,
+                                "lat": "52.40506400",
+                                "lng": "-1.53111100",
+                                "distance": "0.19",
+                                "type": "Terraced house"
+                            },
+                            {
+                                "price": 173,
+                                "lat": "52.40444600",
+                                "lng": "-1.53249000",
+                                "distance": "0.19",
+                                "type": "Detached house"
+                            },
+                            {
+                                "price": 159,
+                                "lat": "52.40415600",
+                                "lng": "-1.52477600",
+                                "distance": "0.20",
+                                "type": "Detached house"
+                            },
+                            {
+                                "price": 138,
+                                "lat": "52.40399400",
+                                "lng": "-1.53335600",
+                                "distance": "0.21",
+                                "type": "Detached house"
+                            },
+                            {
+                                "price": 160,
+                                "lat": "52.40563600",
+                                "lng": "-1.53102200",
+                                "distance": "0.22",
+                                "type": "Detached house"
+                            },
+                            {
+                                "price": 173,
+                                "lat": "52.40588000",
+                                "lng": "-1.53077000",
+                                "distance": "0.23",
+                                "type": "Detached house"
+                            },
+                            {
+                                "price": 190,
+                                "lat": "52.40265000",
+                                "lng": "-1.53504400",
+                                "distance": "0.26",
+                                "type": "Flat"
+                            },
+                            {
+                                "price": 190,
+                                "lat": "52.40263400",
+                                "lng": "-1.53504600",
+                                "distance": "0.26",
+                                "type": "Flat"
+                            },
+                            {
+                                "price": 219,
+                                "lat": "52.40342600",
+                                "lng": "-1.52276000",
+                                "distance": "0.27",
+                                "type": "Flat"
+                            }
+                        ]
+                    }
+                },
+                "process_time": "1.45"
+            },
+            "demand": {
+                "status": "success",
+                "radius": "0.22",
+                "total_for_sale": 100,
+                "average_sales_per_month": "7.0",
+                "turnover_per_month": "7%",
+                "months_of_inventory": "14.3",
+                "days_on_market": 435,
+                "demand_rating": "Buyer's market",
+                "process_time": "6.53"
+            },
+            "crime": {
+                "status": "success",
+                "radius": "0.26",
+                "population": 2868,
+                "crimes_last_12m": 141,
+                "crimes_per_thousand": 49,
+                "crime_rating": "Very low crime",
+                "types": {
+                    "Burglary": 31,
+                    "Violence and sexual offences": 30,
+                    "Vehicle crime": 16,
+                    "Other theft": 14,
+                    "Anti-social behaviour": 14,
+                    "Criminal damage and arson": 14,
+                    "Public order": 10,
+                    "Robbery": 4,
+                    "Bicycle theft": 3,
+                    "Shoplifting": 1,
+                    "Other crime": 1,
+                    "Possession of weapons": 1,
+                    "Theft from the person": 1,
+                    "Drugs": 1
+                },
+                "observations": [
+                    "Incidence of Shoplifting is below national average",
+                    "Incidence of Drugs is below national average",
+                    "Incidence of Anti-social behaviour is below national average"
+                ],
+                "process_time": "1.90"
+            },
+            "demographics": {
+                "status": "success",
+                "postcode": "CV5 6GG",
+                "postcode_type": "full",
+                "radius": 0,
+                "url": "https://propertydata.co.uk/draw?input=CV5+6GG",
+                "data": {
+                    "deprivation": 21,
+                    "health": 61,
+                    "social_grade": {
+                        "ab": "35.6",
+                        "c1": "38.7",
+                        "c2": "12.4",
+                        "de": "13.2"
+                    },
+                    "age": {
+                        "0-4": "4.07",
+                        "5-9": "4.01",
+                        "10-14": "3.78",
+                        "15-19": "5.98",
+                        "20-24": "14.80",
+                        "25-29": "9.85",
+                        "30-34": "6.89",
+                        "35-39": "5.76",
+                        "40-44": "6.37",
+                        "45-49": "6.55",
+                        "50-54": "6.31",
+                        "55-59": "5.87",
+                        "60-64": "5.75",
+                        "65-69": "4.68",
+                        "70-74": "2.92",
+                        "75-79": "2.48",
+                        "80-84": "2.16",
+                        "85-89": "1.78"
+                    },
+                    "politics": {
+                        "results": {
+                            "Labour": "54%",
+                            "Conservative": "37%",
+                            "UKIP": "3%",
+                            "Liberal Democrats": "3%",
+                            "Independent": "2%",
+                            "Green Party": "1%"
+                        },
+                        "constituences": ["Coventry North West"]
+                    },
+                    "proportion_with_degree": 34,
+                    "vehicles_per_household": "1.1",
+                    "commute_method": {
+                        "at_home": "5.3",
+                        "underground_light_rail": "0.1",
+                        "train": "4.7",
+                        "bus": "7.6",
+                        "taxi": "0.3",
+                        "motorcycle": "0.3",
+                        "car_driver": "55.0",
+                        "car_passenger": "5.2",
+                        "bicycle": "5.9",
+                        "foot": "15.0",
+                        "other": "0.5"
+                    }
+                },
+                "process_time": "0.48"
+            },
+            "schools": {
+                "status": "success",
+                "postcode": "CV5 6GG",
+                "postcode_type": "full",
+                "url": "https://propertydata.co.uk/draw?input=CV5+6GG",
+                "data": {
+                    "state": {
+                        "average_score": "1.85",
+                        "rating": "Good schools",
+                        "nearest": [
+                            {
+                                "name": "Earlsdon Primary School",
+                                "local_authority": "Coventry",
+                                "postcode": "CV5 6FZ",
+                                "type": "Community School",
+                                "phase": "Primary",
+                                "sixth_form": "Does not have a sixth form",
+                                "rating": "Good",
+                                "num_pupils": 405,
+                                "deprivation": 2,
+                                "inspection_start": "2011-11-14",
+                                "inspection_end": "2011-11-15",
+                                "inspection_pub": "2011-12-06",
+                                "url": "http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/103641",
+                                "distance": "0.15"
+                            },
+                            {
+                                "name": "Hearsall Community Academy",
+                                "local_authority": "Coventry",
+                                "postcode": "CV5 6LR",
+                                "type": "Academy Sponsor Led",
+                                "phase": "Primary",
+                                "sixth_form": "Does not have a sixth form",
+                                "rating": "Good",
+                                "num_pupils": 374,
+                                "deprivation": 3,
+                                "inspection_start": "2014-07-08",
+                                "inspection_end": "2014-07-09",
+                                "inspection_pub": "2014-09-09",
+                                "url": "http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/143535",
+                                "distance": "0.15"
+                            },
+                            {
+                                "name": "All Souls Catholic Primary School",
+                                "local_authority": "Coventry",
+                                "postcode": "CV5 8ED",
+                                "type": "Voluntary Aided School",
+                                "phase": "Primary",
+                                "sixth_form": "Does not have a sixth form",
+                                "rating": "Good",
+                                "num_pupils": 235,
+                                "deprivation": 3,
+                                "inspection_start": "2013-11-14",
+                                "inspection_end": "2013-11-15",
+                                "inspection_pub": "2013-12-03",
+                                "url": "http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/103724",
+                                "distance": "0.45"
+                            },
+                            {
+                                "name": "Spon Gate Primary School",
+                                "local_authority": "Coventry",
+                                "postcode": "CV1 3BQ",
+                                "type": "Community School",
+                                "phase": "Primary",
+                                "sixth_form": "Does not have a sixth form",
+                                "rating": "Good",
+                                "num_pupils": 368,
+                                "deprivation": 5,
+                                "inspection_start": "2012-11-21",
+                                "inspection_end": "2012-11-22",
+                                "inspection_pub": "2012-12-06",
+                                "url": "http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/131241",
+                                "distance": "0.48"
+                            },
+                            {
+                                "name": "St Osburg's Catholic Primary School",
+                                "local_authority": "Coventry",
+                                "postcode": "CV1 4AP",
+                                "type": "Voluntary Aided School",
+                                "phase": "Primary",
+                                "sixth_form": "Does not have a sixth form",
+                                "rating": "Good",
+                                "num_pupils": 219,
+                                "deprivation": 5,
+                                "inspection_start": "2011-02-15",
+                                "inspection_end": "2011-02-16",
+                                "inspection_pub": "2011-03-11",
+                                "url": "http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/103711",
+                                "distance": "0.72"
+                            }
+                        ]
+                    },
+                    "independent": {
+                        "nearest": [
+                            {
+                                "url": "http://www.bablakejuniorschool.co.uk/",
+                                "name": "Bablake Junior School",
+                                "lat": "52.41393000",
+                                "lng": "-1.52122500",
+                                "postcode": "CV1 4AU",
+                                "type": "Day",
+                                "ages": "3 - 11",
+                                "gender": "Co-ed",
+                                "telephone": "0247 6271260",
+                                "website": "http://www.bablakejuniorschool.co.uk/"
+                            },
+                            {
+                                "url": "http://www.bablake.com",
+                                "name": "Bablake School",
+                                "lat": "52.41393000",
+                                "lng": "-1.52122500",
+                                "postcode": "CV1 4AU",
+                                "type": "Day",
+                                "ages": "11 - 18",
+                                "gender": "Co-ed",
+                                "telephone": "024 76271200",
+                                "website": "http://www.bablake.com"
+                            },
+                            {
+                                "url": "http://www.crackleyhall.co.uk",
+                                "name": "Crackley Hall School",
+                                "lat": "52.35504000",
+                                "lng": "-1.57181200",
+                                "postcode": "CV8 2FT",
+                                "type": "Day",
+                                "ages": "2 - 11",
+                                "gender": "Co-ed",
+                                "telephone": "01926 514444",
+                                "website": "http://www.crackleyhall.co.uk"
+                            },
+                            {
+                                "url": "http://www.arnoldlodge.com/",
+                                "name": "Arnold Lodge School",
+                                "lat": "52.29724000",
+                                "lng": "-1.53606200",
+                                "postcode": "CV32 5TW",
+                                "type": "Day",
+                                "ages": "2 - 18",
+                                "gender": "Co-ed",
+                                "telephone": "01926 778050",
+                                "website": "http://www.arnoldlodge.com/"
+                            },
+                            {
+                                "url": "http://www.eversfield.co.uk",
+                                "name": "Eversfield Preparatory School",
+                                "lat": "52.41682000",
+                                "lng": "-1.78054000",
+                                "postcode": "B91 1AT",
+                                "type": "Day",
+                                "ages": "3 - 11",
+                                "gender": "Co-ed",
+                                "telephone": "0121 7050354",
+                                "website": "http://www.eversfield.co.uk"
+                            }
+                        ]
+                    }
+                },
+                "process_time": "2.42"
+            },
+            "areaType": {
+                "status": "success",
+                "postcode": "CV5 6GG",
+                "postcode_type": "full",
+                "area_type": "Urban city and town",
+                "process_time": "0.43"
+            },
+            "floorArea": {
+                "status": "success",
+                "postcode": "CV5 6GG",
+                "postcode_type": "full",
+                "known_floor_areas": [
+                    {
+                        "inspection_date": {
+                            "date": "2019-03-18 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "69, Kensington Road",
+                        "square_feet": 721
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2019-03-15 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "33, Kensington Road",
+                        "square_feet": 1055
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2018-11-26 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "59, Kensington Road",
+                        "square_feet": 775
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2018-07-24 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "55, Kensington Road",
+                        "square_feet": 1475
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2018-07-12 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "31, Kensington Road",
+                        "square_feet": 893
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2018-07-04 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "39, Kensington Road",
+                        "square_feet": 947
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2018-05-17 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "3, Kensington Road",
+                        "square_feet": 818
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2017-03-17 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "41, Kensington Road",
+                        "square_feet": 1033
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2017-03-14 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "5, Kensington Road",
+                        "square_feet": 850
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2016-09-19 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "41, Kensington Road",
+                        "square_feet": 980
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2016-06-07 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "3, Kensington Road",
+                        "square_feet": 829
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2016-06-07 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "3, Kensington Road",
+                        "square_feet": 829
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2016-03-15 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "First Floor Flat, 13b Kensington Road",
+                        "square_feet": 452
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2016-03-14 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "3, Kensington Road",
+                        "square_feet": 829
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2015-12-03 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "Ground Floor Flat, 13b Kensington Road",
+                        "square_feet": 441
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2015-08-11 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "21, Kensington Road",
+                        "square_feet": 721
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2014-12-08 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "3, Kensington Road",
+                        "square_feet": 829
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2014-09-24 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "51, Kensington Road",
+                        "square_feet": 1044
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2013-10-07 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "9, Kensington Road",
+                        "square_feet": 861
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2013-09-17 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "13a, Kensington Road",
+                        "square_feet": 829
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2012-09-28 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "47, Kensington Road",
+                        "square_feet": 990
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2012-06-07 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "79, Kensington Road",
+                        "square_feet": 915
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2012-04-18 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "71, Kensington Road",
+                        "square_feet": 689
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2011-09-09 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "79, Kensington Road",
+                        "square_feet": 880
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2011-08-12 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "63, Kensington Road",
+                        "square_feet": 887
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2011-07-11 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "33, Kensington Road",
+                        "square_feet": 1156
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2011-04-18 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "57, Kensington Road",
+                        "square_feet": 701
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2011-03-30 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "33, Kensington Road",
+                        "square_feet": 930
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2011-02-01 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "17, Kensington Road",
+                        "square_feet": 1076
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2010-10-11 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "19, Kensington Road",
+                        "square_feet": 1101
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2010-08-19 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "35, Kensington Road",
+                        "square_feet": 1213
+                    },
+                    {
+                        "inspection_date": {
+                            "date": "2010-06-30 00:00:00.000000",
+                            "timezone_type": 3,
+                            "timezone": "Europe/London"
+                        },
+                        "address": "13, Kensington Road",
+                        "square_feet": 1079
+                    }
+                ],
+                "process_time": "0.48"
+            }
+        }
+    ]
+}
+{"location":"ls167pt","numBedrooms":"2","soldPrices":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","url":"https://propertydata.co.uk/draw?input=LS16+7PT","max_age":18,"data":{"points_analysed":20,"radius":"0.09","date_earliest":"2018-08-30","date_latest":"2019-11-01","average":230825,"70pc_range":[205000,265000],"80pc_range":[205000,268500],"90pc_range":[195000,282500],"100pc_range":[192000,345000],"raw_data":[{"date":"2018-09-05","address":"21, Dale Park Gardens, LS16 7PT","price":229950,"lat":"53.85377000","lng":"-1.62397200","distance":"0.00"},{"date":"2019-01-24","address":"20, Dale Park Gardens, LS16 7PT","price":282500,"lat":"53.85377000","lng":"-1.62397200","distance":"0.00"},{"date":"2019-04-17","address":"19, Dale Park Avenue, LS16 7PU","price":192000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2019-07-12","address":"57, Dale Park Avenue, LS16 7PU","price":250000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2019-03-27","address":"11, Dale Park Avenue, LS16 7PU","price":247000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2019-07-31","address":"1, Dale Park Avenue, LS16 7PU","price":240000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2018-12-13","address":"40, Dale Park Avenue, LS16 7PU","price":195000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2018-11-16","address":"5, Dale Park View, LS16 7PX","price":234300,"lat":"53.85331800","lng":"-1.62314000","distance":"0.05"},{"date":"2019-02-05","address":"65, Dale Park Avenue, LS16 7PU","price":222000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2019-01-28","address":"61, Dale Park Avenue, LS16 7PU","price":220000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2019-07-10","address":"9, Dale Park Rise, LS16 7PP","price":235000,"lat":"53.85342400","lng":"-1.62560200","distance":"0.07"},{"date":"2019-11-01","address":"24, Moseley Wood Approach, LS16 7JS","price":205000,"lat":"53.85475700","lng":"-1.62353800","distance":"0.07"},{"date":"2018-12-06","address":"14, Dale Park Rise, LS16 7PP","price":345000,"lat":"53.85342400","lng":"-1.62560200","distance":"0.07"},{"date":"2018-08-30","address":"8, Dale Park Close, LS16 7PR","price":225000,"lat":"53.85457400","lng":"-1.62544000","distance":"0.08"},{"date":"2018-11-02","address":"128a, Tinshill Road, LS16 7PZ","price":240000,"lat":"53.85369200","lng":"-1.62210300","distance":"0.08"},{"date":"2019-02-14","address":"126, Tinshill Road, LS16 7PZ","price":205000,"lat":"53.85369200","lng":"-1.62210300","distance":"0.08"},{"date":"2018-12-19","address":"24, Dale Park Close, LS16 7PR","price":205000,"lat":"53.85457400","lng":"-1.62544000","distance":"0.08"},{"date":"2019-07-05","address":"142, Tinshill Road, LS16 7PN","price":265000,"lat":"53.85260100","lng":"-1.62383100","distance":"0.08"},{"date":"2018-10-22","address":"140, Tinshill Road, LS16 7PZ","price":268500,"lat":"53.85369200","lng":"-1.62210300","distance":"0.08"},{"date":"2019-02-26","address":"23, Kirkwood Grove, LS16 7JR","price":215000,"lat":"53.85509000","lng":"-1.62370200","distance":"0.09"}]},"process_time":"9.73"},"growth":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","url":"https://propertydata.co.uk/draw?input=LS16+7PT","data":[["Feb 2015",269578,null],["Feb 2016",290305,"7.7%"],["Feb 2017",309359,"6.6%"],["Feb 2018",319551,"3.3%"],["Feb 2019",330988,"3.6%"],["Feb 2020",332303,"0.4%"]],"process_time":"1.10"},"rent":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","url":"https://propertydata.co.uk/draw?input=LS16+7PT","bedrooms":2,"data":{"long_let":{"points_analysed":20,"radius":"1.29","unit":"gbp_per_week","average":162,"70pc_range":[142,183],"80pc_range":[138,190],"90pc_range":[138,190],"100pc_range":[127,194],"raw_data":[{"price":183,"lat":"53.85218300","lng":"-1.61965400","distance":"0.21","type":"Semi-detached house"},{"price":194,"lat":"53.84947600","lng":"-1.62854500","distance":"0.35","type":"Flat"},{"price":190,"lat":"53.85220400","lng":"-1.61507800","distance":"0.38","type":"Detached house"},{"price":174,"lat":"53.84906400","lng":"-1.62895900","distance":"0.38","type":"Flat"},{"price":156,"lat":"53.84852000","lng":"-1.62907900","distance":"0.42","type":"Flat"},{"price":190,"lat":"53.85294300","lng":"-1.61332800","distance":"0.44","type":"Detached house"},{"price":162,"lat":"53.84358100","lng":"-1.63113100","distance":"0.76","type":"Terraced house"},{"price":178,"lat":"53.84849900","lng":"-1.60369000","distance":"0.90","type":"Flat"},{"price":173,"lat":"53.84081600","lng":"-1.62441200","distance":"0.90","type":"Detached house"},{"price":127,"lat":"53.84033500","lng":"-1.62757300","distance":"0.94","type":"Flat"},{"price":150,"lat":"53.84022500","lng":"-1.63585600","distance":"1.05","type":"Flat"},{"price":179,"lat":"53.84578764","lng":"-1.60206126","distance":"1.05","type":"Semi-detached house"},{"price":150,"lat":"53.84024400","lng":"-1.63568700","distance":"1.05","type":"Flat"},{"price":138,"lat":"53.84990914","lng":"-1.59814591","distance":"1.09","type":"Flat"},{"price":150,"lat":"53.83750000","lng":"-1.62166000","distance":"1.13","type":"Terraced house"},{"price":142,"lat":"53.83913800","lng":"-1.63656900","distance":"1.13","type":"Terraced house"},{"price":153,"lat":"53.85012000","lng":"-1.59646600","distance":"1.15","type":"Flat"},{"price":138,"lat":"53.85035581","lng":"-1.59466057","distance":"1.22","type":"Flat"},{"price":162,"lat":"53.83609400","lng":"-1.62831300","distance":"1.23","type":"Semi-detached house"},{"price":160,"lat":"53.83549300","lng":"-1.61713100","distance":"1.29","type":"Flat"}]}},"process_time":"2.17"},"demand":{"status":"success","radius":"0.22","total_for_sale":19,"average_sales_per_month":"3.3","turnover_per_month":"18%","months_of_inventory":"5.6","days_on_market":169,"demand_rating":"Balanced market","process_time":"7.53"},"crime":{"status":"success","radius":"0.29","population":2596,"crimes_last_12m":68,"crimes_per_thousand":26,"crime_rating":"Very low crime","types":{"Violence and sexual offences":27,"Anti-social behaviour":8,"Vehicle crime":8,"Burglary":7,"Other crime":6,"Public order":3,"Other theft":2,"Shoplifting":2,"Drugs":2,"Robbery":2,"Criminal damage and arson":1},"observations":["Incidence of Criminal damage and arson is below national average","Incidence of Other theft is below national average","Incidence of Anti-social behaviour is below national average"],"process_time":"2.59"},"demographics":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","radius":0,"url":"https://propertydata.co.uk/draw?input=LS16+7PT","data":{"deprivation":8,"health":55,"social_grade":{"ab":"28.6","c1":"35.1","c2":"18.1","de":"18.3"},"age":{"0-4":"5.65","5-9":"5.06","10-14":"5.22","15-19":"5.97","20-24":"4.72","25-29":"4.88","30-34":"5.62","35-39":"6.55","40-44":"6.90","45-49":"7.62","50-54":"7.34","55-59":"6.66","60-64":"7.79","65-69":"5.40","70-74":"5.35","75-79":"4.29","80-84":"3.39","85-89":"1.57"},"politics":{"results":{"Labour":"44%","Liberal Democrats":"35%","Conservative":"20%","Green Party":"1%"},"constituences":["Leeds North West"]},"proportion_with_degree":36,"vehicles_per_household":"1.2","commute_method":{"at_home":"5.0","underground_light_rail":"0.2","train":"6.6","bus":"9.0","taxi":"0.7","motorcycle":"0.4","car_driver":"64.8","car_passenger":"5.2","bicycle":"1.4","foot":"6.5","other":"0.3"}},"process_time":"1.13"},"schools":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","url":"https://propertydata.co.uk/draw?input=LS16+7PT","data":{"state":{"average_score":"1.80","rating":"Good schools","nearest":[{"name":"Cookridge Primary School","local_authority":"Leeds","postcode":"LS16 7DH","type":"Foundation School","phase":"Primary","sixth_form":"Does not have a sixth form","rating":"Good","num_pupils":315,"deprivation":4,"inspection_start":"2013-10-17","inspection_end":"2013-10-18","inspection_pub":"2013-11-08","url":"http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/107894","distance":"0.39"},{"name":"Cookridge Holy Trinity Church of England Primary School","local_authority":"Leeds","postcode":"LS16 7EZ","type":"Voluntary Aided School","phase":"Primary","sixth_form":"Does not have a sixth form","rating":"Good","num_pupils":418,"deprivation":2,"inspection_start":"2015-03-18","inspection_end":"2015-03-19","inspection_pub":"2015-04-23","url":"http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/108042","distance":"0.39"},{"name":"Ralph Thoresby School","local_authority":"Leeds","postcode":"LS16 7RX","type":"Foundation School","phase":"Secondary","sixth_form":"Has a sixth form","rating":"Good","num_pupils":961,"deprivation":4,"inspection_start":"2015-03-10","inspection_end":"2015-03-11","inspection_pub":"2015-03-31","url":"http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/108075","distance":"0.68"},{"name":"Lighthouse School Leeds","local_authority":"Leeds","postcode":"LS16 6QB","type":"Free School Special","phase":"Special","sixth_form":"Has a sixth form","rating":"Good","num_pupils":59,"deprivation":3,"inspection_start":"2014-03-11","inspection_end":"2014-03-12","inspection_pub":"2014-04-09","url":"http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/138380","distance":"0.73"},{"name":"Ireland Wood Primary School","local_authority":"Leeds","postcode":"LS16 6BW","type":"Foundation School","phase":"Primary","sixth_form":"Does not have a sixth form","rating":"Good","num_pupils":410,"deprivation":4,"inspection_start":"2013-07-04","inspection_end":"2013-07-05","inspection_pub":"2013-07-26","url":"http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/107896","distance":"0.80"}]},"independent":{"nearest":[{"url":"http://www.fulneckschool.co.uk","name":"Fulneck School","lat":"53.78400000","lng":"-1.66311500","postcode":"LS28 8DS","type":"Boarding","ages":"3 - 18","gender":"Co-ed","telephone":"0113 2570235","website":"http://www.fulneckschool.co.uk"},{"url":"http://www.dhschool.co.uk","name":"Dale House School","lat":"53.72134000","lng":"-1.64624900","postcode":"WF17 8HL","type":"Day","ages":"2 - 11","gender":"Co-ed","telephone":"01924 422215","website":"http://www.dhschool.co.uk"},{"url":null,"name":"Gateways School","lat":"53.89917000","lng":"-1.51020200","postcode":"LS17 9LE","type":"Day","ages":"2 - 18","gender":"Co-ed","telephone":null,"website":null},{"url":"http://www.bradfordgrammar.com/","name":"Bradford Grammar School","lat":"53.81453000","lng":"-1.76980800","postcode":"BD9 4JP","type":"Day","ages":"11 - 19","gender":"Co-ed","telephone":"01274 542492","website":"http://www.bradfordgrammar.com/"},{"url":"http://www.bgsjuniorschool.co.uk/","name":"Bradford Grammar School Junior School","lat":"53.81453000","lng":"-1.76980800","postcode":"BD9 4JP","type":"Day","ages":"6 - 11","gender":"Co-ed","telephone":"01274 553742","website":"http://www.bgsjuniorschool.co.uk/"}]}},"process_time":"3.39"},"areaType":{"status":"error","code":"X14","message":"Key throttled: last call less than two seconds ago"},"floorArea":{"status":"error","code":"X14","message":"Key throttled: last call less than two seconds ago"}} 
+{"location":"LS16 7PT","numBedrooms":2,"soldPrices":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","url":"https://propertydata.co.uk/draw?input=LS16+7PT","max_age":18,"data":{"points_analysed":20,"radius":"0.09","date_earliest":"2018-08-30","date_latest":"2019-11-01","average":230825,"70pc_range":[205000,265000],"80pc_range":[205000,268500],"90pc_range":[195000,282500],"100pc_range":[192000,345000],"raw_data":[{"date":"2018-09-05","address":"21, Dale Park Gardens, LS16 7PT","price":229950,"lat":"53.85377000","lng":"-1.62397200","distance":"0.00"},{"date":"2019-01-24","address":"20, Dale Park Gardens, LS16 7PT","price":282500,"lat":"53.85377000","lng":"-1.62397200","distance":"0.00"},{"date":"2019-04-17","address":"19, Dale Park Avenue, LS16 7PU","price":192000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2019-07-12","address":"57, Dale Park Avenue, LS16 7PU","price":250000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2019-03-27","address":"11, Dale Park Avenue, LS16 7PU","price":247000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2019-07-31","address":"1, Dale Park Avenue, LS16 7PU","price":240000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2018-12-13","address":"40, Dale Park Avenue, LS16 7PU","price":195000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2018-11-16","address":"5, Dale Park View, LS16 7PX","price":234300,"lat":"53.85331800","lng":"-1.62314000","distance":"0.05"},{"date":"2019-02-05","address":"65, Dale Park Avenue, LS16 7PU","price":222000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2019-01-28","address":"61, Dale Park Avenue, LS16 7PU","price":220000,"lat":"53.85318400","lng":"-1.62347600","distance":"0.05"},{"date":"2019-07-10","address":"9, Dale Park Rise, LS16 7PP","price":235000,"lat":"53.85342400","lng":"-1.62560200","distance":"0.07"},{"date":"2019-11-01","address":"24, Moseley Wood Approach, LS16 7JS","price":205000,"lat":"53.85475700","lng":"-1.62353800","distance":"0.07"},{"date":"2018-12-06","address":"14, Dale Park Rise, LS16 7PP","price":345000,"lat":"53.85342400","lng":"-1.62560200","distance":"0.07"},{"date":"2018-08-30","address":"8, Dale Park Close, LS16 7PR","price":225000,"lat":"53.85457400","lng":"-1.62544000","distance":"0.08"},{"date":"2018-11-02","address":"128a, Tinshill Road, LS16 7PZ","price":240000,"lat":"53.85369200","lng":"-1.62210300","distance":"0.08"},{"date":"2019-02-14","address":"126, Tinshill Road, LS16 7PZ","price":205000,"lat":"53.85369200","lng":"-1.62210300","distance":"0.08"},{"date":"2018-12-19","address":"24, Dale Park Close, LS16 7PR","price":205000,"lat":"53.85457400","lng":"-1.62544000","distance":"0.08"},{"date":"2019-07-05","address":"142, Tinshill Road, LS16 7PN","price":265000,"lat":"53.85260100","lng":"-1.62383100","distance":"0.08"},{"date":"2018-10-22","address":"140, Tinshill Road, LS16 7PZ","price":268500,"lat":"53.85369200","lng":"-1.62210300","distance":"0.08"},{"date":"2019-02-26","address":"23, Kirkwood Grove, LS16 7JR","price":215000,"lat":"53.85509000","lng":"-1.62370200","distance":"0.09"}]},"process_time":"9.32"},"growth":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","url":"https://propertydata.co.uk/draw?input=LS16+7PT","data":[["Feb 2015",269578,null],["Feb 2016",290305,"7.7%"],["Feb 2017",309359,"6.6%"],["Feb 2018",319551,"3.3%"],["Feb 2019",330988,"3.6%"],["Feb 2020",332303,"0.4%"]],"process_time":"1.03"},"rent":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","url":"https://propertydata.co.uk/draw?input=LS16+7PT","bedrooms":2,"data":{"long_let":{"points_analysed":20,"radius":"1.29","unit":"gbp_per_week","average":162,"70pc_range":[142,183],"80pc_range":[138,190],"90pc_range":[138,190],"100pc_range":[127,194],"raw_data":[{"price":183,"lat":"53.85218300","lng":"-1.61965400","distance":"0.21","type":"Semi-detached house"},{"price":194,"lat":"53.84947600","lng":"-1.62854500","distance":"0.35","type":"Flat"},{"price":190,"lat":"53.85220400","lng":"-1.61507800","distance":"0.38","type":"Detached house"},{"price":174,"lat":"53.84906400","lng":"-1.62895900","distance":"0.38","type":"Flat"},{"price":156,"lat":"53.84852000","lng":"-1.62907900","distance":"0.42","type":"Flat"},{"price":190,"lat":"53.85294300","lng":"-1.61332800","distance":"0.44","type":"Detached house"},{"price":162,"lat":"53.84358100","lng":"-1.63113100","distance":"0.76","type":"Terraced house"},{"price":178,"lat":"53.84849900","lng":"-1.60369000","distance":"0.90","type":"Flat"},{"price":173,"lat":"53.84081600","lng":"-1.62441200","distance":"0.90","type":"Detached house"},{"price":127,"lat":"53.84033500","lng":"-1.62757300","distance":"0.94","type":"Flat"},{"price":150,"lat":"53.84022500","lng":"-1.63585600","distance":"1.05","type":"Flat"},{"price":179,"lat":"53.84578764","lng":"-1.60206126","distance":"1.05","type":"Semi-detached house"},{"price":150,"lat":"53.84024400","lng":"-1.63568700","distance":"1.05","type":"Flat"},{"price":138,"lat":"53.84990914","lng":"-1.59814591","distance":"1.09","type":"Flat"},{"price":150,"lat":"53.83750000","lng":"-1.62166000","distance":"1.13","type":"Terraced house"},{"price":142,"lat":"53.83913800","lng":"-1.63656900","distance":"1.13","type":"Terraced house"},{"price":153,"lat":"53.85012000","lng":"-1.59646600","distance":"1.15","type":"Flat"},{"price":138,"lat":"53.85035581","lng":"-1.59466057","distance":"1.22","type":"Flat"},{"price":162,"lat":"53.83609400","lng":"-1.62831300","distance":"1.23","type":"Semi-detached house"},{"price":160,"lat":"53.83549300","lng":"-1.61713100","distance":"1.29","type":"Flat"}]}},"process_time":"2.29"},"demand":{"status":"success","radius":"0.22","total_for_sale":19,"average_sales_per_month":"3.3","turnover_per_month":"18%","months_of_inventory":"5.6","days_on_market":169,"demand_rating":"Balanced market","process_time":"7.36"},"crime":{"status":"success","radius":"0.29","population":2596,"crimes_last_12m":68,"crimes_per_thousand":26,"crime_rating":"Very low crime","types":{"Violence and sexual offences":27,"Anti-social behaviour":8,"Vehicle crime":8,"Burglary":7,"Other crime":6,"Public order":3,"Other theft":2,"Shoplifting":2,"Drugs":2,"Robbery":2,"Criminal damage and arson":1},"observations":["Incidence of Criminal damage and arson is below national average","Incidence of Other theft is below national average","Incidence of Anti-social behaviour is below national average"],"process_time":"2.55"},"demographics":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","radius":0,"url":"https://propertydata.co.uk/draw?input=LS16+7PT","data":{"deprivation":8,"health":55,"social_grade":{"ab":"28.6","c1":"35.1","c2":"18.1","de":"18.3"},"age":{"0-4":"5.65","5-9":"5.06","10-14":"5.22","15-19":"5.97","20-24":"4.72","25-29":"4.88","30-34":"5.62","35-39":"6.55","40-44":"6.90","45-49":"7.62","50-54":"7.34","55-59":"6.66","60-64":"7.79","65-69":"5.40","70-74":"5.35","75-79":"4.29","80-84":"3.39","85-89":"1.57"},"politics":{"results":{"Labour":"44%","Liberal Democrats":"35%","Conservative":"20%","Green Party":"1%"},"constituences":["Leeds North West"]},"proportion_with_degree":36,"vehicles_per_household":"1.2","commute_method":{"at_home":"5.0","underground_light_rail":"0.2","train":"6.6","bus":"9.0","taxi":"0.7","motorcycle":"0.4","car_driver":"64.8","car_passenger":"5.2","bicycle":"1.4","foot":"6.5","other":"0.3"}},"process_time":"1.09"},"schools":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","url":"https://propertydata.co.uk/draw?input=LS16+7PT","data":{"state":{"average_score":"1.80","rating":"Good schools","nearest":[{"name":"Cookridge Primary School","local_authority":"Leeds","postcode":"LS16 7DH","type":"Foundation School","phase":"Primary","sixth_form":"Does not have a sixth form","rating":"Good","num_pupils":315,"deprivation":4,"inspection_start":"2013-10-17","inspection_end":"2013-10-18","inspection_pub":"2013-11-08","url":"http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/107894","distance":"0.39"},{"name":"Cookridge Holy Trinity Church of England Primary School","local_authority":"Leeds","postcode":"LS16 7EZ","type":"Voluntary Aided School","phase":"Primary","sixth_form":"Does not have a sixth form","rating":"Good","num_pupils":418,"deprivation":2,"inspection_start":"2015-03-18","inspection_end":"2015-03-19","inspection_pub":"2015-04-23","url":"http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/108042","distance":"0.39"},{"name":"Ralph Thoresby School","local_authority":"Leeds","postcode":"LS16 7RX","type":"Foundation School","phase":"Secondary","sixth_form":"Has a sixth form","rating":"Good","num_pupils":961,"deprivation":4,"inspection_start":"2015-03-10","inspection_end":"2015-03-11","inspection_pub":"2015-03-31","url":"http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/108075","distance":"0.68"},{"name":"Lighthouse School Leeds","local_authority":"Leeds","postcode":"LS16 6QB","type":"Free School Special","phase":"Special","sixth_form":"Has a sixth form","rating":"Good","num_pupils":59,"deprivation":3,"inspection_start":"2014-03-11","inspection_end":"2014-03-12","inspection_pub":"2014-04-09","url":"http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/138380","distance":"0.73"},{"name":"Ireland Wood Primary School","local_authority":"Leeds","postcode":"LS16 6BW","type":"Foundation School","phase":"Primary","sixth_form":"Does not have a sixth form","rating":"Good","num_pupils":410,"deprivation":4,"inspection_start":"2013-07-04","inspection_end":"2013-07-05","inspection_pub":"2013-07-26","url":"http://www.ofsted.gov.uk/inspection-reports/find-inspection-report/provider/ELS/107896","distance":"0.80"}]},"independent":{"nearest":[{"url":"http://www.fulneckschool.co.uk","name":"Fulneck School","lat":"53.78400000","lng":"-1.66311500","postcode":"LS28 8DS","type":"Boarding","ages":"3 - 18","gender":"Co-ed","telephone":"0113 2570235","website":"http://www.fulneckschool.co.uk"},{"url":"http://www.dhschool.co.uk","name":"Dale House School","lat":"53.72134000","lng":"-1.64624900","postcode":"WF17 8HL","type":"Day","ages":"2 - 11","gender":"Co-ed","telephone":"01924 422215","website":"http://www.dhschool.co.uk"},{"url":null,"name":"Gateways School","lat":"53.89917000","lng":"-1.51020200","postcode":"LS17 9LE","type":"Day","ages":"2 - 18","gender":"Co-ed","telephone":null,"website":null},{"url":"http://www.bradfordgrammar.com/","name":"Bradford Grammar School","lat":"53.81453000","lng":"-1.76980800","postcode":"BD9 4JP","type":"Day","ages":"11 - 19","gender":"Co-ed","telephone":"01274 542492","website":"http://www.bradfordgrammar.com/"},{"url":"http://www.bgsjuniorschool.co.uk/","name":"Bradford Grammar School Junior School","lat":"53.81453000","lng":"-1.76980800","postcode":"BD9 4JP","type":"Day","ages":"6 - 11","gender":"Co-ed","telephone":"01274 553742","website":"http://www.bgsjuniorschool.co.uk/"}]}},"process_time":"3.29"},"areaType":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","area_type":"Urban major conurbation","process_time":"1.00"},"floorArea":{"status":"success","postcode":"LS16 7PT","postcode_type":"full","known_floor_areas":[{"inspection_date":{"date":"2019-03-05 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"30, Dale Park Gardens","square_feet":958},{"inspection_date":{"date":"2018-10-03 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"20, Dale Park Gardens","square_feet":1163},{"inspection_date":{"date":"2017-05-04 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"33, Dale Park Gardens","square_feet":1528},{"inspection_date":{"date":"2016-05-10 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"14, Dale Park Gardens","square_feet":764},{"inspection_date":{"date":"2015-04-14 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"8, Dale Park Gardens","square_feet":753},{"inspection_date":{"date":"2014-04-16 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"21, Dale Park Gardens","square_feet":797},{"inspection_date":{"date":"2013-12-02 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"32, Dale Park Gardens","square_feet":861},{"inspection_date":{"date":"2013-09-07 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"31, Dale Park Gardens","square_feet":980},{"inspection_date":{"date":"2013-08-27 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"4, Dale Park Gardens","square_feet":980},{"inspection_date":{"date":"2013-05-22 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"3, Dale Park Gardens","square_feet":861},{"inspection_date":{"date":"2013-05-09 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"18, Dale Park Gardens","square_feet":764},{"inspection_date":{"date":"2013-04-26 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"9, Dale Park Gardens","square_feet":1033},{"inspection_date":{"date":"2012-10-04 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"39, Dale Park Gardens","square_feet":947},{"inspection_date":{"date":"2012-04-16 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"10, Dale Park Gardens","square_feet":797},{"inspection_date":{"date":"2012-03-26 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"24, Dale Park Gardens","square_feet":1030},{"inspection_date":{"date":"2011-09-28 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"4, Dale Park Gardens","square_feet":1005},{"inspection_date":{"date":"2011-05-17 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"2, Dale Park Gardens","square_feet":1006},{"inspection_date":{"date":"2011-03-25 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"41, Dale Park Gardens","square_feet":948},{"inspection_date":{"date":"2010-09-23 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"22, Dale Park Gardens","square_feet":1470},{"inspection_date":{"date":"2010-09-01 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"43, Dale Park Gardens","square_feet":895},{"inspection_date":{"date":"2010-07-05 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"22, Dale Park Gardens","square_feet":1470},{"inspection_date":{"date":"2010-03-25 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"16, Dale Park Gardens","square_feet":770},{"inspection_date":{"date":"2010-02-23 00:00:00.000000","timezone_type":3,"timezone":"Europe/London"},"address":"20, Dale Park Gardens","square_feet":774}],"process_time":"1.05"}} 

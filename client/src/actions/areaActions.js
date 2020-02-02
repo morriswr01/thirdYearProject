@@ -6,14 +6,13 @@ import { GET_AREA_DATA } from "./types";
 export const getAreaData = searchObj => dispatch => {
     const { location, numBedrooms } = searchObj;
 
-    console.log("got here");
-
     axios
         .post("/api/area/data?", {
             location,
             numBedrooms
         })
         .then(res => {
+            console.log("got here");
             dispatch({
                 type: GET_AREA_DATA,
                 payload: res.data

@@ -1,18 +1,27 @@
 import { GET_AREA_DATA } from "../actions/types";
 
+import { area } from "./area";
+
 const initialState = {
-    location: "",
-    numBedrooms: null
+    // location: "",
+    // numBedrooms: "",
+    // soldPrices: {},
+    // growth: {},
+    // rent: {},
+    // demand: {},
+    // crime: {},
+    // demographics: {},
+    // schools: {},
+    // areaType: {},
+    // floorArea: {}
+    ...area
 };
 
 export default (state = initialState, action) => {
     switch (action.type) {
         case GET_AREA_DATA:
-            const { location, numBedrooms } = action.payload;
             return {
-                ...state,
-                location,
-                numBedrooms
+                ...action.payload
             };
         default:
             return state;

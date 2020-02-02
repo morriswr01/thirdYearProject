@@ -16,11 +16,11 @@ import "../../assets/stylesheets/index.scss";
 
 class Listings extends Component {
     componentDidMount() {
-        if (this.props.searchLocation.postcode) {
-                this.props.getAreaData({
-                    location: this.props.searchLocation.postcode,
-                    numBedrooms: 2
-                });
+        if (this.props.searchLocation.postcode && !this.props.area.location) {
+            this.props.getAreaData({
+                location: this.props.searchLocation.postcode,
+                numBedrooms: 2
+            });
         }
     }
 

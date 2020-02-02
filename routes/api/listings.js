@@ -1,5 +1,6 @@
 const express = require("express");
 const request = require("request");
+var requestPromise = require("request-promise-any");
 
 // Create router
 const router = express.Router();
