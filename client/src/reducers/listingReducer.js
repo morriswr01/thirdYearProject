@@ -1,10 +1,15 @@
-import { SET_SELECTED_LISTING, GET_LISTINGS } from "../actions/types";
+import {
+    SET_SELECTED_LISTING,
+    GET_LISTINGS,
+    SET_SORT_BY
+} from "../actions/types";
 
 import { listings } from "./listing";
 
 const initialState = {
     selectedListing: {},
     fullscreen: false,
+    sortBy: "",
     // listings: [],
     listings: listings
 };
@@ -24,6 +29,11 @@ export default (state = initialState, action) => {
                     action.payload.listingNumber ===
                     state.selectedListing.listingNumber,
                 selectedListing: action.payload
+            };
+        case SET_SORT_BY:
+            return {
+                ...state,
+                sortBy: action.payload
             };
         default:
             return state;

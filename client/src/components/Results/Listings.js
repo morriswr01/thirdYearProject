@@ -11,6 +11,7 @@ import FullScreenListing from "./Fullscreen/FullScreenListing";
 import Amenities from "./Fullscreen/Amenities";
 
 import { getAreaData } from "../../actions/areaActions";
+import { setSortBy } from "../../actions/listingActions";
 
 import "../../assets/stylesheets/index.scss";
 
@@ -23,6 +24,19 @@ class Listings extends Component {
             });
         }
     }
+
+    sortListings = (listings, sortBy) => {
+        switch (sortBy) {
+            case "priceLowHigh":
+                console.log("Sort by low to high");
+                return listings.sort((a, b) => a.price - b.price);
+            case "priceHighLow":
+                console.log("Sort by high to low");
+                return listings.sort((a, b) => b.price - a.price);
+            default:
+                return listings;
+        }
+    };
 
     render() {
         let location = {
@@ -37,6 +51,13 @@ class Listings extends Component {
                         : this.props.selectedListing.longitude
             }
         };
+
+        const sortedListings = this.sortListings(
+            this.props.listings,
+            this.props.sortBy
+        );
+
+        console.log(sortedListings);
 
         return this.props.listings.length === 0 ? (
             <Redirect to='/' />
@@ -54,11 +75,11 @@ class Listings extends Component {
                 <div className='nonFullScreen'>
                     <Map
                         // listings={listings.listings}
-                        listings={this.props.listings}
+                        listings={sortedListings}
                         location={location}
                     />
 
-                    <ListingsSidebar listings={this.props.listings} />
+                    <ListingsSidebar listings={sortedListings} />
                 </div>
             </div>
         );
@@ -67,10 +88,11 @@ class Listings extends Component {
 
 const mapStateToProps = state => ({
     listings: state.listings.listings,
+    sortBy: state.listings.sortBy,
     searchLocation: state.search.location,
     selectedListing: state.listings.selectedListing,
     fullscreen: state.listings.fullscreen,
     area: state.area
 });
 
-export default connect(mapStateToProps, { getAreaData })(Listings);
+export default connect(mapStateToProps, { getAreaData, setSortBy })(Listings);

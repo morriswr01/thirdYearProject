@@ -2,30 +2,39 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Listing from "./Listing";
+
 import Nav from "./Nav";
+import SortBy from "./SortBy";
 
-export default function ListingsSidebar(props) {
-    const { listings } = props;
+export default class ListingsSidebar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            listings: this.props.listings
+        };
+    }
 
-    return (
-        <div className='listingsSidebar'>
-            <Nav />
-            <div className='resultTitle'>
-                <h1>
-                    150 Results for{" "}
-                    <p className='searchAddress'>Coventry, CV5 6GB</p>
-                </h1>
+    render() {
+        const { listings } = this.state;
+
+        return (
+            <div className='listingsSidebar'>
+                <Nav />
+                <div className='resultTitle'>
+                    <h1>
+                        150 Results for{" "}
+                        <p className='searchAddress'>Coventry, CV5 6GB</p>
+                    </h1>
+                </div>
+                <SortBy />
+                <div className='sidebarListings'>
+                    {listings.map((listing, i) => (
+                        <Listing key={i} listingNumber={i} listing={listing} />
+                    ))}
+                </div>
             </div>
-            <div className='sortAndFilter'>
-                <h4>Filters and SortBy</h4>
-            </div>
-            <div className='sidebarListings'>
-                {listings.map((listing, i) => (
-                    <Listing key={i} listingNumber={i} listing={listing} />
-                ))}
-            </div>
-        </div>
-    );
+        );
+    }
 }
 
 ListingsSidebar.propTypes = {

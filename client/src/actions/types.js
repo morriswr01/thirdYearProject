@@ -11,8 +11,7 @@ export const GET_LISTINGS = "GET_LISTINGS";
 // Listings reducer
 export const SET_SELECTED_LISTING = "SET_SELECTED_LISTING";
 export const GET_SELECTED_LISTING = "GET_SELECTED_LISTING";
+export const SET_SORT_BY = "SET_SORT_BY";
 
 // Area Reducer
 export const GET_AREA_DATA = "GET_AREA_DATA";
-
-

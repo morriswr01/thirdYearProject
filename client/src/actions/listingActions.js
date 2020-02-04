@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { SET_SELECTED_LISTING, GET_LISTINGS } from "./types";
+import { SET_SELECTED_LISTING, GET_LISTINGS, SET_SORT_BY } from "./types";
 
 export const setSelectedListing = listingObj => ({
     type: SET_SELECTED_LISTING,
@@ -34,3 +34,8 @@ export const getListings = () => (dispatch, getState) => {
         })
         .catch(err => console.log(err.response.data));
 };
+
+export const setSortBy = sortBy => ({
+    type: SET_SORT_BY,
+    payload: sortBy
+});
