@@ -67,9 +67,67 @@
         }
 
         .sortAndFilter {
+            display: flex;
+            flex-direction: row;
+            min-height: 5vh;
             font-size: 30px;
-            margin: 0 30px;
-            height: 5vh;
+
+            .dropdown,
+            .menu {
+                min-width: 100%;
+            }
+
+            .menu {
+                background-color: $shale_grey;
+            }
+
+            .sort {
+                margin: auto 20px;
+                padding-top: 10px;
+                width: 50%;
+            }
+
+            .filterContainer {
+                margin: auto 20px;
+                padding-top: 10px;
+                width: 50%;
+
+                .filter {
+                    padding: 0 20px;
+                    background-color: $shale_grey;
+
+                    .multi-choice-buttons {
+                        width: 100%;
+                    }
+
+                    .num-bedrooms-slider,
+                    .house-price-slider {
+                        margin: 10px 10px 30px 10px;
+                    }
+
+                    // JANKY CSS(Overwrites CSS of other imported external modules)
+                    .input-range__slider,
+                    .input-range__track--active {
+                        background-color: $bs-primary;
+                    }
+
+                    .input-range__slider {
+                        border: 1px solid $bs-primary;
+                    }
+
+                    span {
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana,
+                            sans-serif;
+                    }
+
+                    .search-submit-btn {
+                        margin: 10px 0;
+                        font-size: 1.5em;
+                        width: 100%;
+                        height: 5vh;
+                    }
+                }
+            }
         }
 
         @media screen and (min-width: 1400px) {

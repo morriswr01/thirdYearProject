@@ -4,7 +4,7 @@ import {
     SET_SORT_BY
 } from "../actions/types";
 
-import { listings } from "./listing";
+import { listings } from "./static/listing";
 
 const initialState = {
     selectedListing: {},

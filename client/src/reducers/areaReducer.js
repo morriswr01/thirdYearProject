@@ -1,6 +1,6 @@
 import { GET_AREA_DATA } from "../actions/types";
 
-import { area } from "./area";
+import { area } from "./static/area";
 
 const initialState = {
     // location: "",

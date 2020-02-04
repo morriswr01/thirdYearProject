@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Listing from "./Listing";
-
 import Nav from "./Nav";
 import SortBy from "./SortBy";
+import FilterContainer from "./Filter/FilterContainer";
 
 export default class ListingsSidebar extends React.Component {
     constructor(props) {
@@ -26,7 +26,10 @@ export default class ListingsSidebar extends React.Component {
                         <p className='searchAddress'>Coventry, CV5 6GB</p>
                     </h1>
                 </div>
-                <SortBy />
+                <div className='sortAndFilter'>
+                    <SortBy />
+                    <FilterContainer />
+                </div>
                 <div className='sidebarListings'>
                     {listings.map((listing, i) => (
                         <Listing key={i} listingNumber={i} listing={listing} />

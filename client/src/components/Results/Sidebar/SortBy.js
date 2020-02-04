@@ -32,16 +32,17 @@ class SortBy extends Component {
 
     render() {
         return (
-            <div className='sortAndFilter'>
+            <div className='sort'>
                 {/* Sort By */}
                 <ButtonDropdown
                     isOpen={this.state.dropdownOpen}
                     toggle={this.toggle}
+                    className='dropdown'
                 >
                     <DropdownToggle caret color='primary'>
                         Sort By
                     </DropdownToggle>
-                    <DropdownMenu>
+                    <DropdownMenu className='menu'>
                         <DropdownItem
                             onClick={this.handleSortByChange.bind(
                                 this,
