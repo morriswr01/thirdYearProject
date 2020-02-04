@@ -10,8 +10,8 @@ const initialState = {
     selectedListing: {},
     fullscreen: false,
     sortBy: "",
-    // listings: [],
-    listings: listings
+    listings: []
+    // listings: listings
 };
 
 export default (state = initialState, action) => {

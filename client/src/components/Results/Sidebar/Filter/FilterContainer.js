@@ -27,6 +27,31 @@ class FilterContainer extends React.Component {
         });
     };
 
+    handleSubmit = () => {
+        this.props.getListings();
+    };
+
+    // Get updated sliders from filter box
+    // ========= FIX THIS ==================
+    handleFilterChange = (key, values) => {
+        switch (key) {
+            case "SET_HOUSE_PRICE":
+                this.props.setHousePrice(values);
+                break;
+            case "SET_NUM_BEDROOMS":
+                this.props.setNumBedooms(values);
+                break;
+            case "SET_HOUSE_TYPE":
+                this.props.setHouseType(values);
+                break;
+            case "SET_SEARCH_RADIUS":
+                this.props.setSearchRadius(values);
+                break;
+            default:
+                break;
+        }
+    };
+
     render() {
         return (
             <div className='filterContainer'>
@@ -39,7 +64,11 @@ class FilterContainer extends React.Component {
                         Filter
                     </DropdownToggle>
                     <DropdownMenu className='menu'>
-                        <Filters />
+                        <Filters
+                            {...this.props}
+                            handleSubmit={this.handleSubmit}
+                            handleFilterChange={this.handleFilterChange}
+                        />
                     </DropdownMenu>
                 </ButtonDropdown>
             </div>
@@ -53,20 +82,15 @@ const mapStateToProps = state => {
         houseTypes,
         searchRadius,
         housePrice,
-        numBedrooms,
-        result
+        numBedrooms
     } = state.search;
-
-    const { listings } = state.listings;
 
     return {
         location,
         houseTypes,
         searchRadius,
         housePrice,
-        numBedrooms,
-        result,
-        listings
+        numBedrooms
     };
 };
 

@@ -84,6 +84,8 @@ export default function SearchFilter(props) {
                         <InputRangeSlider
                             minValue={0}
                             maxValue={50}
+                            low={0}
+                            high={50}
                             multiplier={20000}
                             onChange={onHousePriceChange}
                         />
@@ -95,6 +97,8 @@ export default function SearchFilter(props) {
                         <InputRangeSlider
                             minValue={1}
                             maxValue={5}
+                            low={1}
+                            high={5}
                             onChange={onNumBedsChange}
                         />
                     </div>

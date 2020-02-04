@@ -58,7 +58,7 @@ class SearchScreen extends Component {
         return this.props.listings.length !== 0 ? (
             <Redirect to='/listings' />
         ) : (
-        // return (
+            // return (
             <div className='search'>
                 {/* Login and registration buttons */}
                 <div className='nav-container clearfix'>
@@ -92,24 +92,9 @@ class SearchScreen extends Component {
 }
 
 const mapStateToProps = state => {
-    const {
-        location,
-        houseTypes,
-        searchRadius,
-        housePrice,
-        numBedrooms,
-        result
-    } = state.search;
-
     const { listings } = state.listings;
 
     return {
-        location,
-        houseTypes,
-        searchRadius,
-        housePrice,
-        numBedrooms,
-        result,
         listings
     };
 };

@@ -4,11 +4,11 @@ import InputRange from "react-input-range";
 import "react-input-range/lib/css/index.css";
 
 export default function InputRangeSlider(props) {
-    const { minValue, maxValue } = props;
+    const { minValue, maxValue, low, high } = props;
     const multiplier = props.multiplier || 1;
 
     const [range, setRange] = useState({
-        value: { min: minValue, max: maxValue }
+        value: { min: low, max: high }
     });
 
     const handleRangeChange = newRange => {

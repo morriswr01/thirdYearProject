@@ -21,8 +21,10 @@ import {
 import "../../../../assets/stylesheets/index.scss";
 
 export default function Filters(props) {
-    const [checkedButtons, setCheckedButtons] = useState([]);
-    const [radioButtons, setRadioButtons] = useState(1);
+    const { houseTypes, searchRadius, housePrice, numBedrooms } = props;
+
+    const [checkedButtons, setCheckedButtons] = useState(houseTypes);
+    const [radioButtons, setRadioButtons] = useState(searchRadius);
 
     const onSubmit = e => {
         props.handleSubmit(radioButtons);
@@ -84,6 +86,8 @@ export default function Filters(props) {
                         <InputRangeSlider
                             minValue={0}
                             maxValue={50}
+                            low={housePrice.min/20000}
+                            high={housePrice.max/20000}
                             multiplier={20000}
                             onChange={onHousePriceChange}
                         />
@@ -95,6 +99,8 @@ export default function Filters(props) {
                         <InputRangeSlider
                             minValue={1}
                             maxValue={5}
+                            low={numBedrooms.min}
+                            high={numBedrooms.max}
                             onChange={onNumBedsChange}
                         />
                     </div>
