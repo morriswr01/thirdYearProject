@@ -66,7 +66,7 @@
             }
         }
 
-        .sortAndFilter {
+        .sortFilterAndFavourites {
             display: flex;
             flex-direction: row;
             min-height: 5vh;
@@ -81,16 +81,23 @@
                 background-color: $shale_grey;
             }
 
-            .sort {
-                margin: auto 20px;
+            .favouritesToggleButtons {
+                margin: auto 0;
                 padding-top: 10px;
-                width: 50%;
+                width: 20%;
+                text-align: center;
+            }
+
+            .sort {
+                margin: auto 0 auto 10px;
+                padding-top: 10px;
+                width: 40%;
             }
 
             .filterContainer {
-                margin: auto 20px;
+                margin: auto 10px auto 0px;
                 padding-top: 10px;
-                width: 50%;
+                width: 40%;
 
                 .filter {
                     padding: 0 20px;
@@ -130,107 +137,113 @@
             }
         }
 
-        @media screen and (min-width: 1400px) {
-            .sidebarListings {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-        @media screen and (max-width: 1400px) {
-            .resultTitle {
-                h1 {
-                    font-size: 2rem;
+        .sidebarListingsContainer {
+            display: flex;
+            overflow: hidden;
+
+            @media screen and (min-width: 1400px) {
+                .sidebarListings {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
                 }
             }
-            .sidebarListings {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        @media screen and (max-width: 900px) {
-            .resultTitle {
-                h1 {
-                    font-size: 1.5rem;
-                }
-            }
-            .sidebarListings {
-                display: grid;
-                grid-template-columns: 1fr;
-            }
-        }
-        .sidebarListings {
-            height: 80vh;
-            overflow-x: hidden; //horizontal
-            overflow-y: scroll; //vertical
-
-            .sidebarListing {
-                display: grid;
-                grid-template-rows: 1fr 2fr;
-                height: 38vh;
-                border-radius: 5px;
-                padding: 10px;
-                margin: 10px;
-                overflow: hidden;
-
-                transition: 0.4s;
-
-                &:hover {
-                    img {
-                        border-radius: 5px;
-                        border: 3px solid #00b074;
-                        padding: 3px;
-                        transition: 0.4s;
-                    }
-                    background-color: darken($shale_grey, 5%);
-                }
-
-                &.selected {
-                    img {
-                        border-radius: 5px;
-                        border: 3px solid #00b074;
-                        padding: 3px;
-                        transition: 0.4s;
+            @media screen and (max-width: 1400px) {
+                .resultTitle {
+                    h1 {
+                        font-size: 2rem;
                     }
                 }
-
-                h3,
-                h5,
-                p {
-                    margin: 0 auto;
+                .sidebarListings {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
                 }
+            }
+            @media screen and (max-width: 900px) {
+                .resultTitle {
+                    h1 {
+                        font-size: 1.5rem;
+                    }
+                }
+                .sidebarListings {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                }
+            }
+            .sidebarListings,
+            .favouriteListings {
+                height: 80vh;
+                overflow-x: hidden; //horizontal
+                overflow-y: scroll; //vertical
 
-                img {
-                    width: 100%;
-                    height: auto;
-                    margin: auto;
+                .sidebarListing {
+                    display: grid;
+                    grid-template-rows: 1fr 2fr;
+                    height: 38vh;
                     border-radius: 5px;
+                    padding: 10px;
+                    margin: 10px;
+                    overflow: hidden;
+
                     transition: 0.4s;
-                }
-                .sidebarListingInfo {
-                    position: relative;
-                    // in order from top to bottom
-                    .title {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 4;
-                        -webkit-box-orient: vertical;
-                        font-size: 2vh;
-                        overflow: hidden;
+
+                    &:hover {
+                        img {
+                            border-radius: 5px;
+                            border: 3px solid #00b074;
+                            padding: 3px;
+                            transition: 0.4s;
+                        }
+                        background-color: darken($shale_grey, 5%);
                     }
 
-                    .summary {
-                        font-size: 1vh;
+                    &.selected {
+                        img {
+                            border-radius: 5px;
+                            border: 3px solid #00b074;
+                            padding: 3px;
+                            transition: 0.4s;
+                        }
                     }
 
-                    .bedNum {
-                        font-size: 1vh;
+                    h3,
+                    h5,
+                    p {
+                        margin: 0 auto;
                     }
 
-                    .price {
-                        position: absolute;
-                        bottom: 0;
+                    img {
                         width: 100%;
-                        font-size: 1.5vh;
-                        color: #00b074;
+                        height: auto;
+                        margin: auto;
+                        border-radius: 5px;
+                        transition: 0.4s;
+                    }
+                    .sidebarListingInfo {
+                        position: relative;
+                        // in order from top to bottom
+                        .title {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical;
+                            font-size: 2vh;
+                            overflow: hidden;
+                        }
+
+                        .summary {
+                            font-size: 1vh;
+                        }
+
+                        .bedNum {
+                            font-size: 1vh;
+                        }
+
+                        .price {
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            font-size: 1.5vh;
+                            color: #00b074;
+                        }
                     }
                 }
             }

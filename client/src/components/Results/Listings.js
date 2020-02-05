@@ -16,6 +16,13 @@ import { setSortBy } from "../../actions/listingActions";
 import "../../assets/stylesheets/index.scss";
 
 class Listings extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            listingsMode: 1
+        };
+    }
+
     componentDidMount() {
         if (this.props.searchLocation.postcode && !this.props.area.location) {
             this.props.getAreaData({
@@ -57,8 +64,6 @@ class Listings extends Component {
             this.props.sortBy
         );
 
-        console.log(sortedListings);
-
         return this.props.listings.length === 0 ? (
             <Redirect to='/' />
         ) : (
@@ -79,7 +84,10 @@ class Listings extends Component {
                         location={location}
                     />
 
-                    <ListingsSidebar listings={sortedListings} />
+                    <ListingsSidebar
+                        listings={sortedListings}
+                        numListings={this.props.numListings}
+                    />
                 </div>
             </div>
         );
@@ -88,6 +96,7 @@ class Listings extends Component {
 
 const mapStateToProps = state => ({
     listings: state.listings.listings,
+    numListings: state.listings.numListings,
     sortBy: state.listings.sortBy,
     searchLocation: state.search.location,
     selectedListing: state.listings.selectedListing,

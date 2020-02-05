@@ -4,14 +4,16 @@ import {
     SET_SORT_BY
 } from "../actions/types";
 
+// eslint-disable-next-line
 import { listings } from "./static/listing";
 
 const initialState = {
     selectedListing: {},
     fullscreen: false,
     sortBy: "",
-    listings: []
-    // listings: listings
+    // listings: [],
+    numListings: 203,
+    listings: listings
 };
 
 export default (state = initialState, action) => {
@@ -20,6 +22,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 result: action.payload,
+                numListings: action.payload.response.total_results,
                 listings: action.payload.response.listings
             };
         case SET_SELECTED_LISTING:
