@@ -15,7 +15,7 @@ import { setSortBy } from "../../actions/listingActions";
 
 import "../../assets/stylesheets/index.scss";
 
-class Listings extends Component {
+class Results extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -104,4 +104,4 @@ const mapStateToProps = state => ({
     area: state.area
 });
 
-export default connect(mapStateToProps, { getAreaData, setSortBy })(Listings);
+export default connect(mapStateToProps, { getAreaData, setSortBy })(Results);

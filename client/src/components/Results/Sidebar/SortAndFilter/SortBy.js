@@ -10,7 +10,7 @@ import {
     DropdownItem
 } from "reactstrap";
 
-import { setSortBy } from "../../../actions/listingActions";
+import { setSortBy } from "../../../../actions/listingActions";
 
 class SortBy extends Component {
     constructor(props) {

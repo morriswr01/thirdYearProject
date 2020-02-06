@@ -8,7 +8,7 @@ import store from "./store";
 
 // Component Imports
 import Search from "./components/Search/SearchScreen";
-import Listings from "./components/Results/Listings";
+import Results from "./components/Results/Results";
 
 // CSS
 import "./assets/stylesheets/index.scss";
@@ -18,7 +18,7 @@ export default function App() {
         <Router>
             <Provider store={store}>
                 <Switch>
-                    <Route path='/listings' component={Listings} />
+                    <Route path='/listings' component={Results} />
                     <Route path='/' exact component={Search} />
                 </Switch>
             </Provider>
