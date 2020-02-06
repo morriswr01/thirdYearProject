@@ -16,7 +16,7 @@
         height: 100vh;
         box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
         border-radius: 20px 0 0 20px;
-        z-index: 10;
+        z-index: 20;
 
         .navBar {
             display: flex;
@@ -155,7 +155,7 @@
                 width: 50vw;
                 right: -50vw;
             }
-            
+
             .sidebarListings {
                 width: 50vw;
                 right: 0;
@@ -207,15 +207,16 @@
                         margin: 0 auto;
                     }
 
-                    img {
-                        width: 100%;
-                        height: auto;
-                        margin: auto;
-                        border-radius: 5px;
-                        transition: 0.4s;
-                    }
                     .sidebarListingInfo {
                         position: relative;
+                        height: 38vh;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            margin: auto;
+                            border-radius: 5px;
+                            transition: 0.4s;
+                        }
                         // in order from top to bottom
                         .title {
                             display: -webkit-box;
@@ -233,12 +234,40 @@
                             font-size: 1vh;
                         }
 
-                        .price {
+                        .priceContainer {
                             position: absolute;
                             bottom: 0;
+                            margin-bottom: 10px;
                             width: 100%;
                             font-size: 1.5vh;
-                            color: #00b074;
+
+                            hr {
+                                margin: 0.5rem 0;
+                            }
+
+                            .infoBar {
+                                margin-bottom: 8px;
+                                align-items: center;
+                                position: relative;
+
+                                .price {
+                                    color: #00b074;
+                                    display: inline-block;
+                                }
+
+                                .heart {
+                                    margin-top: 2px;
+                                    display: inline-block;
+                                    position: absolute;
+                                    right: 0;
+                                    transition: 0.3s;
+
+                                    &:hover,
+                                    &.favourited {
+                                        color: red;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
