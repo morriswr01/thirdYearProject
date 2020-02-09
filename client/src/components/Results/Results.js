@@ -11,7 +11,7 @@ import FullScreenListing from "./Fullscreen/FullScreenListing";
 import Amenities from "./Fullscreen/Amenities";
 
 import { getAreaData } from "../../actions/areaActions";
-import { setSortBy } from "../../actions/listingActions";
+import { setSortBy, setListingLiked } from "../../actions/listingActions";
 
 import "../../assets/stylesheets/index.scss";
 
@@ -31,6 +31,11 @@ class Results extends Component {
             });
         }
     }
+
+    handleLikedToggle = id => {
+        console.log("bout to dispatch4");
+        this.props.setListingLiked(id);
+    };
 
     sortListings = (listings, sortBy) => {
         switch (sortBy) {
@@ -64,6 +69,11 @@ class Results extends Component {
             this.props.sortBy
         );
 
+        const sortedFavourites = this.sortListings(
+            this.props.favourites,
+            this.props.sortBy
+        );
+
         return this.props.listings.length === 0 ? (
             <Redirect to='/' />
         ) : (
@@ -78,15 +88,13 @@ class Results extends Component {
                 <FullScreenListing />
                 <Amenities />
                 <div className='nonFullScreen'>
-                    <Map
-                        // listings={listings.listings}
-                        listings={sortedListings}
-                        location={location}
-                    />
+                    <Map listings={sortedListings} location={location} />
 
                     <ListingsSidebar
                         listings={sortedListings}
+                        favourites={sortedFavourites}
                         numListings={this.props.numListings}
+                        handleLikedToggle={this.handleLikedToggle}
                     />
                 </div>
             </div>
@@ -96,6 +104,7 @@ class Results extends Component {
 
 const mapStateToProps = state => ({
     listings: state.listings.listings,
+    favourites: state.listings.favourites,
     numListings: state.listings.numListings,
     sortBy: state.listings.sortBy,
     searchLocation: state.search.location,
@@ -104,4 +113,8 @@ const mapStateToProps = state => ({
     area: state.area
 });
 
-export default connect(mapStateToProps, { getAreaData, setSortBy })(Results);
+export default connect(mapStateToProps, {
+    getAreaData,
+    setSortBy,
+    setListingLiked
+})(Results);

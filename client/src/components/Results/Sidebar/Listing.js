@@ -8,27 +8,33 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { setSelectedListing } from "../../../actions/listingActions";
 
 function Listing(props) {
+    const toggleLiked = () => {
+        props.handleLikedToggle(props.listing._id);
+    };
+
     const {
         img_url,
         price_formatted,
         summary,
         title,
-        bedroom_number
+        bedroom_number,
+        _id
     } = props.listing;
 
     return (
         <div
             className={
-                props.listingNumber === props.selectedListing.listingNumber
+                _id === props.selectedListing._id
                     ? "sidebarListing selected"
                     : "sidebarListing"
             }
-            onClick={() =>
+            onClick={() => {
+                console.log("Selected house" + _id);
                 props.setSelectedListing({
                     ...props.listing,
-                    listingNumber: props.listingNumber
-                })
-            }
+                    listingNumber: _id
+                });
+            }}
         >
             <div className='sidebarListingInfo'>
                 <img src={img_url} alt='House' className='sidebarListingImg' />
@@ -44,10 +50,18 @@ function Listing(props) {
                         <span
                             onClick={e => {
                                 console.log("Heart clicked");
+                                toggleLiked();
                                 e.stopPropagation();
                             }}
                         >
-                            <FontAwesomeIcon className='heart' icon={faHeart} />
+                            <FontAwesomeIcon
+                                className={
+                                    props.listing.liked
+                                        ? "heart active"
+                                        : "heart"
+                                }
+                                icon={faHeart}
+                            />
                         </span>
                     </div>
                 </div>

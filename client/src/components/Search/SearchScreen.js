@@ -18,6 +18,8 @@ import { Button } from "reactstrap";
 // Components
 import SearchBox from "./SearchBox";
 import SearchFilter from "./SearchFilter";
+import LoginModal from "../Login/LoginModal";
+import RegisterModal from "../Login/RegisterModal";
 
 // SCSS
 import "../../assets/stylesheets/index.scss";
@@ -63,8 +65,10 @@ class SearchScreen extends Component {
                 {/* Login and registration buttons */}
                 <div className='nav-container clearfix'>
                     {/* Login and registration buttons */}
-                    <Button color='primary'> Login </Button>
-                    <Button color='success'> Register </Button>
+                    <div className='loginButtons authContainer'>
+                        <LoginModal />
+                        <RegisterModal />
+                    </div>
                 </div>
                 {/* Title and subheading */}
                 <header className='search-header'>

@@ -8,30 +8,42 @@ import Listings from "./Listings";
 import Favourites from "./Favourites";
 
 export default function ListingsSidebar(props) {
-    const [radioButtons, setRadioButtons] = useState(1);
+    const [sidebarTab, setSidebarTab] = useState(1);
 
-    const handleToggleChange = radius => {
-        setRadioButtons(radius);
+    const handleSidebarTabChange = radius => {
+        setSidebarTab(radius);
     };
 
-    const { listings, numListings } = props;
+    const handleLikedToggle = id => {
+        console.log("bout to dispatch3" + id);
+        props.handleLikedToggle(id);
+    };
+
+    const { listings, favourites, numListings } = props;
     return (
         <div className='listingsSidebar'>
             <Nav />
             <ResultsTitle numListings={numListings} />
             <SortAndFilter
-                radioButtons={radioButtons}
-                handleToggleChange={handleToggleChange}
+                sidebarTab={sidebarTab}
+                handleToggleChange={handleSidebarTabChange}
             />
             <div
                 className={
-                    radioButtons == 2
+                    sidebarTab === 2
                         ? "sidebarListingsContainer favourites"
                         : "sidebarListingsContainer"
                 }
             >
-                <Listings listings={listings} />
-                <Favourites listings={listings} />
+                <Listings
+                    listings={listings}
+                    handleLikedToggle={handleLikedToggle}
+                />
+                <Favourites
+                    listings={listings}
+                    favourites={favourites}
+                    handleLikedToggle={handleLikedToggle}
+                />
             </div>
         </div>
     );
