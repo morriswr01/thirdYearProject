@@ -10,11 +10,19 @@ const app = express();
 app.use(express.json());
 
 // Connect to mongoDB / APIs
-// ...
+mongoose
+    .connect(config.get("mongoURI"), {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useUnifiedTopology: true
+    })
+    .then(() => console.log("MongoDB connected..."))
+    .catch(err => console.log(err));
 
 // Routes
 app.use("/api/listings", require("./routes/api/listings"));
 app.use("/api/area", require("./routes/api/area"));
+app.use("/api/users", require("./routes/api/users"));
 
 // Start server and listen on port 5000
 const port = process.env.PORT || 5000;
