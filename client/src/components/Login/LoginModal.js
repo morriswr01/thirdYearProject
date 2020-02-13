@@ -16,10 +16,10 @@ import InputGroup from "../utils/InputGroup";
 import "../../assets/stylesheets/index.scss";
 
 // Actions
-// import { login } from "../actions/authActions";
-// import { clearErrors } from "../actions/errorActions";
+import { login } from "../../actions/authActions";
+import { clearErrors } from "../../actions/errorActions";
 
-export default class LoginModal extends Component {
+class LoginModal extends Component {
     constructor(props) {
         super(props);
 
@@ -36,31 +36,37 @@ export default class LoginModal extends Component {
     // When the state of connected store changes check if there are any errors and if the user is now authenticated
     // componentDidUpdate(prevProps) {
     //     const { error, isAuthenticated } = this.props;
+    //     console.log(prevProps);
+    //     console.log(this.props);
+
     //     if (error !== prevProps.error) {
     //         // Check for login error and populate login modal with error message
-    //         if (error.id === 'LOGIN_FAIL') {
+    //         if (error.id === "LOGIN_FAIL") {
+    //             console.log(this.props.error.msg.msg);
     //             this.setState({
     //                 loginDetails: {
     //                     ...this.state.loginDetails,
     //                     generalError: this.props.error.msg.msg
     //                 }
     //             });
-    //         }
-    //         else {
+    //         } else {
     //             this.setState({
     //                 loginDetails: {
     //                     ...this.state.loginDetails,
     //                     generalError: null
-    //                 },
+    //                 }
     //             });
     //         }
     //     }
     //     // If authenticated, close modal
     //     if (isAuthenticated) {
     //         this.setState({
+    //             ...this.state,
     //             showLoginModal: false
-    //         })
+    //         });
+    //         this.showLoginModal();
     //     }
+    //     console.log("==============================");
     // }
 
     handleLoginFormChange = e => {
@@ -77,7 +83,7 @@ export default class LoginModal extends Component {
     };
 
     showLoginModal = () => {
-        // this.props.clearErrors();
+        this.props.clearErrors();
         this.setState({
             showLoginModal: !this.state.showLoginModal,
             loginDetails: {
@@ -103,7 +109,7 @@ export default class LoginModal extends Component {
             return;
         }
 
-        // this.props.login(this.state.loginDetails);
+        this.props.login(this.state.loginDetails);
     };
 
     render() {
@@ -164,9 +170,8 @@ export default class LoginModal extends Component {
 }
 
 const mapStateToProps = state => ({
-    // isAuthenticated: state.auth.isAuthenticated,
-    // error: state.error
+    isAuthenticated: state.auth.isAuthenticated,
+    error: state.error
 });
 
-// export default connect(
-//     mapStateToProps, { login, clearErrors })(LoginModal);
+export default connect(mapStateToProps, { login, clearErrors })(LoginModal);

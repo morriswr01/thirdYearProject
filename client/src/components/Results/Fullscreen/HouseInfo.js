@@ -44,7 +44,11 @@ export default function HouseInfo(props) {
                     <a href={lister_url}>{lister_url}</a>
                 </div>
             </div>
-            <Nav setSelectedListing={props.setSelectedListing} />
+            <Nav
+                setSelectedListing={props.setSelectedListing}
+                auth={props.auth}
+                logout={props.logout}
+            />
         </div>
     );
 }

@@ -4,6 +4,7 @@
 @import "./resultsContainer.scss";
 @import "./fullScreen.scss";
 @import "./nonFullScreen.scss";
+@import "./login.scss";
 
 * {
     box-sizing: border-box;
@@ -36,4 +37,3 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-

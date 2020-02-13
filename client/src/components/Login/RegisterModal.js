@@ -16,10 +16,10 @@ import InputGroup from "../utils/InputGroup";
 import "../../assets/stylesheets/index.scss";
 
 // Actions
-// import { register } from '../actions/authActions';
-// import { clearErrors } from '../actions/errorActions';
+import { register } from "../../actions/authActions";
+import { clearErrors } from "../../actions/errorActions";
 
-export default class RegistrationModal extends Component {
+class RegistrationModal extends Component {
     constructor(props) {
         super(props);
 
@@ -39,29 +39,28 @@ export default class RegistrationModal extends Component {
     //     const { error, isAuthenticated } = this.props;
     //     if (error !== prevProps.error) {
     //         // Check for register error if so populate register modal with error
-    //         if (error.id === 'REGISTER_FAIL') {
+    //         if (error.id === "REGISTER_FAIL") {
     //             this.setState({
     //                 registrationDetails: {
     //                     ...this.state.registrationDetails,
     //                     generalError: this.props.error.msg.msg
     //                 }
     //             });
-    //         }
-    //         else {
+    //         } else {
     //             this.setState({
     //                 registrationDetails: {
     //                     ...this.state.registrationDetails,
-    //                     generalError: ''
+    //                     generalError: ""
     //                 }
     //             });
     //         }
     //     }
-    //     // If authenticated, close modal
-    //     if (isAuthenticated) {
-    //         this.setState({
-    //             showRegistrationModal: false,
-    //         })
-    //     }
+    //         // If authenticated, close modal
+    //         if (isAuthenticated) {
+    //             this.setState({
+    //                 showRegistrationModal: false,
+    //             })
+    //         }
     // }
 
     // Update state to match input fields
@@ -80,7 +79,7 @@ export default class RegistrationModal extends Component {
 
     // Toggle registration modal
     showRegistrationModal = () => {
-        // this.props.clearErrors();
+        this.props.clearErrors();
         this.setState({
             showRegistrationModal: !this.state.showRegistrationModal,
             registrationDetails: {
@@ -108,8 +107,8 @@ export default class RegistrationModal extends Component {
             return;
         }
 
-        // this.props.register(this.state.registrationDetails);
-    }
+        this.props.register(this.state.registrationDetails);
+    };
 
     render() {
         return (
@@ -179,10 +178,11 @@ export default class RegistrationModal extends Component {
     }
 }
 
-// const mapStateToProps = (state) => ({
-//     isAuthenticated: state.auth.isAuthenticated,
-//     error: state.error
-// });
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated,
+    error: state.error
+});
 
-// export default connect(
-//     mapStateToProps, { register, clearErrors })(RegistrationModal);
+export default connect(mapStateToProps, { register, clearErrors })(
+    RegistrationModal
+);
