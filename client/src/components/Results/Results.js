@@ -75,10 +75,10 @@ class Results extends Component {
             this.props.sortBy
         );
 
-        return this.props.listings.length === 0 ? (
-            <Redirect to='/' />
-        ) : (
-            // return (
+        // return this.props.listings.length === 0 ? (
+        //     <Redirect to='/' />
+        // ) : (
+            return (
             <div
                 className={
                     this.props.fullscreen

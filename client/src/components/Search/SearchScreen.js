@@ -57,10 +57,10 @@ class SearchScreen extends Component {
     };
 
     render() {
-        return this.props.listings.length !== 0 ? (
+        return this.props.listings.listings.length !== 0 ? (
             <Redirect to='/listings' />
         ) : (
-        // return (
+            // return (
             <div className='search'>
                 {/* Login and registration buttons */}
                 <div className='nav-container clearfix'>
