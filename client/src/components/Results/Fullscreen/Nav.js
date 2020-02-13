@@ -2,14 +2,20 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-import '../../../assets/stylesheets/index.scss'
+import "../../../assets/stylesheets/index.scss";
 
-import LoginModal from "../../Login/LoginModal";
+import LoginContainer from "../../Login/LoginContainer";
 
 export default function Nav(props) {
     return (
         <div className='nav'>
-            <LoginModal />
+            <div className='nav-container clearfix'>
+                {/* Login and registration buttons */}
+                <LoginContainer
+                    auth={props.auth}
+                    logout={props.logout}
+                />
+            </div>
             <button className='compare'>Compare</button>
             <button
                 className='back'

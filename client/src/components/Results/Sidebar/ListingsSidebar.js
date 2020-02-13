@@ -15,14 +15,14 @@ export default function ListingsSidebar(props) {
     };
 
     const handleLikedToggle = id => {
-        console.log("bout to dispatch3" + id);
+        console.log("bout to dispatch" + id);
         props.handleLikedToggle(id);
     };
 
     const { listings, favourites, numListings } = props;
     return (
         <div className='listingsSidebar'>
-            <Nav />
+            <Nav auth={props.auth} logout={props.logout} />
             <ResultsTitle numListings={numListings} />
             <SortAndFilter
                 sidebarTab={sidebarTab}

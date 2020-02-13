@@ -12,6 +12,7 @@ import Amenities from "./Fullscreen/Amenities";
 
 import { getAreaData } from "../../actions/areaActions";
 import { setSortBy, setListingLiked } from "../../actions/listingActions";
+import { logout } from "../../actions/authActions";
 
 import "../../assets/stylesheets/index.scss";
 
@@ -74,10 +75,10 @@ class Results extends Component {
             this.props.sortBy
         );
 
-        return this.props.listings.length === 0 ? (
-            <Redirect to='/' />
-        ) : (
-            // return (
+        // return this.props.listings.length === 0 ? (
+        //     <Redirect to='/' />
+        // ) : (
+            return (
             <div
                 className={
                     this.props.fullscreen
@@ -95,6 +96,8 @@ class Results extends Component {
                         favourites={sortedFavourites}
                         numListings={this.props.numListings}
                         handleLikedToggle={this.handleLikedToggle}
+                        auth={this.props.auth}
+                        logout={this.props.logout}
                     />
                 </div>
             </div>
@@ -110,11 +113,13 @@ const mapStateToProps = state => ({
     searchLocation: state.search.location,
     selectedListing: state.listings.selectedListing,
     fullscreen: state.listings.fullscreen,
+    auth: state.auth,
     area: state.area
 });
 
 export default connect(mapStateToProps, {
     getAreaData,
     setSortBy,
+    logout,
     setListingLiked
 })(Results);

@@ -11,6 +11,7 @@ import {
     setNumBedooms
 } from "../../actions/searchActions";
 import { getListings } from "../../actions/listingActions";
+import { logout } from "../../actions/authActions";
 
 // Aesthetic
 import { Button } from "reactstrap";
@@ -18,8 +19,7 @@ import { Button } from "reactstrap";
 // Components
 import SearchBox from "./SearchBox";
 import SearchFilter from "./SearchFilter";
-import LoginModal from "../Login/LoginModal";
-import RegisterModal from "../Login/RegisterModal";
+import LoginContainer from "../Login/LoginContainer";
 
 // SCSS
 import "../../assets/stylesheets/index.scss";
@@ -57,7 +57,7 @@ class SearchScreen extends Component {
     };
 
     render() {
-        return this.props.listings.length !== 0 ? (
+        return this.props.listings.listings.length !== 0 ? (
             <Redirect to='/listings' />
         ) : (
             // return (
@@ -65,10 +65,10 @@ class SearchScreen extends Component {
                 {/* Login and registration buttons */}
                 <div className='nav-container clearfix'>
                     {/* Login and registration buttons */}
-                    <div className='loginButtons authContainer'>
-                        <LoginModal />
-                        <RegisterModal />
-                    </div>
+                    <LoginContainer
+                        auth={this.props.auth}
+                        logout={this.props.logout}
+                    />
                 </div>
                 {/* Title and subheading */}
                 <header className='search-header'>
@@ -96,10 +96,9 @@ class SearchScreen extends Component {
 }
 
 const mapStateToProps = state => {
-    const { listings } = state.listings;
-
     return {
-        listings
+        listings: state.listings,
+        auth: state.auth
     };
 };
 
@@ -109,5 +108,6 @@ export default connect(mapStateToProps, {
     setHouseType,
     setSearchRadius,
     setHousePrice,
-    setNumBedooms
+    setNumBedooms,
+    logout
 })(SearchScreen);

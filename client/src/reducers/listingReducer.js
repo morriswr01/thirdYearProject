@@ -21,7 +21,7 @@ const filterListings = listings => {
     // Filter listings for duplicate IDs
     let finalListings = [];
     listingsWithId.filter(listing => {
-        const i = finalListings.findIndex(x => x._id == listing._id);
+        const i = finalListings.findIndex(x => x._id === listing._id);
         if (i <= -1) {
             finalListings.push(listing);
         }
