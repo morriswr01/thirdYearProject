@@ -2,7 +2,11 @@ import {
     SET_SELECTED_LISTING,
     GET_LISTINGS,
     SET_LISTING_LIKED,
-    SET_SORT_BY
+    SET_SORT_BY,
+    GET_FAVOURITES,
+    CLEAR_FAVOURITES,
+    CLEAR_LIKE_BUTTONS,
+    SET_FAVOURITE
 } from "../actions/types";
 
 // eslint-disable-next-line
@@ -13,7 +17,7 @@ const filterListings = listings => {
     const listingsWithId = listings.map(listing => {
         return {
             ...listing,
-            _id: listing.latitude,
+            id: listing.latitude,
             liked: false
         };
     });
@@ -21,7 +25,7 @@ const filterListings = listings => {
     // Filter listings for duplicate IDs
     let finalListings = [];
     listingsWithId.filter(listing => {
-        const i = finalListings.findIndex(x => x._id === listing._id);
+        const i = finalListings.findIndex(x => x.id === listing.id);
         if (i <= -1) {
             finalListings.push(listing);
         }
@@ -50,6 +54,30 @@ export default (state = initialState, action) => {
                 result: action.payload.data,
                 numListings: action.payload.response.total_results,
                 listings: filterListings(action.payload.response.listings)
+            };
+        case GET_FAVOURITES:
+            return {
+                ...state,
+                favourites: action.payload
+            };
+        case CLEAR_FAVOURITES:
+            return {
+                ...state,
+                favourites: []
+            };
+        case CLEAR_LIKE_BUTTONS:
+            return {
+                ...state,
+                listings: action.payload
+            };
+        case SET_FAVOURITE:
+            return {
+                ...state,
+                listings: state.listings.map(listing =>
+                    listing.id == action.payload.id
+                        ? { ...listing, liked: action.payload.value }
+                        : listing
+                )
             };
         case SET_SELECTED_LISTING:
             return {

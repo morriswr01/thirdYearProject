@@ -7,7 +7,6 @@ import LoginModal from "./LoginModal";
 import RegisterModal from "./RegisterModal";
 
 export default function LoginContainer(props) {
-    // render() {
         return (
             <div className='loginButtons authContainer'>
                 {!props.auth.isAuthenticated ? (
@@ -27,5 +26,4 @@ export default function LoginContainer(props) {
                 )}
             </div>
         );
-    // }
 }

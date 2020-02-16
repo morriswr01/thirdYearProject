@@ -26,13 +26,13 @@ const MapComponent = props => {
         >
             {listings.map(listing => (
                 <Marker
-                    key={listing._id}
-                    listingNumber={listing._id}
+                    key={listing.id}
+                    listingNumber={listing.id}
                     listing={listing}
                     position={{ lat: listing.latitude, lng: listing.longitude }}
                     onClick={e => {
-                        console.log("Selected listing " + listing._id);
-                        props.onMarkerClick(listing._id, listing);
+                        console.log("Selected listing " + listing.id);
+                        props.onMarkerClick(listing.id, listing);
                     }}
                     icon={{
                         url: `https://image.flaticon.com/icons/svg/569/569212.svg`,

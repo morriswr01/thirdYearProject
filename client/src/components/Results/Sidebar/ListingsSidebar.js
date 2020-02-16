@@ -14,8 +14,8 @@ export default function ListingsSidebar(props) {
         setSidebarTab(radius);
     };
 
-    const handleLikedToggle = id => {
-        props.handleLikedToggle(id);
+    const handleLikedToggle = listing => {
+        props.handleLikedToggle(listing);
     };
 
     const { listings, favourites, numListings } = props;
@@ -39,7 +39,6 @@ export default function ListingsSidebar(props) {
                     handleLikedToggle={handleLikedToggle}
                 />
                 <Favourites
-                    listings={listings}
                     favourites={favourites}
                     handleLikedToggle={handleLikedToggle}
                 />

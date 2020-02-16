@@ -4,14 +4,20 @@ import {
     SET_SELECTED_LISTING,
     GET_LISTINGS,
     SET_SORT_BY,
-    SET_LISTING_LIKED
+    SET_LISTING_LIKED,
+    GET_FAVOURITES,
+    CLEAR_FAVOURITES,
+    CLEAR_LIKE_BUTTONS,
+    SET_FAVOURITE
 } from "./types";
+
+import { tokenConfig } from "./authActions";
 
 const filterListings = listings => {
     const listingsWithId = listings.map(listing => {
         return {
             ...listing,
-            _id: listing.latitude,
+            id: listing.latitude,
             liked: false
         };
     });
@@ -19,7 +25,7 @@ const filterListings = listings => {
     // Filter listings for duplicate IDs
     let finalListings = [];
     listingsWithId.filter(listing => {
-        const i = finalListings.findIndex(x => x._id === listing._id);
+        const i = finalListings.findIndex(x => x.id === listing.id);
         if (i <= -1) {
             finalListings.push(listing);
         }
@@ -54,15 +60,40 @@ export const getListings = () => (dispatch, getState) => {
             numBedrooms
         })
         .then(res => {
-            // const data1 = {
-            //     result: res.data,
-            //     totalResults: res.response.total_results,
-            //     listings: filterListings(res.response.listings)
-            // };
             console.log(res.data);
             dispatch({
                 type: GET_LISTINGS,
                 payload: res.data
+            });
+        })
+        .catch(err => console.log(err.response.data));
+};
+
+export const getFavourites = () => (dispatch, getState) => {
+    axios
+        .get("/api/favourites", tokenConfig(getState))
+        .then(res => {
+            const favourites = res.data;
+            let listings = getState().listings.listings;
+            const newListings = listings.map(listing => {
+                let listingIsFavourite = false;
+                favourites.forEach(favourite => {
+                    if (favourite.id == listing.id) {
+                        listingIsFavourite = true;
+                    }
+                });
+                return listingIsFavourite
+                    ? { ...listing, liked: true }
+                    : listing;
+            });
+            console.log(newListings);
+            dispatch({
+                type: GET_FAVOURITES,
+                payload: favourites
+            });
+            dispatch({
+                type: SET_LISTING_LIKED,
+                payload: newListings
             });
         })
         .catch(err => console.log(err.response.data));
@@ -73,19 +104,65 @@ export const setSortBy = sortBy => ({
     payload: sortBy
 });
 
-export const setListingLiked = id => (dispatch, getState) => {
+export const setListingLiked = favouriteListing => (dispatch, getState) => {
     const { listings, favourites } = getState().listings;
-    console.log(id);
+
+    let removeFromDatabase = false;
 
     const newListings = listings.map(listing => {
-        if (id === listing._id) return { ...listing, liked: !listing.liked };
-        else {
+        if (favouriteListing.id === listing.id) {
+            if (favouriteListing.liked) {
+                removeFromDatabase = true;
+            }
+            return { ...listing, liked: !listing.liked };
+        } else {
             return listing;
         }
     });
 
+    console.log(removeFromDatabase);
+
+    if (!removeFromDatabase) {
+        console.log("adding to the database");
+        axios
+            .post("/api/favourites", favouriteListing, tokenConfig(getState))
+            .then(res => {
+                dispatch(getFavourites());
+                dispatch(setFavourite(favouriteListing.id, true));
+            })
+            .catch(err => {
+                dispatch(getFavourites());
+            });
+    } else {
+        console.log("removing from the database");
+        axios
+            .delete("/api/favourites", {
+                data: { id: favouriteListing.id },
+                headers: { ...tokenConfig(getState).headers }
+            })
+            .then(res => {
+                dispatch(getFavourites());
+                dispatch(setFavourite(favouriteListing.id, false));
+            })
+            .catch(err => {
+                dispatch(getFavourites());
+            });
+    }
+};
+
+export const setFavourite = (id, value) => ({
+    type: SET_FAVOURITE,
+    payload: { id, value }
+});
+export const clearFavourites = () => ({
+    type: CLEAR_FAVOURITES
+});
+
+export const clearLikeButtons = () => (dispatch, getState) => {
+    let listings = getState().listings.listings;
+    const cleared = listings.map(listing => ({ ...listing, liked: false }));
     dispatch({
-        type: SET_LISTING_LIKED,
-        payload: newListings
+        type: CLEAR_LIKE_BUTTONS,
+        payload: cleared
     });
 };

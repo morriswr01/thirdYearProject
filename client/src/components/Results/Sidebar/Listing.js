@@ -9,7 +9,7 @@ import { setSelectedListing } from "../../../actions/listingActions";
 
 function Listing(props) {
     const toggleLiked = () => {
-        props.handleLikedToggle(props.listing._id);
+        props.handleLikedToggle(props.listing);
     };
 
     const {
@@ -18,21 +18,21 @@ function Listing(props) {
         summary,
         title,
         bedroom_number,
-        _id
+        id
     } = props.listing;
 
     return (
         <div
             className={
-                _id === props.selectedListing._id
+                id === props.selectedListing.id
                     ? "sidebarListing selected"
                     : "sidebarListing"
             }
             onClick={() => {
-                console.log("Selected house" + _id);
+                console.log("Selected house" + id);
                 props.setSelectedListing({
                     ...props.listing,
-                    listingNumber: _id
+                    listingNumber: id
                 });
             }}
         >

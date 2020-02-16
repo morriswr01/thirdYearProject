@@ -21,6 +21,7 @@ mongoose
 
 // Routes
 app.use("/api/listings", require("./routes/api/listings"));
+app.use("/api/favourites", require("./routes/api/favourites"));
 app.use("/api/area", require("./routes/api/area"));
 app.use("/api/users", require("./routes/api/users"));
 

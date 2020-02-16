@@ -11,7 +11,11 @@ import FullScreenListing from "./Fullscreen/FullScreenListing";
 import Amenities from "./Fullscreen/Amenities";
 
 import { getAreaData } from "../../actions/areaActions";
-import { setSortBy, setListingLiked } from "../../actions/listingActions";
+import {
+    setSortBy,
+    setListingLiked,
+    getFavourites
+} from "../../actions/listingActions";
 import { logout } from "../../actions/authActions";
 
 import "../../assets/stylesheets/index.scss";
@@ -31,10 +35,11 @@ class Results extends Component {
                 numBedrooms: 2
             });
         }
+        this.props.getFavourites();
     }
 
-    handleLikedToggle = id => {
-        this.props.setListingLiked(id);
+    handleLikedToggle = listing => {
+        this.props.setListingLiked(listing);
     };
 
     sortListings = (listings, sortBy) => {
@@ -77,7 +82,7 @@ class Results extends Component {
         // return this.props.listings.length === 0 ? (
         //     <Redirect to='/' />
         // ) : (
-            return (
+        return (
             <div
                 className={
                     this.props.fullscreen
@@ -120,5 +125,6 @@ export default connect(mapStateToProps, {
     getAreaData,
     setSortBy,
     logout,
-    setListingLiked
+    setListingLiked,
+    getFavourites
 })(Results);
