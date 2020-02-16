@@ -6,7 +6,6 @@ export default function Favourites(props) {
     const localFavourites = props.listings.filter(listing => listing.liked);
 
     const handleLikedToggle = id => {
-        console.log("bout to dispatch1");
         props.handleLikedToggle(id);
     };
 

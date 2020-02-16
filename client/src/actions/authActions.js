@@ -22,12 +22,12 @@ export const login = (loginDetails) => dispatch => {
 				payload: res.data
 			})
 		})
-		// .catch(err => {
-		// 	dispatch(returnErrors(err.response.data, err.response.status, LOGIN_FAIL));
-		// 	dispatch({
-		// 		type: LOGIN_FAIL
-		// 	})
-		// })
+		.catch(err => {
+			dispatch(returnErrors(err.response.data, err.response.status, LOGIN_FAIL));
+			dispatch({
+				type: LOGIN_FAIL
+			})
+		})
 }
 
 // Register User

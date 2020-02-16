@@ -35,33 +35,33 @@ class RegistrationModal extends Component {
     }
 
     // When the state of connected store changes check if there are any errors and if the user is now authenticated
-    // componentDidUpdate(prevProps) {
-    //     const { error, isAuthenticated } = this.props;
-    //     if (error !== prevProps.error) {
-    //         // Check for register error if so populate register modal with error
-    //         if (error.id === "REGISTER_FAIL") {
-    //             this.setState({
-    //                 registrationDetails: {
-    //                     ...this.state.registrationDetails,
-    //                     generalError: this.props.error.msg.msg
-    //                 }
-    //             });
-    //         } else {
-    //             this.setState({
-    //                 registrationDetails: {
-    //                     ...this.state.registrationDetails,
-    //                     generalError: ""
-    //                 }
-    //             });
-    //         }
-    //     }
-    //         // If authenticated, close modal
-    //         if (isAuthenticated) {
-    //             this.setState({
-    //                 showRegistrationModal: false,
-    //             })
-    //         }
-    // }
+    componentDidUpdate(prevProps) {
+        const { error, isAuthenticated } = this.props;
+        if (error !== prevProps.error) {
+            // Check for register error if so populate register modal with error
+            if (error.id === "REGISTER_FAIL") {
+                this.setState({
+                    registrationDetails: {
+                        ...this.state.registrationDetails,
+                        generalError: this.props.error.msg.msg
+                    }
+                });
+            } else {
+                this.setState({
+                    registrationDetails: {
+                        ...this.state.registrationDetails,
+                        generalError: ""
+                    }
+                });
+            }
+        }
+        // If authenticated, close modal
+        // if (isAuthenticated) {
+        //     this.setState({
+        //         showRegistrationModal: false,
+        //     })
+        // }
+    }
 
     // Update state to match input fields
     handleRegistrationFormChange = e => {

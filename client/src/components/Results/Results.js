@@ -34,7 +34,6 @@ class Results extends Component {
     }
 
     handleLikedToggle = id => {
-        console.log("bout to dispatch4");
         this.props.setListingLiked(id);
     };
 

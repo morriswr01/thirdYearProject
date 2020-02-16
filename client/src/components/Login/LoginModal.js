@@ -34,40 +34,38 @@ class LoginModal extends Component {
     }
 
     // When the state of connected store changes check if there are any errors and if the user is now authenticated
-    // componentDidUpdate(prevProps) {
-    //     const { error, isAuthenticated } = this.props;
-    //     console.log(prevProps);
-    //     console.log(this.props);
+    componentDidUpdate(prevProps) {
+        const { error, isAuthenticated } = this.props;
 
-    //     if (error !== prevProps.error) {
-    //         // Check for login error and populate login modal with error message
-    //         if (error.id === "LOGIN_FAIL") {
-    //             console.log(this.props.error.msg.msg);
-    //             this.setState({
-    //                 loginDetails: {
-    //                     ...this.state.loginDetails,
-    //                     generalError: this.props.error.msg.msg
-    //                 }
-    //             });
-    //         } else {
-    //             this.setState({
-    //                 loginDetails: {
-    //                     ...this.state.loginDetails,
-    //                     generalError: null
-    //                 }
-    //             });
-    //         }
-    //     }
-    //     // If authenticated, close modal
-    //     if (isAuthenticated) {
-    //         this.setState({
-    //             ...this.state,
-    //             showLoginModal: false
-    //         });
-    //         this.showLoginModal();
-    //     }
-    //     console.log("==============================");
-    // }
+        if (error !== prevProps.error) {
+            // Check for login error and populate login modal with error message
+            if (error.id === "LOGIN_FAIL") {
+                console.log(this.props.error.msg.msg);
+                this.setState({
+                    loginDetails: {
+                        ...this.state.loginDetails,
+                        generalError: this.props.error.msg.msg
+                    }
+                });
+            } else {
+                this.setState({
+                    loginDetails: {
+                        ...this.state.loginDetails,
+                        generalError: null
+                    }
+                });
+            }
+        }
+        // If authenticated, close modal
+        // if (isAuthenticated) {
+        //     this.setState({
+        //         ...this.state,
+        //         showLoginModal: false
+        //     });
+        //     this.showLoginModal();
+        // }
+        // console.log("==============================");
+    }
 
     handleLoginFormChange = e => {
         const name = e.target.name;
@@ -99,6 +97,7 @@ class LoginModal extends Component {
         const { email, password } = this.state.loginDetails;
 
         if (!email || !password) {
+            console.log("Yo")
             this.setState({
                 ...this.state,
                 loginDetails: {

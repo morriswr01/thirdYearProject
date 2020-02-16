@@ -15,7 +15,6 @@ export default function ListingsSidebar(props) {
     };
 
     const handleLikedToggle = id => {
-        console.log("bout to dispatch" + id);
         props.handleLikedToggle(id);
     };
 

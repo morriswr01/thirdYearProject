@@ -4,7 +4,6 @@ import Listing from "./Listing";
 
 export default function Listings(props) {
     const handleLikedToggle = id => {
-        console.log("bout to dispatch2");
         props.handleLikedToggle(id);
     };
 
