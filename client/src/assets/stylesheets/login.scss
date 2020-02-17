@@ -1,8 +1,16 @@
 .loggedInBtn {
-    display: grid;
-    grid-template-columns: 5fr 2fr;
-    grid-gap: 10px;
-
+    display: flex;
+    flex-direction: row;
+}
+.loggedInBtn {
+    button {
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #00b074;
+    }
+    button:hover {
+        background-color: darken(#00b074, 10%);
+    }
 }
 .loggedInBtn p {
     margin: auto 0;

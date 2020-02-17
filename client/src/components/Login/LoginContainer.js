@@ -7,23 +7,23 @@ import LoginModal from "./LoginModal";
 import RegisterModal from "./RegisterModal";
 
 export default function LoginContainer(props) {
-        return (
-            <div className='loginButtons authContainer'>
-                {!props.auth.isAuthenticated ? (
-                    <Fragment>
-                        <RegisterModal />
-                        <LoginModal />
-                    </Fragment>
-                ) : (
-                    <div className='loggedInBtn'>
-                        <p className='nameTag'>
-                            Logged In As, {props.auth.user.name}
-                        </p>
-                        <Button color='primary' onClick={props.logout}>
-                            Logout
-                        </Button>
-                    </div>
-                )}
-            </div>
-        );
+    return (
+        <div className='loginButtons'>
+            {!props.auth.isAuthenticated ? (
+                <Fragment>
+                    <RegisterModal />
+                    <LoginModal />
+                </Fragment>
+            ) : (
+                <div className='loggedInBtn loginButtons'>
+                    <p className='nameTag'>
+                        Logged In As, {props.auth.user.name}
+                    </p>
+                    <button onClick={props.logout}>
+                        Logout
+                    </button>
+                </div>
+            )}
+        </div>
+    );
 }

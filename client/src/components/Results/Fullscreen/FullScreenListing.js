@@ -6,7 +6,7 @@ import AreaInfo from "./AreaInfo";
 import HouseInfo from "./HouseInfo";
 
 // Redux
-import { setSelectedListing } from "../../../actions/listingActions";
+import { setSelectedListing, setListingLiked } from "../../../actions/listingActions";
 import { logout } from "../../../actions/authActions";
 
 function FullScreenListing(props) {
@@ -35,6 +35,7 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
+    setListingLiked,
     setSelectedListing,
     logout
 })(FullScreenListing);

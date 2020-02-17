@@ -40,6 +40,7 @@ export default function ListingsSidebar(props) {
                 />
                 <Favourites
                     favourites={favourites}
+                    auth={props.auth}
                     handleLikedToggle={handleLikedToggle}
                 />
             </div>

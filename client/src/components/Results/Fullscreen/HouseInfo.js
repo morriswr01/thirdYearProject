@@ -1,5 +1,8 @@
 import React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBed, faToilet } from "@fortawesome/free-solid-svg-icons";
+
 import PriceElement from "./PriceElement";
 import Nav from "./Nav";
 import TitleBar from "./TitleBar";
@@ -11,9 +14,8 @@ export default function HouseInfo(props) {
         price,
         summary,
         img_url,
-        lister_url
-        // updated_in_days,
-        // datasource_name
+        lister_url,
+        liked
     } = props.selectedListing;
 
     return (
@@ -40,7 +42,17 @@ export default function HouseInfo(props) {
                     <hr />
                 </div>
                 <div className='info'>
-                    <TitleBar titleInfo={{ title, bedroom_number, summary }} />
+                    <TitleBar
+                        titleInfo={{ title, bedroom_number }}
+                        liked={liked}
+                    />
+                    <h4>
+                        <FontAwesomeIcon icon={faBed} />
+                        {bedroom_number}
+                        <FontAwesomeIcon icon={faToilet} />
+                        {1}
+                    </h4>
+                    <p>{summary}</p>
                     <a href={lister_url}>{lister_url}</a>
                 </div>
             </div>

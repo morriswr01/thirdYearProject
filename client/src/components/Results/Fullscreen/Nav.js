@@ -9,12 +9,9 @@ import LoginContainer from "../../Login/LoginContainer";
 export default function Nav(props) {
     return (
         <div className='nav'>
-            <div className='nav-container clearfix'>
+            <div className='fullscreenLogin'>
                 {/* Login and registration buttons */}
-                <LoginContainer
-                    auth={props.auth}
-                    logout={props.logout}
-                />
+                <LoginContainer auth={props.auth} logout={props.logout} />
             </div>
             <button className='compare'>Compare</button>
             <button

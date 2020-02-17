@@ -21,9 +21,22 @@ a {
 }
 
 .loginButton {
-        background-color: $light-green;
+    background-color: $light-green;
 }
 
 .registerButton {
-        background-color: $amber;
+    background-color: $amber !important;
+}
+
+.heart {
+    margin-top: 2px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    transition: 0.3s;
+
+    &:hover,
+    &.active {
+        color: red;
+    }
 }
