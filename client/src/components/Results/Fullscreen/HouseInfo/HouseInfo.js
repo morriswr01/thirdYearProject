@@ -1,19 +1,13 @@
 import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBed, faToilet } from "@fortawesome/free-solid-svg-icons";
-
-import PriceElement from "./PriceElement";
-import Nav from "./Nav";
+import PriceElement from "../PriceElement";
+import Nav from "../Nav";
 import TitleBar from "./TitleBar";
+import RoomsInfo from "./RoomsInfo";
+import Description from "./Description";
 
 export default function HouseInfo(props) {
-    const {
-        bedroom_number,
-        price,
-        summary,
-        img_url,
-    } = props.selectedListing;
+    const { bedroom_number, price, summary, img_url } = props.selectedListing;
 
     const handleLikedToggle = listing => {
         props.handleLikedToggle(listing);
@@ -47,13 +41,8 @@ export default function HouseInfo(props) {
                         listing={props.selectedListing}
                         handleLikedToggle={handleLikedToggle}
                     />
-                    <h4>
-                        <FontAwesomeIcon icon={faBed} />
-                        {bedroom_number}
-                        <FontAwesomeIcon icon={faToilet} />
-                        {1}
-                    </h4>
-                    <p>{summary}</p>
+                    <RoomsInfo bedroom_number={bedroom_number} />
+                    <Description description={summary} />
                 </div>
             </div>
             <Nav

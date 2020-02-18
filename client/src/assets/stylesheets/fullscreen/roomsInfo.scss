@@ -1,0 +1,10 @@
+.roomsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 0 15px 15px 15px;
+
+    .roomIcon {
+        margin: 10px 15px 0 5px;
+    }
+}

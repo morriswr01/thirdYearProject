@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import AreaInfo from "./AreaInfo";
-import HouseInfo from "./HouseInfo";
+import HouseInfo from "./HouseInfo/HouseInfo";
 
 // Redux
 import {
