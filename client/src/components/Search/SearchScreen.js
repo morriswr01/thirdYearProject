@@ -13,9 +13,6 @@ import {
 import { getListings } from "../../actions/listingActions";
 import { logout } from "../../actions/authActions";
 
-// Aesthetic
-import { Button } from "reactstrap";
-
 // Components
 import SearchBox from "./SearchBox";
 import SearchFilter from "./SearchFilter";

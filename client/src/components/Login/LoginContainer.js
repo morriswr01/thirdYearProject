@@ -1,7 +1,4 @@
-import React, { Component, Fragment } from "react";
-
-// Aesthetic
-import { Button } from "reactstrap";
+import React, { Fragment } from "react";
 
 import LoginModal from "./LoginModal";
 import RegisterModal from "./RegisterModal";

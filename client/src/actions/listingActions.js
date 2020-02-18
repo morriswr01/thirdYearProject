@@ -13,27 +13,27 @@ import {
 
 import { tokenConfig } from "./authActions";
 
-const filterListings = listings => {
-    const listingsWithId = listings.map(listing => {
-        return {
-            ...listing,
-            id: listing.latitude,
-            liked: false
-        };
-    });
+// const filterListings = listings => {
+//     const listingsWithId = listings.map(listing => {
+//         return {
+//             ...listing,
+//             id: listing.latitude,
+//             liked: false
+//         };
+//     });
 
-    // Filter listings for duplicate IDs
-    let finalListings = [];
-    listingsWithId.filter(listing => {
-        const i = finalListings.findIndex(x => x.id === listing.id);
-        if (i <= -1) {
-            finalListings.push(listing);
-        }
-        return null;
-    });
+//     // Filter listings for duplicate IDs
+//     let finalListings = [];
+//     listingsWithId.filter(listing => {
+//         const i = finalListings.findIndex(x => x.id === listing.id);
+//         if (i <= -1) {
+//             finalListings.push(listing);
+//         }
+//         return null;
+//     });
 
-    return finalListings;
-};
+//     return finalListings;
+// };
 
 export const setSelectedListing = listingObj => ({
     type: SET_SELECTED_LISTING,
@@ -78,7 +78,7 @@ export const getFavourites = () => (dispatch, getState) => {
             const newListings = listings.map(listing => {
                 let listingIsFavourite = false;
                 favourites.forEach(favourite => {
-                    if (favourite.id == listing.id) {
+                    if (favourite.id === listing.id) {
                         listingIsFavourite = true;
                     }
                 });
@@ -105,18 +105,15 @@ export const setSortBy = sortBy => ({
 });
 
 export const setListingLiked = favouriteListing => (dispatch, getState) => {
-    const { listings, favourites } = getState().listings;
+    const { listings } = getState().listings;
 
     let removeFromDatabase = false;
 
-    const newListings = listings.map(listing => {
+    listings.forEach(listing => {
         if (favouriteListing.id === listing.id) {
             if (favouriteListing.liked) {
                 removeFromDatabase = true;
             }
-            return { ...listing, liked: !listing.liked };
-        } else {
-            return listing;
         }
     });
 

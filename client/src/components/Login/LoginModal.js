@@ -35,7 +35,7 @@ class LoginModal extends Component {
 
     // When the state of connected store changes check if there are any errors and if the user is now authenticated
     componentDidUpdate(prevProps) {
-        const { error, isAuthenticated } = this.props;
+        const { error } = this.props;
 
         if (error !== prevProps.error) {
             // Check for login error and populate login modal with error message
@@ -56,15 +56,6 @@ class LoginModal extends Component {
                 });
             }
         }
-        // If authenticated, close modal
-        // if (isAuthenticated) {
-        //     this.setState({
-        //         ...this.state,
-        //         showLoginModal: false
-        //     });
-        //     this.showLoginModal();
-        // }
-        // console.log("==============================");
     }
 
     handleLoginFormChange = e => {

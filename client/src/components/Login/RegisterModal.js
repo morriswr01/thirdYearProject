@@ -36,7 +36,7 @@ class RegistrationModal extends Component {
 
     // When the state of connected store changes check if there are any errors and if the user is now authenticated
     componentDidUpdate(prevProps) {
-        const { error, isAuthenticated } = this.props;
+        const { error } = this.props;
         if (error !== prevProps.error) {
             // Check for register error if so populate register modal with error
             if (error.id === "REGISTER_FAIL") {
@@ -55,12 +55,6 @@ class RegistrationModal extends Component {
                 });
             }
         }
-        // If authenticated, close modal
-        // if (isAuthenticated) {
-        //     this.setState({
-        //         showRegistrationModal: false,
-        //     })
-        // }
     }
 
     // Update state to match input fields
