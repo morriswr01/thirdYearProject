@@ -159,7 +159,7 @@
                     top: 30vh;
                     text-align: center;
                     height: 10vh;
-                    width: 200%;
+                    width: 100%;
 
                     .registerButton {
                         margin-right: 10px;
@@ -280,6 +280,10 @@
                                     color: #00b074;
                                     display: inline-block;
                                 }
+                                .heart {
+                                    position: absolute;
+                                    right: 0;
+                                }
                             }
                         }
                     }
@@ -291,6 +295,9 @@
                 .favouriteListings {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
+                    .favouritesLogin {
+                        width: 300%;
+                    }
                 }
                 .favourite {
                     .favouriteListings {
@@ -309,6 +316,9 @@
                 .favouriteListings {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
+                    .favouritesLogin {
+                        width: 200%;
+                    }
                 }
                 .favourite {
                     .favouriteListings {
@@ -327,6 +337,9 @@
                 .favouriteListings {
                     display: grid;
                     grid-template-columns: 1fr;
+                    .favouritesLogin {
+                        width: 100%;
+                    }
                 }
                 .favourite {
                     .favouriteListings {

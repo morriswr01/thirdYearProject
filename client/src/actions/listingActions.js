@@ -154,6 +154,7 @@ export const setFavourite = (id, value) => ({
     type: SET_FAVOURITE,
     payload: { id, value }
 });
+
 export const clearFavourites = () => ({
     type: CLEAR_FAVOURITES
 });

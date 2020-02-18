@@ -1,0 +1,44 @@
+.fullscreenTitle {
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+
+    .buttonsContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        vertical-align: middle;
+        width: 100%;
+
+        .externalLinkContainer {
+            margin-top: 10px;
+            a {
+                background-color: #d9534f;
+                text-decoration: none;
+                height: 2.5em;
+
+                &:hover {
+                    color: white;
+                    background-color: darken(#d9534f, 10%);
+                }
+            }
+        }
+
+        .likeButtonContainer {
+            .heart {
+                box-sizing: border-box;
+                position: relative;
+                width: auto;
+                height: 2.5em;
+            }
+        }
+    }
+
+    #borderBottom {
+        margin: 5px auto;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+        bottom: 0;
+    }
+}

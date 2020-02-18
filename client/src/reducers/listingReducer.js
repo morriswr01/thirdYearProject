@@ -74,10 +74,17 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 listings: state.listings.map(listing =>
-                    listing.id == action.payload.id
+                    listing.id === action.payload.id
                         ? { ...listing, liked: action.payload.value }
                         : listing
-                )
+                ),
+                selectedListing:
+                    state.selectedListing.id === action.payload.id
+                        ? {
+                              ...state.selectedListing,
+                              liked: action.payload.value
+                          }
+                        : state.selectedListing
             };
         case SET_SELECTED_LISTING:
             return {

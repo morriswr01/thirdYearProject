@@ -37,14 +37,11 @@
             height: 100%;
         }
     }
+
     .infoContainer {
         height: 60vh;
         display: flex;
         flex-direction: row;
-
-        .fullscreenTitle {
-            border-left: 1px solid rgba(0, 0, 0, 0.1);
-        }
 
         .price {
             width: 30%;
@@ -61,17 +58,10 @@
             svg {
                 margin: 0 15px;
             }
-
-            h4,
-            h3 {
-                padding: 0 25px;
-            }
         }
     }
 
     .nav {
-        // display: grid;
-        // grid-template-columns: 1fr 1fr 1fr;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

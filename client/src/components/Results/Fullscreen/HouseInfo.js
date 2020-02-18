@@ -9,14 +9,15 @@ import TitleBar from "./TitleBar";
 
 export default function HouseInfo(props) {
     const {
-        title,
         bedroom_number,
         price,
         summary,
         img_url,
-        lister_url,
-        liked
     } = props.selectedListing;
+
+    const handleLikedToggle = listing => {
+        props.handleLikedToggle(listing);
+    };
 
     return (
         <div className='houseInfo'>
@@ -43,8 +44,8 @@ export default function HouseInfo(props) {
                 </div>
                 <div className='info'>
                     <TitleBar
-                        titleInfo={{ title, bedroom_number }}
-                        liked={liked}
+                        listing={props.selectedListing}
+                        handleLikedToggle={handleLikedToggle}
                     />
                     <h4>
                         <FontAwesomeIcon icon={faBed} />
@@ -53,7 +54,6 @@ export default function HouseInfo(props) {
                         {1}
                     </h4>
                     <p>{summary}</p>
-                    <a href={lister_url}>{lister_url}</a>
                 </div>
             </div>
             <Nav
