@@ -8,7 +8,8 @@ import {
     GET_FAVOURITES,
     CLEAR_FAVOURITES,
     CLEAR_LIKE_BUTTONS,
-    SET_FAVOURITE
+    SET_FAVOURITE,
+    GET_DETAILED_DATA
 } from "./types";
 
 import { tokenConfig } from "./authActions";
@@ -35,10 +36,13 @@ import { tokenConfig } from "./authActions";
 //     return finalListings;
 // };
 
-export const setSelectedListing = listingObj => ({
-    type: SET_SELECTED_LISTING,
-    payload: listingObj
-});
+export const setSelectedListing = listingObj => (dispatch) => {
+    dispatch({
+        type: SET_SELECTED_LISTING,
+        payload: listingObj
+    });
+    // dispatch(getDetailedData(listingObj.lister_url));
+};
 
 export const getListings = () => (dispatch, getState) => {
     const {
@@ -86,7 +90,6 @@ export const getFavourites = () => (dispatch, getState) => {
                     ? { ...listing, liked: true }
                     : listing;
             });
-            console.log(newListings);
             dispatch({
                 type: GET_FAVOURITES,
                 payload: favourites
@@ -97,6 +100,20 @@ export const getFavourites = () => (dispatch, getState) => {
             });
         })
         .catch(err => console.log(err.response.data));
+};
+
+export const getDetailedData = listing_url => dispatch => {
+    if (listing_url) {
+        axios
+            .post("/api/scrape/listing", { url: listing_url })
+            .then(res => {
+                dispatch({
+                    type: GET_DETAILED_DATA,
+                    payload: res.data
+                });
+            })
+            .catch(err => console.log(err.response.data));
+    }
 };
 
 export const setSortBy = sortBy => ({
@@ -121,6 +138,7 @@ export const setListingLiked = favouriteListing => (dispatch, getState) => {
 
     if (!removeFromDatabase) {
         console.log("adding to the database");
+
         axios
             .post("/api/favourites", favouriteListing, tokenConfig(getState))
             .then(res => {

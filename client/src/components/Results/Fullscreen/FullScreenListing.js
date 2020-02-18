@@ -8,29 +8,48 @@ import HouseInfo from "./HouseInfo/HouseInfo";
 // Redux
 import {
     setSelectedListing,
-    setListingLiked
+    setListingLiked,
+    getDetailedData
 } from "../../../actions/listingActions";
 import { logout } from "../../../actions/authActions";
 
-function FullScreenListing(props) {
-    // On component mount, getAreaAnalytics(location)
+class FullScreenListing extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-    const handleLikedToggle = listing => {
-        props.setListingLiked(listing);
+    componentDidUpdate(prevProps) {
+        // const { selectedListing, fullscreen } = this.props;
+        // if (
+        //     !fullscreen &&
+        //     selectedListing &&
+        //     (!selectedListing.description ||
+        //         prevProps.selectedListing.id !== selectedListing.id)
+        // ) {
+        //     console.log(prevProps.selectedListing.id);
+        //     console.log(selectedListing.id);
+        //     this.props.getDetailedData(selectedListing.lister_url);
+        // }
+    }
+
+    handleLikedToggle = listing => {
+        this.props.setListingLiked(this.props.selectedListing);
     };
 
-    return (
-        <div className='fullscreenListing'>
-            <HouseInfo
-                selectedListing={props.selectedListing}
-                setSelectedListing={props.setSelectedListing}
-                handleLikedToggle={handleLikedToggle}
-                auth={props.auth}
-                logout={props.logout}
-            />
-            <AreaInfo />
-        </div>
-    );
+    render() {
+        return (
+            <div className='fullscreenListing'>
+                <HouseInfo
+                    selectedListing={this.props.selectedListing}
+                    setSelectedListing={this.props.setSelectedListing}
+                    handleLikedToggle={this.handleLikedToggle}
+                    auth={this.props.auth}
+                    logout={this.props.logout}
+                />
+                <AreaInfo />
+            </div>
+        );
+    }
 }
 
 FullScreenListing.propTypes = {
@@ -38,6 +57,7 @@ FullScreenListing.propTypes = {
 };
 
 const mapStateToProps = state => ({
+    fullscreen: state.listings.fullscreen,
     selectedListing: state.listings.selectedListing,
     auth: state.auth
 });
@@ -45,5 +65,6 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, {
     setListingLiked,
     setSelectedListing,
+    getDetailedData,
     logout
 })(FullScreenListing);

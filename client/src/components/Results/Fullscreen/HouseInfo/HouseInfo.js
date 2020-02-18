@@ -7,7 +7,15 @@ import RoomsInfo from "./RoomsInfo";
 import Description from "./Description";
 
 export default function HouseInfo(props) {
-    const { bedroom_number, price, summary, img_url } = props.selectedListing;
+    const {
+        bedroom_number,
+        bathroom_number,
+        price,
+        summary,
+        description,
+        img_url,
+        lister_url
+    } = props.selectedListing;
 
     const handleLikedToggle = listing => {
         props.handleLikedToggle(listing);
@@ -41,8 +49,15 @@ export default function HouseInfo(props) {
                         listing={props.selectedListing}
                         handleLikedToggle={handleLikedToggle}
                     />
-                    <RoomsInfo bedroom_number={bedroom_number} />
-                    <Description description={summary} />
+                    <RoomsInfo
+                        bedroom_number={bedroom_number}
+                        bathroom_number={bathroom_number}
+                    />
+                    <Description
+                        summary={summary}
+                        description={description}
+                        lister_url={lister_url}
+                    />
                 </div>
             </div>
             <Nav

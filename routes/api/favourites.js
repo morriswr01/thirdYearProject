@@ -24,7 +24,10 @@ router.post("/", auth, (req, res) => {
 
     newFavourite
         .save()
-        .then(favourite => res.json(favourite))
+        .then(favourite => {
+            console.log("Sup")
+            res.json(favourite);
+        })
         .catch(err =>
             res.status(400).json({ msg: "This favourite is a duplicate" })
         );

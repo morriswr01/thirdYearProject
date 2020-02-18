@@ -17,6 +17,7 @@ export const GET_FAVOURITES = "GET_FAVOURITES";
 export const CLEAR_FAVOURITES = "CLEAR_FAVOURITES";
 export const SET_FAVOURITE = "SET_FAVOURITE";
 export const CLEAR_LIKE_BUTTONS = "CLEAR_LIKE_BUTTONS";
+export const GET_DETAILED_DATA = "GET_DETAILED_DATA";
 
 // Area Reducer
 export const GET_AREA_DATA = "GET_AREA_DATA";

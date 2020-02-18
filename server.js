@@ -24,6 +24,7 @@ app.use("/api/listings", require("./routes/api/listings"));
 app.use("/api/favourites", require("./routes/api/favourites"));
 app.use("/api/area", require("./routes/api/area"));
 app.use("/api/users", require("./routes/api/users"));
+app.use("/api/scrape", require("./routes/api/scrape"));
 
 // Start server and listen on port 5000
 const port = process.env.PORT || 5000;

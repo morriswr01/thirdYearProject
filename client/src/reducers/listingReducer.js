@@ -6,7 +6,8 @@ import {
     GET_FAVOURITES,
     CLEAR_FAVOURITES,
     CLEAR_LIKE_BUTTONS,
-    SET_FAVOURITE
+    SET_FAVOURITE,
+    GET_DETAILED_DATA
 } from "../actions/types";
 
 // eslint-disable-next-line
@@ -37,7 +38,9 @@ const filterListings = listings => {
 // ========================== REMOVE =================
 
 const initialState = {
-    selectedListing: {},
+    selectedListing: {
+        description: ""
+    },
     fullscreen: false,
     sortBy: "",
     // listings: [],
@@ -92,7 +95,7 @@ export default (state = initialState, action) => {
                 fullscreen:
                     action.payload.listingNumber ===
                     state.selectedListing.listingNumber,
-                selectedListing: action.payload
+                selectedListing: { ...state.selectedListing, ...action.payload }
             };
         case SET_SORT_BY:
             return {
@@ -103,6 +106,14 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 listings: action.payload
+            };
+        case GET_DETAILED_DATA:
+            return {
+                ...state,
+                selectedListing: {
+                    ...state.selectedListing,
+                    ...action.payload
+                }
             };
         default:
             return state;
