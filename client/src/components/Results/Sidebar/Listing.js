@@ -29,7 +29,6 @@ function Listing(props) {
                     : "sidebarListing"
             }
             onClick={() => {
-                console.log("Selected house" + id);
                 props.setSelectedListing({
                     ...props.listing,
                     listingNumber: id
@@ -49,7 +48,6 @@ function Listing(props) {
                         <h5 className='price'>{price_formatted}</h5>
                         <span
                             onClick={e => {
-                                console.log("Heart clicked");
                                 toggleLiked();
                                 e.stopPropagation();
                             }}

@@ -39,7 +39,6 @@ router.post("/data", async (req, res) => {
         getEndpointURL(endpoints[key], location, numBedrooms)
     ]);
 
-    // console.log(urls);
 
     var asyncRequests = (key, url) => {
         return rp(url).then(res => ({
@@ -65,7 +64,6 @@ router.post("/data", async (req, res) => {
                 if (err) throw err;
             }
         );
-        console.log(allData);
         res.json(allData);
     });
 });

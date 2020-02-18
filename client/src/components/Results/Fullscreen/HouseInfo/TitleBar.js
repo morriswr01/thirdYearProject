@@ -20,7 +20,6 @@ export default function TitleBar(props) {
                 <div className='likeButtonContainer'>
                     <span
                         onClick={e => {
-                            console.log("Heart clicked");
                             props.handleLikedToggle();
                             e.stopPropagation();
                         }}

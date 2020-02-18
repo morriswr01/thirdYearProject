@@ -41,7 +41,6 @@ export default function Map(props) {
                         <button
                             onClick={e => {
                                 e.preventDefault();
-                                console.log("Selected listing " + i);
                                 if (selectedListing !== i) {
                                     setSelectedListing(i);
                                 } else {

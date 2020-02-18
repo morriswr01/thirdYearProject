@@ -22,17 +22,13 @@ router.post("/", auth, (req, res) => {
     req.body.liked = true;
     const newFavourite = new Favouite({ userID: req.user.id, ...req.body });
 
-    console.log({ userID: req.user.id, ...req.body });
-
     newFavourite
         .save()
         .then(favourite => {
-            console.log("Sup");
-            res.json(favourite);
+            return res.json(favourite);
         })
         .catch(err => {
-            console.log(err.message);
-            res.status(400).json({ msg: "This favourite is a duplicate" });
+            return res.status(400).json({ msg: err.message });
         });
 });
 

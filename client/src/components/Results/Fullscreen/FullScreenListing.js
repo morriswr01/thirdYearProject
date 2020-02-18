@@ -18,22 +18,7 @@ class FullScreenListing extends React.Component {
         super(props);
     }
 
-    componentDidUpdate(prevProps) {
-        // const { selectedListing, fullscreen } = this.props;
-        // if (
-        //     !fullscreen &&
-        //     selectedListing &&
-        //     (!selectedListing.description ||
-        //         prevProps.selectedListing.id !== selectedListing.id)
-        // ) {
-        //     console.log(prevProps.selectedListing.id);
-        //     console.log(selectedListing.id);
-        //     this.props.getDetailedData(selectedListing.lister_url);
-        // }
-    }
-
     handleLikedToggle = listing => {
-        console.log("Sending like to redux action")
         this.props.setListingLiked(this.props.selectedListing);
     };
 

@@ -15,12 +15,12 @@ router.post("/listing", (req, res) => {
             const listing = cheerio.load(body);
             const description = listing(".a_teaser").text();
             // const description = listing(".property__description").text();
-            // const bathroom_number = listing(".a_features")
-            //     .first()
-            //     .children(".summary-item")
-            //     .first()
-            //     .text();
-            return res.json({ description });
+            const bathroom_number = listing(".a_features")
+                .first()
+                .children(".summary-item")
+                .first()
+                .text();
+            return res.json({ description, bathroom_number });
         }
     });
 });

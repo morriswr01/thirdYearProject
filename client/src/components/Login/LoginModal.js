@@ -88,7 +88,6 @@ class LoginModal extends Component {
         const { email, password } = this.state.loginDetails;
 
         if (!email || !password) {
-            console.log("Yo")
             this.setState({
                 ...this.state,
                 loginDetails: {

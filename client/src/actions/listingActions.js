@@ -134,16 +134,13 @@ export const setListingLiked = favouriteListing => (dispatch, getState) => {
         }
     });
 
-    console.log(removeFromDatabase);
 
     if (!removeFromDatabase) {
         console.log("adding to the database");
-        console.log();
 
         axios
             .post("/api/favourites", favouriteListing, tokenConfig(getState))
             .then(res => {
-                console.log("shold call set faVE HERE");
                 dispatch(setFavourite(favouriteListing.id, true));
                 dispatch(getFavourites());
             })
@@ -158,7 +155,6 @@ export const setListingLiked = favouriteListing => (dispatch, getState) => {
                 headers: { ...tokenConfig(getState).headers }
             })
             .then(res => {
-                console.log("shold call set faVE HERE1");
                 dispatch(setFavourite(favouriteListing.id, false));
                 dispatch(getFavourites());
             })
