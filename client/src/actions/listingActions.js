@@ -36,7 +36,7 @@ import { tokenConfig } from "./authActions";
 //     return finalListings;
 // };
 
-export const setSelectedListing = listingObj => (dispatch) => {
+export const setSelectedListing = listingObj => dispatch => {
     dispatch({
         type: SET_SELECTED_LISTING,
         payload: listingObj
@@ -138,12 +138,14 @@ export const setListingLiked = favouriteListing => (dispatch, getState) => {
 
     if (!removeFromDatabase) {
         console.log("adding to the database");
+        console.log();
 
         axios
             .post("/api/favourites", favouriteListing, tokenConfig(getState))
             .then(res => {
-                dispatch(getFavourites());
+                console.log("shold call set faVE HERE");
                 dispatch(setFavourite(favouriteListing.id, true));
+                dispatch(getFavourites());
             })
             .catch(err => {
                 dispatch(getFavourites());
@@ -156,8 +158,9 @@ export const setListingLiked = favouriteListing => (dispatch, getState) => {
                 headers: { ...tokenConfig(getState).headers }
             })
             .then(res => {
-                dispatch(getFavourites());
+                console.log("shold call set faVE HERE1");
                 dispatch(setFavourite(favouriteListing.id, false));
+                dispatch(getFavourites());
             })
             .catch(err => {
                 dispatch(getFavourites());

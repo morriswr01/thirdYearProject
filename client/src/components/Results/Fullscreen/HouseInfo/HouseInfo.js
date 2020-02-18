@@ -17,10 +17,6 @@ export default function HouseInfo(props) {
         lister_url
     } = props.selectedListing;
 
-    const handleLikedToggle = listing => {
-        props.handleLikedToggle(listing);
-    };
-
     return (
         <div className='houseInfo'>
             <div className='imgContainer'>
@@ -47,7 +43,7 @@ export default function HouseInfo(props) {
                 <div className='info'>
                     <TitleBar
                         listing={props.selectedListing}
-                        handleLikedToggle={handleLikedToggle}
+                        handleLikedToggle={props.handleLikedToggle}
                     />
                     <RoomsInfo
                         bedroom_number={bedroom_number}

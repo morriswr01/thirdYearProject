@@ -76,6 +76,10 @@ const FavouriteSchema = new mongoose.Schema({
     liked: {
         type: Boolean,
         default: true
+    },
+    description: {
+        type: String,
+        default: ""
     }
 });
 

@@ -33,6 +33,7 @@ class FullScreenListing extends React.Component {
     }
 
     handleLikedToggle = listing => {
+        console.log("Sending like to redux action")
         this.props.setListingLiked(this.props.selectedListing);
     };
 

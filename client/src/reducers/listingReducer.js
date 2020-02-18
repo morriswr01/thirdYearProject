@@ -92,9 +92,7 @@ export default (state = initialState, action) => {
         case SET_SELECTED_LISTING:
             return {
                 ...state,
-                fullscreen:
-                    action.payload.listingNumber ===
-                    state.selectedListing.listingNumber,
+                fullscreen: action.payload.id === state.selectedListing.id,
                 selectedListing: { ...state.selectedListing, ...action.payload }
             };
         case SET_SORT_BY:

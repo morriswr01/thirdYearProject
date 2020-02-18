@@ -8,10 +8,6 @@ import "../../../../assets/stylesheets/fullscreen/titleBar.scss";
 export default function TitleBar(props) {
     const { title, lister_url, liked } = props.listing;
 
-    const toggleLiked = () => {
-        props.handleLikedToggle(props.listing);
-    };
-
     return (
         <div className='fullscreenTitle'>
             <h3>{title}</h3>
@@ -25,7 +21,7 @@ export default function TitleBar(props) {
                     <span
                         onClick={e => {
                             console.log("Heart clicked");
-                            toggleLiked();
+                            props.handleLikedToggle();
                             e.stopPropagation();
                         }}
                     >
