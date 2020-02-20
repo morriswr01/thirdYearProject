@@ -1,0 +1,34 @@
+.areaInfo {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 40%;
+    padding: 20px;
+
+    .areaHeaderContainer,
+    .locationTitleContainer {
+        text-align: center;
+    }
+
+    .locationTitleContainer {
+        .locationTitle {
+            text-decoration: underline;
+        }
+    }
+
+    .dataGroup {
+        margin: 10px 5px 5px 5px;
+
+        .icon {
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        .stringInfo,
+        .barInfo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

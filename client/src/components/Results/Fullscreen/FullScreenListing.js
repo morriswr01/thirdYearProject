@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-import AreaInfo from "./AreaInfo";
+import AreaInfo from "./AreaInfo/AreaInfo";
 import HouseInfo from "./HouseInfo/HouseInfo";
 
 // Redux
@@ -13,29 +13,23 @@ import {
 } from "../../../actions/listingActions";
 import { logout } from "../../../actions/authActions";
 
-class FullScreenListing extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    handleLikedToggle = listing => {
-        this.props.setListingLiked(this.props.selectedListing);
+function FullScreenListing(props) {
+    const handleLikedToggle = () => {
+        props.setListingLiked(props.selectedListing);
     };
-
-    render() {
-        return (
-            <div className='fullscreenListing'>
-                <HouseInfo
-                    selectedListing={this.props.selectedListing}
-                    setSelectedListing={this.props.setSelectedListing}
-                    handleLikedToggle={this.handleLikedToggle}
-                    auth={this.props.auth}
-                    logout={this.props.logout}
-                />
-                <AreaInfo />
-            </div>
-        );
-    }
+    return (
+        <div className='fullscreenListing'>
+            <HouseInfo
+                selectedListing={props.selectedListing}
+                setSelectedListing={props.setSelectedListing}
+                handleLikedToggle={handleLikedToggle}
+                area={props.area}
+                auth={props.auth}
+                logout={props.logout}
+            />
+            <AreaInfo area={props.area} />
+        </div>
+    );
 }
 
 FullScreenListing.propTypes = {
@@ -45,6 +39,7 @@ FullScreenListing.propTypes = {
 const mapStateToProps = state => ({
     fullscreen: state.listings.fullscreen,
     selectedListing: state.listings.selectedListing,
+    area: state.area,
     auth: state.auth
 });
 
