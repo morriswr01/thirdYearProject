@@ -1,9 +1,9 @@
-import React from 'react'
+import { ChartComponent } from "@syncfusion/ej2-react-charts";
+import React, { Component } from "react";
 
-export default function ChartInfo() {
-    return (
-        <div>
-            
-        </div>
-    )
+class ChartInfo extends Component {
+    render() {
+        return <ChartComponent />;
+    }
 }
+export default ChartInfo;
