@@ -22,7 +22,6 @@
 }
 
 .houseInfo {
-    // height: 100vh;
     width: 60%;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 0 20px 20px 0;
@@ -39,7 +38,7 @@
     }
 
     .infoContainer {
-        height: 60vh;
+        height: 65vh;
         display: flex;
         flex-direction: row;
 
@@ -55,16 +54,23 @@
         .info {
             border-left: 1px solid rgba(0, 0, 0, 0.1);
             width: 70%;
-            height: 60vh;
+            height: 65vh;
         }
     }
 
     .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 10vh;
-        margin: 20px 10px;
+        position: relative;
+        height: 5vh;
+        margin: auto;
+        .buttonsContainer {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-bottom: 20px;
+        }
 
         button {
             height: 50px;
@@ -102,6 +108,7 @@
         }
     }
 }
+
 .amenitiesContainer {
     overflow: hidden;
 

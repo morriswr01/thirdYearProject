@@ -16,9 +16,9 @@ const endpoints = {
     demand: "demand",
     crime: "crime",
     demographics: "demographics",
-    schools: "schools",
-    areaType: "area-type",
-    floorArea: "floor-areas"
+    schools: "schools"
+    // areaType: "area-type",
+    // floorArea: "floor-areas"
 };
 
 const getEndpointURL = (endpoint, location, numBedrooms) => {
@@ -38,7 +38,6 @@ router.post("/data", async (req, res) => {
         key,
         getEndpointURL(endpoints[key], location, numBedrooms)
     ]);
-
 
     var asyncRequests = (key, url) => {
         return rp(url).then(res => ({

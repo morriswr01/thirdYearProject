@@ -9,17 +9,19 @@ import LoginContainer from "../../Login/LoginContainer";
 export default function Nav(props) {
     return (
         <div className='nav'>
-            <div className='fullscreenLogin'>
-                {/* Login and registration buttons */}
-                <LoginContainer auth={props.auth} logout={props.logout} />
+            <div className='buttonsContainer'>
+                <div className='fullscreenLogin'>
+                    {/* Login and registration buttons */}
+                    <LoginContainer auth={props.auth} logout={props.logout} />
+                </div>
+                <button className='compare'>Compare</button>
+                <button
+                    className='back'
+                    onClick={() => props.setSelectedListing({})}
+                >
+                    <FontAwesomeIcon icon={faArrowRight} /> Back
+                </button>
             </div>
-            <button className='compare'>Compare</button>
-            <button
-                className='back'
-                onClick={() => props.setSelectedListing({})}
-            >
-                <FontAwesomeIcon icon={faArrowRight} /> Back
-            </button>
         </div>
     );
 }
