@@ -7,6 +7,8 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 import { setSelectedListing } from "../../../actions/listingActions";
 
+import "../../../assets/stylesheets/sidebar/sidebarListing.scss";
+
 function Listing(props) {
     const toggleLiked = () => {
         props.handleLikedToggle(props.listing);
@@ -37,32 +39,31 @@ function Listing(props) {
         >
             <div className='sidebarListingInfo'>
                 <img src={img_url} alt='House' className='sidebarListingImg' />
-                <div className='title'>
-                    <h3>{title}</h3>
+                <div className='titleContainer'>
+                    <h3 className='title'>{title}</h3>
                 </div>
-                <p className='summary'>{summary}</p>
-                <p className='bedNum'>Bedrooms: {bedroom_number}</p>
+                <div className='listingInfo'>
+                    <p className='summary'>{summary}</p>
+                    <p className='bedNum'>Bedrooms: {bedroom_number}</p>
+                </div>
                 <div className='priceContainer'>
-                    <hr></hr>
-                    <div className='infoBar'>
-                        <h5 className='price'>{price_formatted}</h5>
-                        <span
-                            onClick={e => {
-                                toggleLiked();
-                                e.stopPropagation();
-                            }}
-                        >
-                            <FontAwesomeIcon
-                                className={
-                                    props.listing.liked
-                                        ? "heart active"
-                                        : "heart"
-                                }
-                                icon={faHeart}
-                            />
-                        </span>
-                    </div>
+                    {/* <div className='infoBar'> */}
+                    <h5 className='price'>{price_formatted}</h5>
+                    <span
+                        onClick={e => {
+                            toggleLiked();
+                            e.stopPropagation();
+                        }}
+                    >
+                        <FontAwesomeIcon
+                            className={
+                                props.listing.liked ? "heart active" : "heart"
+                            }
+                            icon={faHeart}
+                        />
+                    </span>
                 </div>
+                {/* </div> */}
             </div>
         </div>
     );

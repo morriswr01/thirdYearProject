@@ -43,9 +43,9 @@ const initialState = {
     },
     fullscreen: false,
     sortBy: "",
-    listings: [],
+    // listings: [],
     numListings: 203,
-    // listings: filterListings(listings),
+    listings: filterListings(listings),
     favourites: []
 };
 

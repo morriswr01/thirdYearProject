@@ -1,0 +1,98 @@
+@import "../config";
+
+.sidebarListing {
+    display: flex;
+    flex-direction: column;
+    // height: 50vh;
+    height: 400px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    transition: 0.4s;
+    position: relative;
+
+    &:hover {
+        img {
+            border-radius: 5px;
+            border: 3px solid #00b074;
+            padding: 3px;
+            transition: 0.4s;
+        }
+        background-color: darken($shale_grey, 5%);
+    }
+
+    &.selected {
+        img {
+            border-radius: 5px;
+            border: 3px solid #00b074;
+            padding: 3px;
+            transition: 0.4s;
+        }
+    }
+
+    h3,
+    h5,
+    p {
+        margin: 0 auto;
+    }
+
+    .sidebarListingInfo {
+        height: 38vh;
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            border-radius: 5px;
+            transition: 0.4s;
+        }
+
+        .titleContainer {
+            box-sizing: border-box;
+            height: 20%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            margin-top: 5px;
+            padding-bottom: 5px;
+            overflow: hidden;
+            .title {
+                font-size: 1.25em;
+            }
+        }
+
+        .listingInfo {
+            box-sizing: border-box;
+            height: 25%;
+            .summary,
+            .bedNum {
+                font-size: 0.75em;
+            }
+        }
+
+        .priceContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-size: 1.5em;
+            height: 15%;
+            margin-right: 5px;
+
+            .price {
+                margin: 2px 0 0 0;
+                color: #00b074;
+            }
+
+            .heart {
+                box-sizing: border-box;
+                float: right;
+            }
+            .infoBar {
+                margin-bottom: 8px;
+                align-items: center;
+                position: relative;
+
+                .price {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
