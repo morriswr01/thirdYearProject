@@ -69,11 +69,9 @@ class SearchScreen extends Component {
                 </div>
                 {/* Title and subheading */}
                 <header className='search-header'>
-                    <div className='search-heading'>
-                        <h1 className='search-title'>Pins</h1>
-                        <h3 className='search-subtitle'>
-                            &lt; Some Catchy Title &gt;
-                        </h3>
+                    <div className='search-heading search-title'>
+                        Pins
+                        {/* <h3 className='search-title'>Pins</h3> */}
                     </div>
                 </header>
                 {/* Search Function and filtering */}
