@@ -16,6 +16,7 @@ router.post("/listing", (req, res) => {
             const description = listing(".a_teaser").text();
             return res.json({ description });
         }
+        return res.status(400).json({ msg: "Link does not exist" });
     });
 });
 
