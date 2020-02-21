@@ -8,12 +8,51 @@ import DataGroup from "./utils/DataGroup";
 export default function Demographics(props) {
     const { demographics } = props;
 
+    const getAgeDemographicsChart = ages => {
+        const labels = Object.keys(ages);
+        const data = Object.values(ages);
+
+        return {
+            labels,
+            datasets: [
+                {
+                    label: "Age",
+                    data,
+                    backgroundColor: [
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8",
+                        "#0275d8"
+                    ]
+                }
+            ]
+        };
+    };
+
     return (
         <DataGroup icon={faChartArea} id='demographics' key='demographics'>
             <div className='chartInfo'>
-                <h6 className='dataName'>Age</h6>
+                <h6 className='dataName'>Age Demographics</h6>
                 <div className='chart'>
-                    <ChartInfo />
+                    <ChartInfo
+                        chartData={getAgeDemographicsChart(demographics.age)}
+                        legendPosition='bottom'
+                        type='bar'
+                    />
                 </div>
             </div>
             <div className='stringInfo'>
