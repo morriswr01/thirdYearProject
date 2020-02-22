@@ -35,3 +35,6 @@ export const REGISTER_FAIL = "REGISTER_FAIL";
 // Errors
 export const GET_ERRORS = "GET_ERRORS";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
+
+//Amenities
+export const SET_LOCAL_AMENITIES = "SET_LOCAL_AMENITIES";

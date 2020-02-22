@@ -91,7 +91,12 @@ class Results extends Component {
                 }
             >
                 <FullScreenListing />
-                <Amenities area={this.props.area} />
+                <Amenities
+                    searchLocation={this.props.search.location.latlng}
+                    selectedListing={this.props.selectedListing}
+                    fullscreen={this.props.fullscreen}
+                    amenities={this.props.amenities}
+                />
                 <div className='nonFullScreen'>
                     <Map listings={sortedListings} location={location} />
 
@@ -117,7 +122,9 @@ const mapStateToProps = state => ({
     searchLocation: state.search.location,
     selectedListing: state.listings.selectedListing,
     fullscreen: state.listings.fullscreen,
+    search: state.search,
     auth: state.auth,
+    amenities: state.amenities.amenities,
     area: state.area
 });
 
