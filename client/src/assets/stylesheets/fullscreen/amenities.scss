@@ -1,0 +1,70 @@
+@import "../config";
+
+.amenitiesContainer {
+    overflow: hidden;
+
+    // Postion
+    position: absolute;
+    right: 0vw;
+    bottom: 0vh;
+
+    // Content behaviour
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    // Size
+    height: 30vh;
+    width: 25vw;
+
+    background-color: transparent;
+
+    z-index: 15;
+
+    .amenitiesBox {
+        // Transitions
+        transition: all 1s;
+
+        // Size
+        height: 100%;
+        width: 80%;
+        margin: 20px auto;
+
+        position: relative;
+        bottom: -30vh;
+
+        background-color: $shale_grey;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+
+        .titleBar {
+            margin: 10px 15px 5px 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .amenities {
+            padding: 0 15px 5px 15px;
+
+            .amenity {
+                margin-bottom: 10px;
+
+                .amenityInfo {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    height: 30px;
+                    line-height: 20px;
+                    padding: 5px;
+                    vertical-align: middle;
+
+                    .name {
+                        font-weight: 600;
+                    }
+                }
+                .amenityBar {
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

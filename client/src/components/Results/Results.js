@@ -8,7 +8,7 @@ import { Redirect } from "react-router";
 import Map from "./Map";
 import ListingsSidebar from "./Sidebar/ListingsSidebar";
 import FullScreenListing from "./Fullscreen/FullScreenListing";
-import Amenities from "./Fullscreen/Amenities";
+import Amenities from "./Fullscreen/Ameneties/Amenities";
 
 import { getAreaData } from "../../actions/areaActions";
 import {
@@ -91,7 +91,7 @@ class Results extends Component {
                 }
             >
                 <FullScreenListing />
-                <Amenities />
+                <Amenities area={this.props.area} />
                 <div className='nonFullScreen'>
                     <Map listings={sortedListings} location={location} />
 
