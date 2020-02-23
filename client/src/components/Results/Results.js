@@ -16,6 +16,7 @@ import {
     setListingLiked,
     getFavourites
 } from "../../actions/listingActions";
+import { getLocalAmenities } from "../../actions/amenityActions";
 import { logout } from "../../actions/authActions";
 
 import "../../assets/stylesheets/index.scss";
@@ -36,6 +37,7 @@ class Results extends Component {
             });
         }
         this.props.getFavourites();
+        this.props.getLocalAmenities();
     }
 
     handleLikedToggle = listing => {
@@ -133,5 +135,6 @@ export default connect(mapStateToProps, {
     setSortBy,
     logout,
     setListingLiked,
-    getFavourites
+    getFavourites,
+    getLocalAmenities
 })(Results);

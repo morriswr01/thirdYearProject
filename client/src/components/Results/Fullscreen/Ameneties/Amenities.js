@@ -5,24 +5,12 @@ import Amenity from "./Amenity";
 
 import "../../../../assets/stylesheets/fullscreen/amenities.scss";
 
-export default class Amenities extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            amenities: this.props.amenities
-        };
-    }
-
-    componentDidMount() {
-        // On load, call an action to search for amenities within a certain mile radius of the search location and get their long/lat
-        // Store this in {name, location:{lat,lng}} format
-    }
-
-    componentDidUpdate() {
-        // On selection of a new listing, calculate the birds eye distance to each of the amenities in metres and display these amenities using map
-    }
-
-    getDistBetweenCoords(houseLocation, amenityLocation, unit = "K") {
+export default function Amenities(props) {
+    const getDistBetweenCoords = (
+        houseLocation,
+        amenityLocation,
+        unit = "K"
+    ) => {
         let lat1 = houseLocation.latitude;
         let long1 = houseLocation.longitude;
         let lat2 = amenityLocation.lat;
@@ -45,12 +33,12 @@ export default class Amenities extends Component {
             dist = dist * 0.8684;
         }
         return dist;
-    }
+    };
 
-    getAmenityComponents(amenities, selectedListing) {
+    const getAmenityComponents = (amenities, selectedListing) => {
         let maxDist = 0;
-        const amenitiesWithDistance = amenities.map(amenity => {
-            let distance = this.getDistBetweenCoords(
+        let amenitiesWithDistance = amenities.map(amenity => {
+            let distance = getDistBetweenCoords(
                 selectedListing,
                 amenity.location
             );
@@ -61,30 +49,32 @@ export default class Amenities extends Component {
             };
         });
 
+        amenitiesWithDistance = amenitiesWithDistance.sort(
+            (a, b) => a.distance - b.distance
+        );
+
         return amenitiesWithDistance.map((amenity, i) => (
             <Amenity
                 name={amenity.name}
-                distance={this.props.fullscreen ? amenity.distance : 250}
+                distance={props.fullscreen ? amenity.distance : 250}
                 number={i}
                 maxDist={maxDist}
                 key={i}
             />
         ));
-    }
+    };
 
-    render() {
-        return (
-            <div className='amenitiesContainer'>
-                <div className='amenitiesBox'>
-                    <TitleBar />
-                    <div className='amenities'>
-                        {this.getAmenityComponents(
-                            this.state.amenities,
-                            this.props.selectedListing
-                        )}
-                    </div>
+    return (
+        <div className='amenitiesContainer'>
+            <div className='amenitiesBox'>
+                <TitleBar />
+                <div className='amenities'>
+                    {getAmenityComponents(
+                        props.amenities,
+                        props.selectedListing
+                    )}
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }

@@ -1,4 +1,4 @@
-// import { SET_LOCAL_AMENITIES } from "../actions/types";
+import { SET_LOCAL_AMENITIES } from "../actions/types";
 
 const initialState = {
     amenities: [
@@ -18,6 +18,11 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
+        case SET_LOCAL_AMENITIES:
+            return {
+                ...state,
+                amenities: action.payload
+            };
         default:
             return state;
     }
