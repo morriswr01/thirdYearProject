@@ -23,7 +23,7 @@
             justify-content: space-between;
             align-items: center;
             height: 10vh;
-            padding: 10px 5%;
+            padding: 0 5%;
 
             .back {
                 background-color: #d9534f;
@@ -45,26 +45,7 @@
             }
         }
 
-        .resultTitle {
-            margin: 0 30px;
-            max-height: 7vh;
 
-            h1 {
-                font-size: 2rem;
-                margin: 0;
-            }
-
-            p {
-                display: inline;
-            }
-
-            .searchAddress {
-                padding-left: 10px;
-                color: lighten($color: #3b3b3b, $amount: 30%);
-                font-weight: bolder;
-                text-decoration: underline;
-            }
-        }
 
         .sortFilterAndFavourites {
             display: flex;
@@ -196,98 +177,6 @@
                 position: absolute;
 
                 transition: 0.6s;
-
-                // .sidebarListing {
-                //     display: grid;
-                //     grid-template-rows: 1fr 2fr;
-                //     height: 38vh;
-                //     border-radius: 5px;
-                //     padding: 10px;
-                //     margin: 10px;
-                //     overflow: hidden;
-
-                //     transition: 0.4s;
-
-                //     &:hover {
-                //         img {
-                //             border-radius: 5px;
-                //             border: 3px solid #00b074;
-                //             padding: 3px;
-                //             transition: 0.4s;
-                //         }
-                //         background-color: darken($shale_grey, 5%);
-                //     }
-
-                //     &.selected {
-                //         img {
-                //             border-radius: 5px;
-                //             border: 3px solid #00b074;
-                //             padding: 3px;
-                //             transition: 0.4s;
-                //         }
-                //     }
-
-                //     h3,
-                //     h5,
-                //     p {
-                //         margin: 0 auto;
-                //     }
-
-                //     .sidebarListingInfo {
-                //         position: relative;
-                //         height: 38vh;
-                //         img {
-                //             width: 100%;
-                //             height: auto;
-                //             margin: auto;
-                //             border-radius: 5px;
-                //             transition: 0.4s;
-                //         }
-                //         // in order from top to bottom
-                //         .title {
-                //             display: -webkit-box;
-                //             -webkit-line-clamp: 4;
-                //             -webkit-box-orient: vertical;
-                //             font-size: 2vh;
-                //             overflow: hidden;
-                //         }
-
-                //         .summary {
-                //             font-size: 1vh;
-                //         }
-
-                //         .bedNum {
-                //             font-size: 1vh;
-                //         }
-
-                //         .priceContainer {
-                //             position: absolute;
-                //             bottom: 0;
-                //             margin-bottom: 10px;
-                //             width: 100%;
-                //             font-size: 1.5vh;
-
-                //             hr {
-                //                 margin: 0.5rem 0;
-                //             }
-
-                //             .infoBar {
-                //                 margin-bottom: 8px;
-                //                 align-items: center;
-                //                 position: relative;
-
-                //                 .price {
-                //                     color: #00b074;
-                //                     display: inline-block;
-                //                 }
-                //                 .heart {
-                //                     position: absolute;
-                //                     right: 0;
-                //                 }
-                //             }
-                //         }
-                //     }
-                // }
             }
 
             @media screen and (min-width: 1400px) {

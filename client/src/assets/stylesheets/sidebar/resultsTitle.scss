@@ -1,0 +1,35 @@
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5%;
+    .resultTitle {
+        max-height: 7vh;
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        p {
+            display: inline;
+        }
+
+        .searchAddress {
+            padding-left: 10px;
+            color: lighten($color: #3b3b3b, $amount: 30%);
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+    }
+    button {
+        height: 40px;
+        margin-right: 10px;
+        background-color: #d9534f;
+        text-decoration: none;
+        &:hover {
+            color: white;
+            background-color: darken(#d9534f, 10%);
+        }
+    }
+}

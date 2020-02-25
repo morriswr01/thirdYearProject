@@ -10,7 +10,7 @@ export default function Nav(props) {
             <a href='/' className='back'>
                 <FontAwesomeIcon icon={faArrowLeft} /> Back
             </a>
-            <h1>Pins</h1>
+            {/* <h1>Pins</h1> */}
             {/* Login and registration buttons */}
             <LoginContainer auth={props.auth} logout={props.logout} />
         </div>
