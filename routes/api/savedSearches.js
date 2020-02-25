@@ -10,9 +10,9 @@ const Search = require("../../models/Search/Search");
 // @desc Gets ALL favourites in DB and return as JSON object
 // @access Private(authentication token required)
 router.get("/", auth, (req, res) => {
-    Search.find({ userID: req.user.id }).then(favourites =>
-        res.json(favourites)
-    );
+    Search.find({ userID: req.user.id }).then(favourites => {
+        return res.json(favourites);
+    });
 });
 
 // @router POST api/favourites

@@ -1,3 +1,7 @@
+import axios from "axios";
+import { tokenConfig } from "./authActions";
+import { returnErrors } from "./errorActions";
+
 import {
     GET_SEARCH,
     GET_LOCATION,
@@ -5,12 +9,61 @@ import {
     SET_HOUSE_TYPE,
     SET_SEARCH_RADIUS,
     SET_HOUSE_PRICE,
-    SET_NUM_BEDROOMS
+    SET_NUM_BEDROOMS,
+    GET_SAVED_SEARCHES,
+    SAVE_SEARCH,
+    REMOVE_SEARCH
 } from "./types";
 
 export const getSearch = () => ({
     type: GET_SEARCH
 });
+
+export const getSavedSearches = () => (dispatch, getState) => {
+    axios
+        .get("/api/savedSearches", tokenConfig(getState))
+        .then(res => {
+            dispatch({
+                type: GET_SAVED_SEARCHES,
+                payload: res.data
+            });
+        })
+        .catch(err =>
+            dispatch(returnErrors(err.response.data, err.response.status))
+        );
+};
+
+// export const saveSearch = search => (dispatch, getState) => {
+//     axios
+//         .post("/api/savedSearches", search, tokenConfig(getState))
+//         .then(res =>
+//             dispatch({
+//                 type: SAVE_SEARCH,
+//                 payload: res.data
+//             })
+//         )
+//         .catch(err => {
+//             console.log(err.message);
+//         });
+// };
+
+// export const removeSearch = id => (getState, dispatch) => {
+//     axios
+//         .delete("/api/savedSearches", {
+//             data: { id },
+//             headers: { ...tokenConfig(getState).headers }
+//         })
+//         .then(res =>
+//             dispatch({
+//                 type: REMOVE_SEARCH,
+//                 payload: res.data
+//             })
+//         )
+//         .catch(err => {
+//             console.log(err.message);
+//         });
+// };
+
 export const getLocation = () => ({
     type: GET_LOCATION
 });

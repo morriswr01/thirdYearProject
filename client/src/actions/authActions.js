@@ -5,6 +5,7 @@ import {
     clearFavourites,
     clearLikeButtons
 } from "./listingActions";
+import { getSavedSearches } from "./searchActions";
 
 import {
     USER_LOADED,
@@ -28,6 +29,7 @@ export const login = loginDetails => dispatch => {
                 payload: res.data
             });
             dispatch(getFavourites());
+            dispatch(getSavedSearches());
         })
         .catch(err => {
             dispatch(

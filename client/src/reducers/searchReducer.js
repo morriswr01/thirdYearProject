@@ -3,19 +3,24 @@ import {
     SET_HOUSE_TYPE,
     SET_SEARCH_RADIUS,
     SET_HOUSE_PRICE,
-    SET_NUM_BEDROOMS
+    SET_NUM_BEDROOMS,
+    SAVE_SEARCH,
+    REMOVE_SEARCH,
+    GET_SAVED_SEARCHES
 } from "../actions/types";
 
 const initialState = {
+    _id: "5e53f351b7692e3f983c99a3",
     location: {
-        postcode: "",
+        postcode: "LS167PT",
         latlng: {
             lat: 53.8539,
             lng: -1.62415
         }
     },
     houseTypes: [],
-    searchRadius: 20,
+    searchRadius: 1,
+    savedSearches: [],
     housePrice: { min: 0, max: 1000000 },
     numBedrooms: { min: 1, max: 5 }
 };
@@ -46,6 +51,22 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 numBedrooms: action.payload
+            };
+        case SET_NUM_BEDROOMS:
+            return {
+                ...state,
+                numBedrooms: action.payload
+            };
+        case SAVE_SEARCH:
+            return {
+                ...state,
+                ...action.payload,
+                savedSearches: [...state.savedSearches, action.payload]
+            };
+        case GET_SAVED_SEARCHES:
+            return {
+                ...state,
+                savedSearches: action.payload
             };
         default:
             return state;

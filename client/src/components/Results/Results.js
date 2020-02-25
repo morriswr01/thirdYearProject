@@ -17,6 +17,7 @@ import {
     getFavourites
 } from "../../actions/listingActions";
 import { getLocalAmenities } from "../../actions/amenityActions";
+import { getSavedSearches } from "../../actions/searchActions";
 import { logout } from "../../actions/authActions";
 
 import "../../assets/stylesheets/index.scss";
@@ -136,5 +137,6 @@ export default connect(mapStateToProps, {
     logout,
     setListingLiked,
     getFavourites,
-    getLocalAmenities
+    getLocalAmenities,
+    getSavedSearches
 })(Results);
