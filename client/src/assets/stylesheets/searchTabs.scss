@@ -1,0 +1,14 @@
+.savedSearchToggleButtons {
+    margin: auto 0;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    
+    .buttons {
+        width: 100%;
+        .toggleButton {
+            border-radius: 25px 25px 0 0 !important;
+            width: 50% !important;
+        }
+    }
+}

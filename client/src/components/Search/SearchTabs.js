@@ -1,31 +1,37 @@
 import React from "react";
 import { Button, ButtonGroup } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faFilter } from "@fortawesome/free-solid-svg-icons";
 
-export default function ToggleFavourites(props) {
+import "../../assets/stylesheets/searchTabs.scss";
+
+export default function SearchTabs(props) {
     const { toggle } = props;
 
-    const onToggleChange = mode => {
-        props.handleToggleChange(mode);
+    const onToggleChange = radius => {
+        props.handleToggleChange(radius);
     };
 
     return (
-        <div className='favouritesToggleButtons'>
-            <ButtonGroup>
+        <div className='savedSearchToggleButtons'>
+            <ButtonGroup className='buttons'>
                 <Button
+                    className='toggleButton'
                     color='primary'
                     onClick={() => onToggleChange(1)}
                     active={toggle === 1}
                 >
-                    <FontAwesomeIcon icon={faSearch} />
+                    <FontAwesomeIcon icon={faFilter} />
+                    Filters
                 </Button>
                 <Button
+                    className='toggleButton'
                     color='danger'
                     onClick={() => onToggleChange(2)}
                     active={toggle === 2}
                 >
-                    <FontAwesomeIcon icon={faHeart} />
+                    <FontAwesomeIcon icon={faSearch} />
+                    Saved Searches
                 </Button>
             </ButtonGroup>
         </div>

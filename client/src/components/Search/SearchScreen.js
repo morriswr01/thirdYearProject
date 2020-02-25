@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 
 // Redux
 import { connect } from "react-redux";
@@ -15,13 +15,26 @@ import { logout } from "../../actions/authActions";
 
 // Components
 import SearchBox from "./SearchBox";
+import SearchTabs from "./SearchTabs";
 import SearchFilter from "./SearchFilter";
 import LoginContainer from "../Login/LoginContainer";
 
 // SCSS
 import "../../assets/stylesheets/index.scss";
+import SavedSearches from "./SavedSearches";
 
 class SearchScreen extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            tab: 1
+        };
+    }
+
+    handleTabChange = tab => {
+        this.setState({ tab: tab });
+    };
+
     // Get postcode and latitude/longitude from the search box component
     handleSearchTextChange = (postcode, latlng) => {
         const location = { postcode, latlng };
@@ -79,11 +92,25 @@ class SearchScreen extends Component {
                     <SearchBox
                         handleSearchTextChange={this.handleSearchTextChange}
                     />
-                    {/* Filtering Section */}
-                    <SearchFilter
-                        handleSubmit={this.handleSubmit}
-                        handleFilterChange={this.handleFilterChange}
-                    />
+                    {/* Search Tabs */}
+                    <SearchTabs handleToggleChange={this.handleTabChange} />
+                    <div
+                        className={
+                            this.state.tab === 2
+                                ? "controlsContainer saved"
+                                : "controlsContainer"
+                        }
+                    >
+                        {/* Filtering Section */}
+                        <SearchFilter
+                            handleSubmit={this.handleSubmit}
+                            handleFilterChange={this.handleFilterChange}
+                        />
+                        <SavedSearches
+                            auth={this.props.auth}
+                            handleSubmit={this.handleSubmit}
+                        />
+                    </div>
                 </div>
             </div>
         );
