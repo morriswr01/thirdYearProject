@@ -134,6 +134,11 @@ export const setListingLiked = favouriteListing => (dispatch, getState) => {
         }
     });
 
+    console.log(favouriteListing._id);
+
+    if (favouriteListing._id !== undefined) {
+        removeFromDatabase = true;
+    }
 
     if (!removeFromDatabase) {
         console.log("adding to the database");
