@@ -37,6 +37,7 @@ class Results extends Component {
                 numBedrooms: 2
             });
         }
+        this.props.getSavedSearches();
         this.props.getFavourites();
         this.props.getLocalAmenities();
     }

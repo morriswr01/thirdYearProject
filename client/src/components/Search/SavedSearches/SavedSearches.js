@@ -3,8 +3,9 @@ import React, { Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-import LoginModal from "../Login/LoginModal";
-import RegisterModal from "../Login/RegisterModal";
+import LoginModal from "../../Login/LoginModal";
+import RegisterModal from "../../Login/RegisterModal";
+import Accordion from "./Accordion";
 
 export default function SavedSearches(props) {
     return (
@@ -21,7 +22,7 @@ export default function SavedSearches(props) {
                     </Fragment>
                 </div>
             ) : (
-                <h1>Yo</h1>
+                <Accordion savedSearches={props.savedSearches} />
             )}
         </div>
     );

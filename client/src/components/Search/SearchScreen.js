@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 
 // Redux
 import { connect } from "react-redux";
@@ -8,7 +8,8 @@ import {
     setHouseType,
     setSearchRadius,
     setHousePrice,
-    setNumBedooms
+    setNumBedooms,
+    getSavedSearches
 } from "../../actions/searchActions";
 import { getListings } from "../../actions/listingActions";
 import { logout } from "../../actions/authActions";
@@ -21,7 +22,7 @@ import LoginContainer from "../Login/LoginContainer";
 
 // SCSS
 import "../../assets/stylesheets/index.scss";
-import SavedSearches from "./SavedSearches";
+import SavedSearches from "./SavedSearches/SavedSearches";
 
 class SearchScreen extends Component {
     constructor(props) {
@@ -29,6 +30,10 @@ class SearchScreen extends Component {
         this.state = {
             tab: 1
         };
+    }
+
+    componentDidMount() {
+        this.props.getSavedSearches();
     }
 
     handleTabChange = tab => {
@@ -107,6 +112,7 @@ class SearchScreen extends Component {
                             handleFilterChange={this.handleFilterChange}
                         />
                         <SavedSearches
+                            savedSearches={this.props.savedSearches}
                             auth={this.props.auth}
                             handleSubmit={this.handleSubmit}
                         />
@@ -119,6 +125,7 @@ class SearchScreen extends Component {
 
 const mapStateToProps = state => {
     return {
+        savedSearches: state.search.savedSearches,
         listings: state.listings,
         auth: state.auth
     };
@@ -131,5 +138,6 @@ export default connect(mapStateToProps, {
     setSearchRadius,
     setHousePrice,
     setNumBedooms,
+    getSavedSearches,
     logout
 })(SearchScreen);
