@@ -13,8 +13,10 @@ class SaveSearch extends React.Component {
     }
 
     componentDidMount() {
-        const { search } = this.props.search;
-        if (this.props.search.savedSearches.length > 0) {
+        if (
+            this.props.search.savedSearches.length > 0 &&
+            this.props.search._id != "1"
+        ) {
             this.setState({
                 saved:
                     this.props.search.savedSearches.find(savedSearch => {
@@ -24,7 +26,9 @@ class SaveSearch extends React.Component {
         }
     }
 
-    handleAddSearch = () => {};
+    handleAddSearch = () => {
+        
+    };
 
     render() {
         return this.state.saved === false ? (

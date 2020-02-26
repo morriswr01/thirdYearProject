@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Button } from "reactstrap";
+
 import "../../../assets/stylesheets/searchAccordion/searchAccordion.scss";
 
 export default function SavedSearch(props) {
@@ -10,8 +12,7 @@ export default function SavedSearch(props) {
                 onClick={e => {
                     if (props.id !== props.selectedSearch) {
                         props.setSelectedSearch(props.id);
-                    }
-                    else {
+                    } else {
                         props.setSelectedSearch("1");
                     }
                     e.stopPropagation();
@@ -30,7 +31,26 @@ export default function SavedSearch(props) {
                         : "accDetails"
                 }
             >
-                I m selected
+                <div className='filters'>
+                    <div className='houseTypes'>
+                        {props.savedSearch.houseTypes}
+                    </div>
+                    <div className='housePrice'>
+                        £{props.savedSearch.housePrice.min} -{" "}
+                        £{props.savedSearch.housePrice.max}
+                    </div>
+                    <div className='bedrooms'>
+                        {props.savedSearch.numBedrooms.min} -{" "}
+                        {props.savedSearch.numBedrooms.max} Bedrooms
+                    </div>
+                    <div className='searchRadius'>
+                        {props.savedSearch.searchRadius}mi
+                    </div>
+                </div>
+                <div className='footer'>
+                    <Button color='danger'>Delete</Button>
+                    <Button color='primary'>Use this Search</Button>
+                </div>
             </div>
         </div>
     );

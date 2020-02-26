@@ -10,7 +10,7 @@ import {
 } from "../actions/types";
 
 const initialState = {
-    _id: "5e53f351b7692e3f983c99a3",
+    _id: "1",
     location: {
         postcode: "LS167PT",
         latlng: {

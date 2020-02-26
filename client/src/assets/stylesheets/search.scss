@@ -83,6 +83,9 @@
 
         .search-savedSearches {
             transition: all 0.5s;
+            height: 40vh;
+            overflow-y: auto;
+            overflow-x: hidden;
             .savedSearchesLogin {
                 position: relative;
                 text-align: center;

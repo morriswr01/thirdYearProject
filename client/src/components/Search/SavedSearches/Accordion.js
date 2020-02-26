@@ -17,6 +17,7 @@ export default function Accordion(props) {
                     savedSearch={savedSearch}
                 />
             ))}
+
         </div>
     ) : (
         <div>You got no saved searches</div>

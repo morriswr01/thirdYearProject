@@ -10,12 +10,6 @@
     padding: 10px;
     margin-bottom: 10px;
 
-    // Aesthetics
-    background-color: darken($shale-grey, 5%);
-    // border: solid 1px rgba(0, 0, 0, 0.1);
-    box-shadow: 5px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
-
     &:hover {
         background-color: darken($shale-grey, 10%);
         cursor: pointer;
@@ -32,12 +26,39 @@
     transition: all 0.5s;
     visibility: hidden;
     opacity: 0;
+    padding: 0;
+    margin: 0;
     max-height: 0;
+    width: 100%;
 
     &.selected {
+        // Outside space
+        padding: 10px;
+        margin-bottom: 10px;
+
         visibility: visible;
         opacity: 1;
         max-height: 400px;
         display: block;
     }
+
+    .footer {
+        text-align: right;
+        border-top: solid 2px rgba(0, 0, 0, 0.1);
+        padding: 5px 0;
+
+        Button {
+            margin-left: 5px;
+            border-radius: 25px;
+        }
+    }
+}
+
+.accDetails,
+.accButton {
+    // Aesthetics
+    background-color: darken($shale-grey, 5%);
+    // border: solid 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
 }
