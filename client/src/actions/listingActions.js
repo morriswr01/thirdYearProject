@@ -44,14 +44,21 @@ export const setSelectedListing = listingObj => dispatch => {
     // dispatch(getDetailedData(listingObj.lister_url));
 };
 
-export const getListings = () => (dispatch, getState) => {
+export const getListings = search => (dispatch, getState) => {
+    // const {
+    //     location,
+    //     houseTypes,
+    //     searchRadius,
+    //     housePrice,
+    //     numBedrooms
+    // } = getState().search;
     const {
         location,
         houseTypes,
         searchRadius,
         housePrice,
         numBedrooms
-    } = getState().search;
+    } = search;
 
     // console.log(location);
 

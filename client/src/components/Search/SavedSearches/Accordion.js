@@ -10,6 +10,7 @@ export default function Accordion(props) {
         <div className='savedSearchAccordion'>
             {props.savedSearches.map(savedSearch => (
                 <SavedSearch
+                    getListings={props.getListings}
                     removeSearch={props.removeSearch}
                     selectedSearch={selectedSearch}
                     setSelectedSearch={setSelectedSearch}

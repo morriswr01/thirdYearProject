@@ -24,7 +24,7 @@ export default function SearchFilter(props) {
     const [radioButtons, setRadioButtons] = useState(1);
 
     const onSubmit = e => {
-        props.handleSubmit(radioButtons);
+        props.handleSubmit(props.search);
     };
 
     const onHousePriceChange = values => {

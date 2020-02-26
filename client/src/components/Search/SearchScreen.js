@@ -68,8 +68,8 @@ class SearchScreen extends Component {
         }
     };
 
-    handleSubmit = () => {
-        this.props.getListings();
+    handleSubmit = search => {
+        this.props.getListings(search);
     };
 
     render() {
@@ -109,10 +109,12 @@ class SearchScreen extends Component {
                     >
                         {/* Filtering Section */}
                         <SearchFilter
+                            search={this.props.search}
                             handleSubmit={this.handleSubmit}
                             handleFilterChange={this.handleFilterChange}
                         />
                         <SavedSearches
+                            getListings={this.props.getListings}
                             savedSearches={this.props.savedSearches}
                             auth={this.props.auth}
                             handleSubmit={this.handleSubmit}
@@ -128,6 +130,7 @@ class SearchScreen extends Component {
 const mapStateToProps = state => {
     return {
         savedSearches: state.search.savedSearches,
+        search: state.search,
         listings: state.listings,
         auth: state.auth
     };

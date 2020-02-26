@@ -25,6 +25,7 @@ export default function SavedSearches(props) {
                 <Accordion
                     savedSearches={props.savedSearches}
                     removeSearch={props.removeSearch}
+                    getListings={props.getListings}
                 />
             )}
         </div>

@@ -57,7 +57,15 @@ export default function SavedSearch(props) {
                     >
                         Delete
                     </Button>
-                    <Button color='primary'>Use this Search</Button>
+                    <Button
+                        color='primary'
+                        onClick={e => {
+                            props.getListings(props.savedSearch);
+                            e.stopPropagation();
+                        }}
+                    >
+                        Use this Search
+                    </Button>
                 </div>
             </div>
         </div>
