@@ -13,7 +13,14 @@ export default function ResultsTitle(props) {
                     <p className='searchAddress'>Coventry, CV5 6GB</p>
                 </h1>
             </div>
-            {props.auth.isAuthenticated ? <SaveSearch /> : ""}
+            {props.auth.isAuthenticated ? (
+                <SaveSearch
+                    saveSearch={props.saveSearch}
+                    removeSearch={props.removeSearch}
+                />
+            ) : (
+                ""
+            )}
         </div>
     );
 }

@@ -26,8 +26,20 @@ class SaveSearch extends React.Component {
         }
     }
 
-    handleAddSearch = () => {
-        
+    handleAddSearch = e => {
+        this.props.saveSearch();
+
+        this.setState({
+            saved: true
+        });
+    };
+
+    handleRemoveSearch = e => {
+        this.props.removeSearch();
+
+        this.setState({
+            saved: false
+        });
     };
 
     render() {
@@ -37,7 +49,7 @@ class SaveSearch extends React.Component {
             </div>
         ) : (
             <div>
-                <button>Unsave</button>
+                <button onClick={this.handleRemoveSearch}>Unsave</button>
             </div>
         );
     }

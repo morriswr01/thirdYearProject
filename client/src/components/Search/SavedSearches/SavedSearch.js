@@ -36,8 +36,8 @@ export default function SavedSearch(props) {
                         {props.savedSearch.houseTypes}
                     </div>
                     <div className='housePrice'>
-                        £{props.savedSearch.housePrice.min} -{" "}
-                        £{props.savedSearch.housePrice.max}
+                        £{props.savedSearch.housePrice.min} - £
+                        {props.savedSearch.housePrice.max}
                     </div>
                     <div className='bedrooms'>
                         {props.savedSearch.numBedrooms.min} -{" "}
@@ -48,7 +48,15 @@ export default function SavedSearch(props) {
                     </div>
                 </div>
                 <div className='footer'>
-                    <Button color='danger'>Delete</Button>
+                    <Button
+                        color='danger'
+                        onClick={e => {
+                            props.removeSearch(props.id);
+                            e.stopPropagation();
+                        }}
+                    >
+                        Delete
+                    </Button>
                     <Button color='primary'>Use this Search</Button>
                 </div>
             </div>

@@ -9,7 +9,8 @@ import {
     setSearchRadius,
     setHousePrice,
     setNumBedooms,
-    getSavedSearches
+    getSavedSearches,
+    removeSearch
 } from "../../actions/searchActions";
 import { getListings } from "../../actions/listingActions";
 import { logout } from "../../actions/authActions";
@@ -115,6 +116,7 @@ class SearchScreen extends Component {
                             savedSearches={this.props.savedSearches}
                             auth={this.props.auth}
                             handleSubmit={this.handleSubmit}
+                            removeSearch={this.props.removeSearch}
                         />
                     </div>
                 </div>
@@ -139,5 +141,6 @@ export default connect(mapStateToProps, {
     setHousePrice,
     setNumBedooms,
     getSavedSearches,
+    removeSearch,
     logout
 })(SearchScreen);

@@ -10,6 +10,7 @@ export default function Accordion(props) {
         <div className='savedSearchAccordion'>
             {props.savedSearches.map(savedSearch => (
                 <SavedSearch
+                    removeSearch={props.removeSearch}
                     selectedSearch={selectedSearch}
                     setSelectedSearch={setSelectedSearch}
                     key={savedSearch._id}
@@ -17,7 +18,6 @@ export default function Accordion(props) {
                     savedSearch={savedSearch}
                 />
             ))}
-
         </div>
     ) : (
         <div>You got no saved searches</div>

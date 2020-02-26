@@ -22,7 +22,10 @@ export default function SavedSearches(props) {
                     </Fragment>
                 </div>
             ) : (
-                <Accordion savedSearches={props.savedSearches} />
+                <Accordion
+                    savedSearches={props.savedSearches}
+                    removeSearch={props.removeSearch}
+                />
             )}
         </div>
     );

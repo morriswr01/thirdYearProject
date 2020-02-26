@@ -17,7 +17,11 @@ import {
     getFavourites
 } from "../../actions/listingActions";
 import { getLocalAmenities } from "../../actions/amenityActions";
-import { getSavedSearches } from "../../actions/searchActions";
+import {
+    getSavedSearches,
+    saveSearch,
+    removeSearch
+} from "../../actions/searchActions";
 import { logout } from "../../actions/authActions";
 
 import "../../assets/stylesheets/index.scss";
@@ -105,6 +109,8 @@ class Results extends Component {
                     <Map listings={sortedListings} location={location} />
 
                     <ListingsSidebar
+                        saveSearch={this.props.saveSearch}
+                        removeSearch={this.props.removeSearch}
                         listings={sortedListings}
                         favourites={sortedFavourites}
                         numListings={this.props.numListings}
@@ -139,5 +145,7 @@ export default connect(mapStateToProps, {
     setListingLiked,
     getFavourites,
     getLocalAmenities,
-    getSavedSearches
+    getSavedSearches,
+    saveSearch,
+    removeSearch
 })(Results);

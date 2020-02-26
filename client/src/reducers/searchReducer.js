@@ -63,6 +63,14 @@ export default (state = initialState, action) => {
                 ...action.payload,
                 savedSearches: [...state.savedSearches, action.payload]
             };
+        case REMOVE_SEARCH:
+            return {
+                ...state,
+                _id: "1",
+                savedSearches: state.savedSearches.filter(
+                    savedSearch => action.payload._id !== savedSearch._id
+                )
+            };
         case GET_SAVED_SEARCHES:
             return {
                 ...state,

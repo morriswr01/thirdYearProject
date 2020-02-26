@@ -33,36 +33,55 @@ export const getSavedSearches = () => (dispatch, getState) => {
         );
 };
 
-// export const saveSearch = search => (dispatch, getState) => {
-//     axios
-//         .post("/api/savedSearches", search, tokenConfig(getState))
-//         .then(res =>
-//             dispatch({
-//                 type: SAVE_SEARCH,
-//                 payload: res.data
-//             })
-//         )
-//         .catch(err => {
-//             console.log(err.message);
-//         });
-// };
+export const saveSearch = () => (dispatch, getState) => {
+    console.log("Called save search");
+    const {
+        location,
+        houseTypes,
+        housePrice,
+        numBedrooms,
+        searchRadius
+    } = getState().search;
 
-// export const removeSearch = id => (getState, dispatch) => {
-//     axios
-//         .delete("/api/savedSearches", {
-//             data: { id },
-//             headers: { ...tokenConfig(getState).headers }
-//         })
-//         .then(res =>
-//             dispatch({
-//                 type: REMOVE_SEARCH,
-//                 payload: res.data
-//             })
-//         )
-//         .catch(err => {
-//             console.log(err.message);
-//         });
-// };
+    const search = {
+        location,
+        houseTypes,
+        housePrice,
+        numBedrooms,
+        searchRadius
+    };
+
+    axios
+        .post("/api/savedSearches", search, tokenConfig(getState))
+        .then(res =>
+            dispatch({
+                type: SAVE_SEARCH,
+                payload: res.data
+            })
+        )
+        .catch(err => {
+            console.log(err.message);
+        });
+};
+
+export const removeSearch = _id => (dispatch, getState) => {
+    console.log("Called remove search");
+    axios
+        .delete("/api/savedSearches", {
+            data: { _id },
+            headers: { ...tokenConfig(getState).headers }
+        })
+        .then(res => {
+            console.log(res.data);
+            dispatch({
+                type: REMOVE_SEARCH,
+                payload: res.data
+            });
+        })
+        .catch(err => {
+            console.log(err.message);
+        });
+};
 
 export const getLocation = () => ({
     type: GET_LOCATION

@@ -22,7 +22,12 @@ export default function ListingsSidebar(props) {
     return (
         <div className='listingsSidebar'>
             <Nav auth={props.auth} logout={props.logout} />
-            <ResultsTitle auth={props.auth} numListings={numListings} />
+            <ResultsTitle
+                auth={props.auth}
+                numListings={numListings}
+                saveSearch={props.saveSearch}
+                removeSearch={props.removeSearch}
+            />
             <SortAndFilter
                 sidebarTab={sidebarTab}
                 handleToggleChange={handleSidebarTabChange}
