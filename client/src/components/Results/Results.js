@@ -35,15 +35,11 @@ class Results extends Component {
     }
 
     componentDidMount() {
-        if (this.props.searchLocation.postcode && !this.props.area.location) {
-            this.props.getAreaData({
-                location: this.props.searchLocation.postcode,
-                numBedrooms: 2
-            });
+        if (this.props.listings.length !== 0) {
+            this.props.getSavedSearches();
+            this.props.getFavourites();
+            this.props.getLocalAmenities();
         }
-        this.props.getSavedSearches();
-        this.props.getFavourites();
-        this.props.getLocalAmenities();
     }
 
     handleLikedToggle = listing => {
@@ -87,10 +83,10 @@ class Results extends Component {
             this.props.sortBy
         );
 
-        // return this.props.listings.length === 0 ? (
-        //     <Redirect to='/' />
-        // ) : (
-        return (
+        return this.props.listings.length === 0 ? (
+            <Redirect to='/' />
+        ) : (
+            // return (
             <div
                 className={
                     this.props.fullscreen

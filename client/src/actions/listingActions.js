@@ -71,7 +71,6 @@ export const getListings = search => (dispatch, getState) => {
             numBedrooms
         })
         .then(res => {
-            console.log(res.data);
             dispatch({
                 type: GET_LISTINGS,
                 payload: res.data

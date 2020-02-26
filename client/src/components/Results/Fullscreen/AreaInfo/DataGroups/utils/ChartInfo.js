@@ -20,7 +20,7 @@ export default class ChartInfo extends Component {
             case "bar":
                 return (
                     <Bar
-                        data={this.state.chartData}
+                        data={this.props.chartData}
                         options={{
                             legend: {
                                 display: this.props.displayLegend,
@@ -32,7 +32,7 @@ export default class ChartInfo extends Component {
             case "line":
                 return (
                     <Line
-                        data={this.state.chartData}
+                        data={this.props.chartData}
                         options={{
                             legend: {
                                 display: this.props.displayLegend,
@@ -44,7 +44,7 @@ export default class ChartInfo extends Component {
             case "pie":
                 return (
                     <Pie
-                        data={this.state.chartData}
+                        data={this.props.chartData}
                         options={{
                             legend: {
                                 display: this.props.displayLegend,

@@ -11,6 +11,7 @@ import {
     setListingLiked,
     getDetailedData
 } from "../../../actions/listingActions";
+import { getAreaData } from "../../../actions/areaActions";
 import { logout } from "../../../actions/authActions";
 
 function FullScreenListing(props) {
@@ -27,7 +28,11 @@ function FullScreenListing(props) {
                 auth={props.auth}
                 logout={props.logout}
             />
-            <AreaInfo area={props.area} />
+            <AreaInfo
+                search={props.search}
+                getAreaData={props.getAreaData}
+                area={props.area}
+            />
         </div>
     );
 }
@@ -39,6 +44,7 @@ FullScreenListing.propTypes = {
 const mapStateToProps = state => ({
     fullscreen: state.listings.fullscreen,
     selectedListing: state.listings.selectedListing,
+    search: state.search,
     area: state.area,
     auth: state.auth
 });
@@ -47,5 +53,6 @@ export default connect(mapStateToProps, {
     setListingLiked,
     setSelectedListing,
     getDetailedData,
+    getAreaData,
     logout
 })(FullScreenListing);

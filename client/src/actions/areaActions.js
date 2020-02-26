@@ -12,6 +12,7 @@ export const getAreaData = searchObj => dispatch => {
             numBedrooms
         })
         .then(res => {
+            console.log(res.data);
             dispatch({
                 type: GET_AREA_DATA,
                 payload: res.data

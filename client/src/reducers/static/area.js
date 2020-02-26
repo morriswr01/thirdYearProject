@@ -624,14 +624,4 @@ export const area = {
         },
         process_time: "3.39"
     },
-    areaType: {
-        status: "error",
-        code: "X14",
-        message: "Key throttled: last call less than two seconds ago"
-    },
-    floorArea: {
-        status: "error",
-        code: "X14",
-        message: "Key throttled: last call less than two seconds ago"
-    }
 };

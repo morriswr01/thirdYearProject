@@ -32,6 +32,7 @@ const getEndpointURL = (endpoint, location, numBedrooms) => {
 // @desc    Gets area info for a given area
 // @access  Public
 router.post("/data", async (req, res) => {
+    console.log("Yo yo yo");
     const { location, numBedrooms } = req.body;
 
     var urls = Object.keys(endpoints).map(key => [
