@@ -5,8 +5,6 @@ import DataGroup from "./utils/DataGroup";
 import ChartInfo from "./utils/ChartInfo";
 
 export default function Financial(props) {
-    const { growth } = props;
-
     const getPropValuesChartData = growth => {
         const labels = growth.map(arr => arr[0]);
         const data = growth.map(arr => arr[1]);
@@ -66,24 +64,32 @@ export default function Financial(props) {
 
     return (
         <DataGroup icon={faMoneyBillWave} id='financial' key='financial'>
-            <div className='stringInfo'>
-                <h6 className='dataName'>Average Property Value</h6>
-                <p className='dataString'>£{getAvgValue(growth)}</p>
-            </div>
-            <div className='stringInfo'>
-                <h6 className='dataName'>Average Annual Growth</h6>
-                <p className='dataString'>{getAvgGrowth(growth)}%</p>
-            </div>
-            <div className='chartInfo'>
-                <h6 className='dataName'>Property Value</h6>
-                <div className='chart'>
-                    <ChartInfo
-                        chartData={getPropValuesChartData(growth)}
-                        legendPosition='bottom'
-                        type='line'
-                    />
+            {props.growth !== undefined && (
+                <div>
+                    <div className='stringInfo'>
+                        <h6 className='dataName'>Average Property Value</h6>
+                        <p className='dataString'>
+                            £{getAvgValue(props.growth)}
+                        </p>
+                    </div>
+                    <div className='stringInfo'>
+                        <h6 className='dataName'>Average Annual Growth</h6>
+                        <p className='dataString'>
+                            {getAvgGrowth(props.growth)}%
+                        </p>
+                    </div>
+                    <div className='chartInfo'>
+                        <h6 className='dataName'>Property Value</h6>
+                        <div className='chart'>
+                            <ChartInfo
+                                chartData={getPropValuesChartData(props.growth)}
+                                legendPosition='bottom'
+                                type='line'
+                            />
+                        </div>
+                    </div>
                 </div>
-            </div>
+            )}
         </DataGroup>
     );
 }

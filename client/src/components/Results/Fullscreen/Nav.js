@@ -14,7 +14,6 @@ export default function Nav(props) {
                     {/* Login and registration buttons */}
                     <LoginContainer auth={props.auth} logout={props.logout} />
                 </div>
-                <button className='compare'>Compare</button>
                 <button
                     className='back'
                     onClick={() => props.setSelectedListing({})}

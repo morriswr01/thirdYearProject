@@ -28,7 +28,21 @@ class FilterContainer extends React.Component {
     };
 
     handleSubmit = () => {
-        this.props.getListings();
+        const {
+            location,
+            houseTypes,
+            searchRadius,
+            housePrice,
+            numBedrooms
+        } = this.props;
+        const search = {
+            location,
+            houseTypes,
+            searchRadius,
+            housePrice,
+            numBedrooms
+        };
+        this.props.getListings(search);
     };
 
     // Get updated sliders from filter box

@@ -183,7 +183,7 @@ export const area = {
         process_time: "9.73"
     },
     growth: {
-        status: "success",
+        status: "error",
         postcode: "LS16 7PT",
         postcode_type: "full",
         url: "https://propertydata.co.uk/draw?input=LS16+7PT",

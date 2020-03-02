@@ -14,7 +14,7 @@ class AreaInfo extends React.Component {
         super(props);
     }
 
-    // // uncomment to get area data
+    // uncomment to get area data
     // componentWillMount() {
     //     if (this.props.search.location.postcode) {
     //         console.log(this.props.search.location.postcode);

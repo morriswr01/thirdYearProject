@@ -21,6 +21,7 @@ export default (state = initialState, action) => {
     switch (action.type) {
         case GET_AREA_DATA:
             return {
+                ...state,
                 ...action.payload
             };
         default:
