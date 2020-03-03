@@ -41,7 +41,6 @@ const MapComponent = props => {
                     // }}
                     icon={{
                         path: markers.HOME,
-                        scale: 0.5,
                         strokeWeight: 0.2,
                         strokeColor: "black",
                         strokeOpacity: 1,
@@ -49,6 +48,10 @@ const MapComponent = props => {
                             props.selectedListing.latitude === listing.latitude
                                 ? "black"
                                 : "#45B39C",
+                        scale:
+                            props.selectedListing.latitude === listing.latitude
+                                ? 0.75
+                                : 0.5,
                         fillOpacity: 1
                     }}
                 />
