@@ -6,7 +6,8 @@ import {
     SET_NUM_BEDROOMS,
     SAVE_SEARCH,
     REMOVE_SEARCH,
-    GET_SAVED_SEARCHES
+    GET_SAVED_SEARCHES,
+    SET_CITY
 } from "../actions/types";
 
 const initialState = {
@@ -18,6 +19,7 @@ const initialState = {
             lng: -1.62415
         }
     },
+    city: "",
     houseTypes: [],
     searchRadius: 1,
     savedSearches: [],
@@ -31,6 +33,11 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 location: action.payload
+            };
+        case SET_CITY:
+            return {
+                ...state,
+                city: action.payload
             };
         case SET_HOUSE_TYPE:
             return {

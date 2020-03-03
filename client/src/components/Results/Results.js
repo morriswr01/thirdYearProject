@@ -86,7 +86,6 @@ class Results extends Component {
         return this.props.listings.length === 0 ? (
             <Redirect to='/' />
         ) : (
-            // return (
             <div
                 className={
                     this.props.fullscreen
@@ -107,6 +106,7 @@ class Results extends Component {
                     <ListingsSidebar
                         saveSearch={this.props.saveSearch}
                         removeSearch={this.props.removeSearch}
+                        search={this.props.search}
                         listings={sortedListings}
                         favourites={sortedFavourites}
                         numListings={this.props.numListings}

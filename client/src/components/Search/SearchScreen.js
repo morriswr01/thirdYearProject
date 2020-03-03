@@ -10,7 +10,8 @@ import {
     setHousePrice,
     setNumBedooms,
     getSavedSearches,
-    removeSearch
+    removeSearch,
+    setCity
 } from "../../actions/searchActions";
 import { getListings } from "../../actions/listingActions";
 import { logout } from "../../actions/authActions";
@@ -42,9 +43,10 @@ class SearchScreen extends Component {
     };
 
     // Get postcode and latitude/longitude from the search box component
-    handleSearchTextChange = (postcode, latlng) => {
-        const location = { postcode, latlng };
+    handleSearchTextChange = (postcode, latlng, city) => {
+        const location = { postcode, latlng, city };
         this.props.setLocation(location);
+        this.props.setCity(city);
     };
 
     // Get updated sliders from filter box
@@ -97,6 +99,7 @@ class SearchScreen extends Component {
                 <div className='search-function'>
                     <SearchBox
                         handleSearchTextChange={this.handleSearchTextChange}
+                        handleCityChange={this.props.setCity}
                     />
                     {/* Search Tabs */}
                     <SearchTabs handleToggleChange={this.handleTabChange} />
@@ -138,6 +141,7 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps, {
     getListings,
+    setCity,
     setLocation,
     setHouseType,
     setSearchRadius,

@@ -23,6 +23,7 @@ export default function ListingsSidebar(props) {
         <div className='listingsSidebar'>
             <Nav auth={props.auth} logout={props.logout} />
             <ResultsTitle
+                search={props.search}
                 auth={props.auth}
                 numListings={numListings}
                 saveSearch={props.saveSearch}

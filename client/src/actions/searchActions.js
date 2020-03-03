@@ -12,7 +12,8 @@ import {
     SET_NUM_BEDROOMS,
     GET_SAVED_SEARCHES,
     SAVE_SEARCH,
-    REMOVE_SEARCH
+    REMOVE_SEARCH,
+    SET_CITY
 } from "./types";
 
 export const getSearch = () => ({
@@ -90,6 +91,10 @@ export const getLocation = () => ({
 export const setLocation = locationObj => ({
     type: SET_LOCATION,
     payload: locationObj
+});
+export const setCity = city => ({
+    type: SET_CITY,
+    payload: city
 });
 export const setHouseType = houseTypes => ({
     type: SET_HOUSE_TYPE,

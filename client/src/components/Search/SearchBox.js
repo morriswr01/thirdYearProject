@@ -9,6 +9,7 @@ export default class SearchBox extends Component {
         super(props);
         this.state = {
             searchPostCode: "",
+            cityName: "",
             latlng: {},
             searchText: "",
             fullAddress: ""
@@ -30,6 +31,7 @@ export default class SearchBox extends Component {
             this.setState({
                 ...this.state,
                 latlng: e.suggestion.latlng,
+                cityName: e.suggestion.city,
                 searchPostCode: e.suggestion.postcode,
                 searchText: e.suggestion.value
             });
@@ -40,6 +42,7 @@ export default class SearchBox extends Component {
                     this.state.searchPostCode,
                     this.state.latlng
                 );
+                this.props.handleCityChange(this.state.cityName);
             }
         });
     }

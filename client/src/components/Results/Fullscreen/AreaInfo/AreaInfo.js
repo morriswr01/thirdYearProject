@@ -25,6 +25,16 @@ class AreaInfo extends React.Component {
     //     }
     // }
 
+    getCity = () => {
+        if (
+            this.props.search.city !== undefined &&
+            this.props.search.city !== ""
+        ) {
+            return `${this.props.search.city}, `;
+        }
+        return "";
+    };
+
     render() {
         return (
             <div className='areaInfo'>
@@ -32,7 +42,10 @@ class AreaInfo extends React.Component {
                     <h2 className='areaHeader'>Area Analytics</h2>
                 </div>
                 <div className='locationTitleContainer'>
-                    <h4 className='locationTitle'>Coventry, CV5 6GB</h4>
+                    <h4 className='locationTitle'>
+                        {this.getCity()}
+                        {this.props.search.location.postcode}{" "}
+                    </h4>
                 </div>
                 <div className='dataGroupContainer'>
                     {this.props.area.location !== "" &&
