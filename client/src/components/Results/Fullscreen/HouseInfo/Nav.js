@@ -2,9 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-import "../../../assets/stylesheets/index.scss";
+import "../../../../assets/stylesheets/index.scss";
 
-import LoginContainer from "../../Login/LoginContainer";
+import LoginContainer from "../../../Login/LoginContainer";
 
 export default function Nav(props) {
     return (
@@ -16,7 +16,10 @@ export default function Nav(props) {
                 </div>
                 <button
                     className='back'
-                    onClick={() => props.setSelectedListing({})}
+                    onClick={() => {
+                        props.setSelectedListing({});
+                        props.clearSelectedListing();
+                    }}
                 >
                     <FontAwesomeIcon icon={faArrowRight} /> Back
                 </button>

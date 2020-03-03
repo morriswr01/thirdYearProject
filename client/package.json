@@ -12,6 +12,7 @@
         "axios": "^0.19.0",
         "bootstrap": "^4.3.1",
         "chart.js": "^2.9.3",
+        "fontawesome-markers": "^4.6.1",
         "node-sass": "^4.13.1",
         "places.js": "^1.17.0",
         "react": "^16.10.2",

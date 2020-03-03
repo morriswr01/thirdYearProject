@@ -9,7 +9,8 @@ import HouseInfo from "./HouseInfo/HouseInfo";
 import {
     setSelectedListing,
     setListingLiked,
-    getDetailedData
+    getDetailedData,
+    clearSelectedListing
 } from "../../../actions/listingActions";
 import { getAreaData } from "../../../actions/areaActions";
 import { logout } from "../../../actions/authActions";
@@ -27,6 +28,7 @@ function FullScreenListing(props) {
                 area={props.area}
                 auth={props.auth}
                 logout={props.logout}
+                clearSelectedListing={props.clearSelectedListing}
             />
             <AreaInfo
                 search={props.search}
@@ -54,5 +56,6 @@ export default connect(mapStateToProps, {
     setSelectedListing,
     getDetailedData,
     getAreaData,
-    logout
+    logout,
+    clearSelectedListing
 })(FullScreenListing);

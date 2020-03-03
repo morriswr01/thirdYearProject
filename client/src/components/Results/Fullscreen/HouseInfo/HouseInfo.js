@@ -1,7 +1,7 @@
 import React from "react";
 
 import PriceElement from "./PriceElement";
-import Nav from "../Nav";
+import Nav from "./Nav";
 import TitleBar from "./TitleBar";
 import RoomsInfo from "./RoomsInfo";
 import Description from "./Description";
@@ -83,6 +83,7 @@ export default function HouseInfo(props) {
             </div>
             <Nav
                 setSelectedListing={props.setSelectedListing}
+                clearSelectedListing={props.clearSelectedListing}
                 auth={props.auth}
                 logout={props.logout}
             />

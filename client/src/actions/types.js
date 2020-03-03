@@ -11,6 +11,7 @@ export const SET_HOUSE_PRICE = "SET_HOUSE_PRICE";
 export const SET_NUM_BEDROOMS = "SET_NUM_BEDROOMS";
 export const GET_LISTINGS = "GET_LISTINGS";
 export const SET_CITY = "SET_CITY";
+export const CLEAR_SELECTED_LISTING = "CLEAR_SELECTED_LISTING";
 
 
 // Listings reducer

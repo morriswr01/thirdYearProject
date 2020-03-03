@@ -7,6 +7,7 @@ import {
     withScriptjs
 } from "react-google-maps";
 
+import markers from "fontawesome-markers";
 import { setSelectedListing } from "../../actions/listingActions";
 
 import mapStyles from "../../assets/mapStyles";
@@ -34,9 +35,21 @@ const MapComponent = props => {
                         console.log("Selected listing " + listing.id);
                         props.onMarkerClick(listing.id, listing);
                     }}
+                    // icon={{
+                    //     url: `https://image.flaticon.com/icons/svg/569/569212.svg`,
+                    //     scaledSize: new window.google.maps.Size(30, 30)
+                    // }}
                     icon={{
-                        url: `https://image.flaticon.com/icons/svg/569/569212.svg`,
-                        scaledSize: new window.google.maps.Size(30, 30)
+                        path: markers.HOME,
+                        scale: 0.5,
+                        strokeWeight: 0.2,
+                        strokeColor: "black",
+                        strokeOpacity: 1,
+                        fillColor:
+                            props.selectedListing.latitude === listing.latitude
+                                ? "black"
+                                : "#45B39C",
+                        fillOpacity: 1
                     }}
                 />
             ))}
@@ -62,6 +75,7 @@ class Map extends Component {
                     listings={this.props.listings}
                     onMarkerClick={this.handleSelectedListingChange}
                     location={this.props.location}
+                    selectedListing={this.props.selectedListing}
                     googleMapURL='https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAziShsAiM9ER0H6IrqETIrE00yzcOx124'
                     loadingElement={<div style={{ height: `100%` }} />}
                     containerElement={<div style={{ height: `100%` }} />}

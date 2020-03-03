@@ -9,7 +9,8 @@ import {
     CLEAR_FAVOURITES,
     CLEAR_LIKE_BUTTONS,
     SET_FAVOURITE,
-    GET_DETAILED_DATA
+    GET_DETAILED_DATA,
+    CLEAR_SELECTED_LISTING
 } from "./types";
 
 import { tokenConfig } from "./authActions";
@@ -182,6 +183,10 @@ export const setFavourite = (id, value) => ({
 
 export const clearFavourites = () => ({
     type: CLEAR_FAVOURITES
+});
+
+export const clearSelectedListing = () => ({
+    type: CLEAR_SELECTED_LISTING
 });
 
 export const clearLikeButtons = () => (dispatch, getState) => {
