@@ -23,9 +23,10 @@ export default function SavedSearches(props) {
                 </div>
             ) : (
                 <Accordion
+                    handleChanges={props.handleChanges}
                     savedSearches={props.savedSearches}
                     removeSearch={props.removeSearch}
-                    getListings={props.getListings}
+                    handleSubmit={props.handleSubmit}
                 />
             )}
         </div>

@@ -38,6 +38,7 @@ export const saveSearch = () => (dispatch, getState) => {
     console.log("Called save search");
     const {
         location,
+        city,
         houseTypes,
         housePrice,
         numBedrooms,
@@ -49,7 +50,8 @@ export const saveSearch = () => (dispatch, getState) => {
         houseTypes,
         housePrice,
         numBedrooms,
-        searchRadius
+        searchRadius,
+        city
     };
 
     axios

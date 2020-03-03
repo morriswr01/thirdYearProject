@@ -60,7 +60,12 @@ export default function SavedSearch(props) {
                     <Button
                         color='primary'
                         onClick={e => {
-                            props.getListings(props.savedSearch);
+                            props.handleSubmit(props.savedSearch);
+                            props.handleChanges(
+                                props.savedSearch.location.postcode,
+                                props.savedSearch.location.latlng,
+                                props.savedSearch.city
+                            );
                             e.stopPropagation();
                         }}
                     >

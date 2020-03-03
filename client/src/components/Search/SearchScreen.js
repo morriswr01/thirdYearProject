@@ -117,6 +117,7 @@ class SearchScreen extends Component {
                             handleFilterChange={this.handleFilterChange}
                         />
                         <SavedSearches
+                            handleChanges={this.handleSearchTextChange}
                             getListings={this.props.getListings}
                             savedSearches={this.props.savedSearches}
                             auth={this.props.auth}

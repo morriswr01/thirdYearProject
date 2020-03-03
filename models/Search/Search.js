@@ -1,41 +1,5 @@
 const mongoose = require("mongoose");
 
-// const LocationSchema = new mongoose.Schema({
-//     postcode: {
-//         type: String,
-//         required: true
-//     },
-//     lat: {
-//         type: Number,
-//         required: true
-//     },
-//     lng: {
-//         type: Number,
-//         required: true
-//     }
-// });
-
-// const PriceSchema = new mongoose.Schema({
-//     min: {
-//         type: Number,
-//         default: 0
-//     },
-//     max: {
-//         type: Number,
-//         default: 1000000
-//     }
-// });
-// const BedroomsSchema = new mongoose.Schema({
-//     min: {
-//         type: Number,
-//         default: 0
-//     },
-//     max: {
-//         type: Number,
-//         default: 5
-//     }
-// });
-
 // Object of the listing object
 const SearchSchema = new mongoose.Schema({
     userID: {
@@ -57,6 +21,10 @@ const SearchSchema = new mongoose.Schema({
                 required: true
             }
         }
+    },
+    city: {
+        type: String,
+        default: ""
     },
     houseTypes: {
         type: Array
