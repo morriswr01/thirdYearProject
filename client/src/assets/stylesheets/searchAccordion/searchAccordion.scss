@@ -31,6 +31,14 @@
     max-height: 0;
     width: 100%;
 
+    .filters {
+        .filter {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
     &.selected {
         // Outside space
         padding: 10px;
@@ -47,7 +55,7 @@
         border-top: solid 2px rgba(0, 0, 0, 0.1);
         padding: 5px 0;
 
-        Button {
+        button {
             margin-left: 5px;
             border-radius: 25px;
         }
