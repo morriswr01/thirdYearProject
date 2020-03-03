@@ -67,8 +67,8 @@ const MapComponent = props => {
                         strokeOpacity: 1,
                         fillColor:
                             props.selectedListing.latitude === listing.latitude
-                                ? "black"
-                                : "#45B39C",
+                                ? "#292b2c"
+                                : "#00895a",
                         scale:
                             props.selectedListing.latitude === listing.latitude
                                 ? 0.75
