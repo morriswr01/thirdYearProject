@@ -57,8 +57,13 @@
                     padding: 5px;
                     vertical-align: middle;
 
-                    .name {
-                        font-weight: 600;
+                    .desc {
+                        display: flex;
+                        flex-direction: row;
+                        .name {
+                            font-weight: 600;
+                            margin-left: 5px;
+                        }
                     }
                 }
                 .amenityBar {

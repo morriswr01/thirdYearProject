@@ -58,6 +58,7 @@ export default function Amenities(props) {
                 name={amenity.name}
                 distance={props.fullscreen ? amenity.distance : 250}
                 number={i}
+                type={amenity.type}
                 maxDist={maxDist}
                 key={i}
             />
