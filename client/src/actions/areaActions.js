@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { GET_AREA_DATA } from "./types";
+import { SET_AREA_DATA } from "./types";
 
 // Get the area data for a given location and bedroom number
 export const getAreaData = searchObj => dispatch => {
@@ -48,7 +48,7 @@ export const getAreaData = searchObj => dispatch => {
             }
 
             dispatch({
-                type: GET_AREA_DATA,
+                type: SET_AREA_DATA,
                 payload: successData
             });
         })

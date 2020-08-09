@@ -181,6 +181,7 @@
                 .sidebarListings,
                 .favouriteListings {
                     display: grid;
+                    // Sets 3 columns
                     grid-template-columns: 1fr 1fr 1fr;
                     .favouritesLogin {
                         width: 300%;

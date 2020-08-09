@@ -46,13 +46,6 @@ export const setSelectedListing = listingObj => dispatch => {
 };
 
 export const getListings = search => (dispatch, getState) => {
-    // const {
-    //     location,
-    //     houseTypes,
-    //     searchRadius,
-    //     housePrice,
-    //     numBedrooms
-    // } = getState().search;
     const {
         location,
         houseTypes,
@@ -60,8 +53,6 @@ export const getListings = search => (dispatch, getState) => {
         housePrice,
         numBedrooms
     } = search;
-
-    // console.log(location);
 
     axios
         .post("/api/listings/nestoria?", {

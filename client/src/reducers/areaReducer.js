@@ -1,4 +1,4 @@
-import { GET_AREA_DATA } from "../actions/types";
+import { SET_AREA_DATA } from "../actions/types";
 
 import { area } from "./static/area";
 
@@ -19,7 +19,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case GET_AREA_DATA:
+        case SET_AREA_DATA:
             return {
                 ...state,
                 ...action.payload

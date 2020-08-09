@@ -24,6 +24,7 @@ router.post("/", async (req, res) => {
         "supermarket"
     ];
 
+    // General function for making a request to Google Places API
     var asyncRequests = type => {
         return Places.nearbysearch({
             location: `${req.body.lat},${req.body.lng}`, // LatLon delimited by ,
@@ -44,8 +45,10 @@ router.post("/", async (req, res) => {
             });
     };
 
+    // Instantiate above function for each type of amenity in types array
     var actions = types.map(type => asyncRequests(type));
 
+    // Run all requests at once and wait until data returned
     var results = Promise.all(actions)
         .then(data => {
             res.json(data);

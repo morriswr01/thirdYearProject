@@ -26,7 +26,7 @@ export const CLEAR_LIKE_BUTTONS = "CLEAR_LIKE_BUTTONS";
 export const GET_DETAILED_DATA = "GET_DETAILED_DATA";
 
 // Area Reducer
-export const GET_AREA_DATA = "GET_AREA_DATA";
+export const SET_AREA_DATA = "SET_AREA_DATA";
 
 // Types for authentication related actions
 export const USER_LOADING = "USER_LOADING";
