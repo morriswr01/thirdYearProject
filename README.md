@@ -6,6 +6,8 @@ Real estate investors do extensive research on the property market before decidi
 *	JSON web tokens, a token based authentication system, was implemented allowing a convenient and secure account system from which users could save listings and searches for future viewing as well as staying safely logged in for the duration of the session.
 *	An agile methodology was used, enabling me to work iteratively throughout the lifetime of the project and taking user feedback and suggestions into account when considering development work for the next sprint. This user feedback lead to a machine learning feasibility study, assessing the potential of Neural Networks within the project.
 * The finished solution is a search engine allowing users to search for listings from multiple sources, compare between them and view more information about the factors affecting their value. 
-The final solution was presented to a Real Estate Agent and received positive feedback on the need for such a system as well as suggestions for future development.
+
+The final solution was presented to a Real Estate Agent and received positive feedback on the need for such a system as well as suggestions for future development. This project was graded with a First.
+
 
 (Technologies Used: React.JS, Redux, NodeJS(ExpressJS), MongoDB)
