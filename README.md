@@ -11,3 +11,4 @@ The final solution was presented to a Real Estate Agent and received positive fe
 
 
 (Technologies Used: React.JS, Redux, NodeJS(ExpressJS), MongoDB)
+![image](https://github.com/morriswr01/thirdYearProject/assets/19209657/75a0c97c-3d2d-4c0c-9b53-6ab8ea3c50eb)
