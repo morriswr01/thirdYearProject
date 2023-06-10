@@ -13,7 +13,8 @@ The final solution was presented to a Real Estate Agent and received positive fe
 (Technologies Used: React.JS, Redux, NodeJS(ExpressJS), MongoDB)
 
 Some screenshots from the application:
+![image](https://github.com/morriswr01/thirdYearProject/assets/19209657/c5654353-424e-4785-9b67-b292581ba956)
 ![image](https://github.com/morriswr01/thirdYearProject/assets/19209657/75a0c97c-3d2d-4c0c-9b53-6ab8ea3c50eb)
 ![image](https://github.com/morriswr01/thirdYearProject/assets/19209657/97d9a516-b23a-4a42-9fe5-19ca234f5e24)
 ![image](https://github.com/morriswr01/thirdYearProject/assets/19209657/7bf74388-4207-4586-92c9-05f7a805099d)
-![image](https://github.com/morriswr01/thirdYearProject/assets/19209657/c5654353-424e-4785-9b67-b292581ba956)
+
